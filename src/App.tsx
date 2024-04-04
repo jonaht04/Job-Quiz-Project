@@ -30,6 +30,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Juan Saquino
+          Jonah Thomas
         </p>
         <a
           className="App-link"
