@@ -32,6 +32,7 @@ function App() {
           Edit <code>src/App.tsx</code> and save to reload and also I'm NATHAN CHEN RAHHH.
           Juan Saquino
           Jonah Thomas
+          Alexander Lee
           main
         </p>
         <a
