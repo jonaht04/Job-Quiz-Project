@@ -2,3 +2,7 @@ body{
     background-color: #121212;
     color: #ffffff;
 }
+.header{
+    align-items: center;
+    background-color: #252525
+}
