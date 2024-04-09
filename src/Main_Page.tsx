@@ -6,7 +6,7 @@ function Main_Page(){
     return(
         <div>
             <header className="header">
-            <p>DDee Inc.</p>
+            <button onClick={}>DDee Inc.</button>
 
             </header>
         </div>
