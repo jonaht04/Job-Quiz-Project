@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import BasicQuestion1 from './Basic_Question1';
+import DetailedQuestion from './DetailedQuestion';
 
 function App() {
   const [key, setKey] = useState<string>('');
@@ -24,6 +25,9 @@ function App() {
     setCurrentPage('BasicQuestion1'); // Navigate to the first new page
   }
 
+  function goToDetailedQuestionPage() {
+    setCurrentPage('DetailedQuesiton')
+  }
 
   return (
     <div className="App">
@@ -47,6 +51,7 @@ function App() {
             Learn React
           </a>
           <button onClick={goToBasicQuestionPage}>Go to Basic Question Page</button>
+          <button onClick={goToDetailedQuestionPage}>Go to Detailed Question Page</button>
         </header>
           <form>
             <label>API Key:</label>
@@ -55,9 +60,9 @@ function App() {
             <button className="Submit-Button" type="button" onClick={handleSubmit}>Submit</button>
           </form>
         </div>
-      ) : (
+      ) : currentPage === 'BasicQuestion' ? (
         <BasicQuestion1 goToHomePage={goToHomePage} />
-      )}
+      ) : (<DetailedQuestion goToHomePage={goToHomePage} />)}
     </div>
   );
 }
