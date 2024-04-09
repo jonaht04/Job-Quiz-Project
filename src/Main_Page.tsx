@@ -7,13 +7,13 @@ function Main_Page(){
         <div>
             <header className="header">
             <div className="headerBody">
-            <button onClick={goToHomePage}>Home</button>
-            <button onClick ={goToBasicQuestions}>Short Quiz</button>
-            <button onClick ={goToLongQuestions}>Long Quiz</button>
+            <button>Home</button>
+            <button>Short Quiz</button>
+            <button>Long Quiz</button>
+            <button>Help</button>
             </div>
             </header>
             <h1>Welcome to the DDee job quiz.</h1>
         </div>
-
     )
 }
