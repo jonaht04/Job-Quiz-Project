@@ -6,9 +6,13 @@ function Main_Page(){
     return(
         <div>
             <header className="header">
-            <button onClick={}>DDee Inc.</button>
-
+            <div className="headerBody">
+            <button onClick={goToHomePage}>Home</button>
+            <button onClick ={goToBasicQuestions}>Short Quiz</button>
+            <button onClick ={goToLongQuestions}>Long Quiz</button>
+            </div>
             </header>
+            <h1>Welcome to the DDee job quiz.</h1>
         </div>
 
     )
