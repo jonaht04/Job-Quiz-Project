@@ -3,7 +3,7 @@ body{
     color: #ffffff;
 }
 .header{
-    justify-content: center; /* Ensures buttons and counter span the header */
+    justify-content: center; /* Ensures buttons are centered in the header */
     padding: 10px;
     background-color: #252525;
     display: flex;
@@ -25,13 +25,13 @@ body{
 .wideTextContainer{
     width: 500px;
     display: flex;
-    justify-content: center;
-    margin: auto;
+    justify-content: center; /*centers content within the container*/
+    margin: auto; /* centers container*/
 }
 .quizButton,
 .homeButton,
   .saveButton,
-  .helpButton {
+  .helpButton { /*series of button declarations*/
     background-color: #007bff;
     color: white;
     border: none;
@@ -40,7 +40,7 @@ body{
     margin-left: 5px;
     cursor: pointer;
   }
-
+/*Container class for the buttons and the blurbs below them, so that they are side by side*/
 .promptContainer{
     display: flex;
     flex-direction: row;
