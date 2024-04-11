@@ -3,16 +3,17 @@ import "./Main_Page.css";
 interface Props {
     goToHomePage: () => void;
     goToDetailedQuestion: () => void;
+    goToBasicQuestion: () => void;
   }
 
 
-  const MainPage: React.FC<Props> = ({ goToHomePage , goToDetailedQuestion}) => {
+  const MainPage: React.FC<Props> = ({ goToHomePage , goToDetailedQuestion, goToBasicQuestion}) => {
     return(
         <div>
             <header className="header">
             <div className="headerBody">
             <button className="homeButton" onClick={goToHomePage}>Home</button>
-            <button className="homeButton">Short Quiz</button>
+            <button className="homeButton" onClick={goToBasicQuestion}>Short Quiz</button>
             <button className="homeButton" onClick={goToDetailedQuestion}>Long Quiz</button>
             <button className="helpButton">Help</button>
             </div>
@@ -30,7 +31,7 @@ interface Props {
             <p className="spacer"> </p>
             <h2>There are two types of quizzes that you can take:</h2>
             <div className="promptContainer">
-                <div><button className="quizButton">Short Quiz</button>
+                <div><button className="quizButton" onClick={goToBasicQuestion}>Short Quiz</button>
                 <p className ="textContainer">This is the short answer quiz. It's a decent bit shorter, but your answers will not be as in-depth.</p></div>
                 <div><button className="quizButton" onClick={goToDetailedQuestion}>Long Quiz</button>
                 <p className ="textContainer">This is the long answer quiz. It consists of short answer questions, which may lead to answers of greater accuracy.</p></div>
