@@ -68,7 +68,7 @@ function App() {
       ) : currentPage === 'BasicQuestion1' ? (
       <BasicQuestion1 goToHomePage={goToHomePage} />
       ) : currentPage === 'Main_Page' ? (
-      <MainPage goToHomePage={goToHomePage} goToDetailedQuestion={goToDetailedQuestionPage}/>)
+      <MainPage goToHomePage={goToHomePage} goToDetailedQuestion={goToDetailedQuestionPage} goToBasicQuestion={goToBasicQuestionPage}/>)
        : (<DetailedQuestion goToHomePage={goToHomePage} />)}
     </div>
   );
