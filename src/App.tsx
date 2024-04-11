@@ -20,6 +20,9 @@ function App() {
   function goToHomePage() {
     setCurrentPage(''); 
   }
+  function goToWIPMainPage() {
+    setCurrentPage('Main_Page'); 
+  }
 
   function goToBasicQuestionPage() {
     setCurrentPage('BasicQuestion1'); // Navigate to the first new page
@@ -50,6 +53,7 @@ function App() {
           >
             Learn React
           </a>
+          <button onClick ={goToWIPMainPage}>Go to WIP Home Page</button>
           <button onClick={goToBasicQuestionPage}>Go to Basic Question Page</button>
           <button onClick={goToDetailedQuestionPage}>Go to Detailed Question Page</button>
         </header>

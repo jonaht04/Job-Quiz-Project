@@ -1,8 +1,11 @@
 import "./Main_Page.css";
 import React, { useState } from 'react';
 
+interface Props {
+    goToHomePage: () => void;
+  }
 
-function Main_Page(){
+  const Main_Page: React.FC<Props> = ({ goToHomePage }) => {
     return(
         <div>
             <header className="header">
