@@ -30,9 +30,9 @@ interface Props {
             <h2>There are two types of quizzes that you can take:</h2>
             <div className="promptContainer">
                 <div><button className="quizButton">Short Quiz</button>
-                <p className ="textContainer">This is the short answer quiz. It's a decent bit shorter, but your answers will not be as in-depth.</p></div>
+                <p className ="textContainer">This exam has more complex questions that require more thought with fill-in-the-blank answers being required. Expect this to take longer than the Short Answer Quiz. This test is powered by ChatGPT’s Large Language Model.</p></div>
                 <div><button className="quizButton">Long Quiz</button>
-                <p className ="textContainer">This is the long answer quiz. It consists of short answer questions, which may lead to answers of greater accuracy.</p></div>
+                <p className ="textContainer">This exam is the Short Answer Quiz. Its questions are all multiple choice and shouldn’t take too long to complete. Choose the answer that best matches your own preferences, beliefs, and opinions. This test is powered by ChatGPT’s Large Language Model.</p></div>
         </div>
         <p></p>
         <p></p>
