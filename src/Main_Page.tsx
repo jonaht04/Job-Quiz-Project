@@ -1,5 +1,4 @@
 import "./Main_Page.css";
-import React, { useState } from 'react';
 
 interface Props {
     goToHomePage: () => void;
