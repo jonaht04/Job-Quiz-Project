@@ -65,7 +65,11 @@ function App() {
             <button className="Submit-Button" type="button" onClick={handleSubmit}>Submit</button>
           </form>
         </div>
-      ) : currentPage === 'BasicQuestion1' ? (<BasicQuestion1 goToHomePage={goToHomePage} />) : currentPage === 'Main_Page' ? (<MainPage goToHomePage={goToHomePage}/>) : (<DetailedQuestion goToHomePage={goToHomePage} />)}
+      ) : currentPage === 'BasicQuestion1' ? (
+      <BasicQuestion1 goToHomePage={goToHomePage} />
+      ) : currentPage === 'Main_Page' ? (
+      <MainPage goToHomePage={goToHomePage}/>)
+       : (<DetailedQuestion goToHomePage={goToHomePage} />)}
     </div>
   );
 }
