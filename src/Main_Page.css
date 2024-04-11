@@ -4,7 +4,6 @@ body{
 }
 .header{
     justify-content: center; /* Ensures buttons and counter span the header */
-
     padding: 10px;
     background-color: #252525;
     display: flex;
@@ -14,7 +13,18 @@ body{
     display: flex;
     justify-content: center;
 }
-
+.textContainer{
+    width: 175px;
+    display: flex;
+    justify-content: center;
+    margin:auto;
+}
+.wideTextContainer{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
 .quizButton,
 .homeButton,
   .saveButton,
