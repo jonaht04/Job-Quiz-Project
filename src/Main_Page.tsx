@@ -2,17 +2,19 @@ import "./Main_Page.css";
 
 interface Props {
     goToHomePage: () => void;
+    goToDetailedQuestion: () => void;
+    goToBasicQuestion: () => void;
   }
 
 
-  const MainPage: React.FC<Props> = ({ goToHomePage }) => {
+  const MainPage: React.FC<Props> = ({ goToHomePage , goToDetailedQuestion, goToBasicQuestion}) => {
     return(
         <div>
             <header className="header">
             <div className="headerBody">
             <button className="homeButton" onClick={goToHomePage}>Home</button>
-            <button className="homeButton">Short Quiz</button>
-            <button className="homeButton">Long Quiz</button>
+            <button className="homeButton" onClick={goToBasicQuestion}>Short Quiz</button>
+            <button className="homeButton" onClick={goToDetailedQuestion}>Long Quiz</button>
             <button className="helpButton">Help</button>
             </div>
             </header>
@@ -29,10 +31,10 @@ interface Props {
             <p className="spacer"> </p>
             <h2>There are two types of quizzes that you can take:</h2>
             <div className="promptContainer">
-                <div><button className="quizButton">Short Quiz</button>
-                <p className ="textContainer">This exam has more complex questions that require more thought with fill-in-the-blank answers being required. Expect this to take longer than the Short Answer Quiz. This test is powered by ChatGPT’s Large Language Model.</p></div>
-                <div><button className="quizButton">Long Quiz</button>
-                <p className ="textContainer">This exam is the Short Answer Quiz. Its questions are all multiple choice and shouldn’t take too long to complete. Choose the answer that best matches your own preferences, beliefs, and opinions. This test is powered by ChatGPT’s Large Language Model.</p></div>
+                <div><button className="quizButton" onClick={goToBasicQuestion}>Multiple Choice</button>
+                <p className ="textContainer">This exam is the shorter quiz. Its questions are all multiple choice and shouldn’t take too long to complete. Choose the answer that best matches your own preferences, beliefs, and opinions. This test is powered by ChatGPT’s Large Language Model.</p></div>
+                <div><button className="quizButton" onClick={goToDetailedQuestion}>Short Answer</button>
+                <p className ="textContainer">This exam has more complex questions that require more thought with fill-in-the-blank answers being required. Expect this to take longer than the multiple choice. This test is powered by ChatGPT’s Large Language Model.</p></div>
         </div>
         <p></p>
         <p></p>
