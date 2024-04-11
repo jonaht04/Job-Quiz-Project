@@ -16,7 +16,7 @@ interface Props {
             <button>Help</button>
             </div>
             </header>
-            <h1>Welcome to the DDee job quiz.</h1>
+            <h1>Welcome to the (Placeholder Name) job quiz.</h1>
         </div>
     )
 }
