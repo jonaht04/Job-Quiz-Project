@@ -28,11 +28,20 @@ body{
     justify-content: center; /*centers content within the container*/
     margin: auto; /* centers container*/
 }
-.quizButton,
-.homeButton,
+.quizButton{
+    background-color: #252525;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+.homeButton{
+    background-color: #121212;
+    color: white;
+} 
   .saveButton,
   .helpButton { /*series of button declarations*/
-    background-color: #007bff;
+    background-color: #121212;
     color: white;
     border: none;
     padding: 8px 16px;
