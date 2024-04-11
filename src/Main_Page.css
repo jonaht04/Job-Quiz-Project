@@ -1,0 +1,53 @@
+body{
+    background-color: #121212;
+    color: #ffffff;
+}
+.header{
+    justify-content: center; /* Ensures buttons are centered in the header */
+    padding: 10px;
+    background-color: #252525;
+    display: flex;
+
+}
+.headerBody{
+    display: flex;
+    justify-content: center;
+}
+.textContainer{
+    width: 225px;
+    display: flex;
+    justify-content: center;
+    margin:auto;
+}
+.spacer{
+    height: 2px;
+}
+.wideTextContainer{
+    width: 500px;
+    display: flex;
+    justify-content: center; /*centers content within the container*/
+    margin: auto; /* centers container*/
+}
+.quizButton,
+.homeButton,
+  .saveButton,
+  .helpButton { /*series of button declarations*/
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+/*Container class for the buttons and the blurbs below them, so that they are side by side*/
+.promptContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 10px;
+    margin: auto;
+    justify-content: center;
+
+}

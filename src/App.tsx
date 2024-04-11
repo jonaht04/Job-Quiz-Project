@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import BasicQuestion1 from './Basic_Question1';
 import DetailedQuestion from './DetailedQuestion';
+import MainPage from './Main_Page';
 
 function App() {
   const [key, setKey] = useState<string>('');
@@ -19,6 +20,9 @@ function App() {
 
   function goToHomePage() {
     setCurrentPage(''); 
+  }
+  function goToWIPMainPage() {
+    setCurrentPage('Main_Page'); 
   }
 
   function goToBasicQuestionPage() {
@@ -50,6 +54,7 @@ function App() {
           >
             Learn React
           </a>
+          <button onClick ={goToWIPMainPage}>Go to WIP Home Page</button>
           <button onClick={goToBasicQuestionPage}>Go to Basic Question Page</button>
           <button onClick={goToDetailedQuestionPage}>Go to Detailed Question Page</button>
         </header>
@@ -61,8 +66,10 @@ function App() {
           </form>
         </div>
       ) : currentPage === 'BasicQuestion1' ? (
-        <BasicQuestion1 goToHomePage={goToHomePage} />
-      ) : (<DetailedQuestion goToHomePage={goToHomePage} />)}
+      <BasicQuestion1 goToHomePage={goToHomePage} />
+      ) : currentPage === 'Main_Page' ? (
+      <MainPage goToHomePage={goToHomePage}/>)
+       : (<DetailedQuestion goToHomePage={goToHomePage} />)}
     </div>
   );
 }
