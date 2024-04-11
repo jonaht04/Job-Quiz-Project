@@ -5,7 +5,7 @@ interface Props {
     goToHomePage: () => void;
   }
 
-  const Main_Page: React.FC<Props> = ({ goToHomePage }) => {
+  const MainPage: React.FC<Props> = ({ goToHomePage }) => {
     return(
         <div>
             <header className="header">
@@ -20,3 +20,4 @@ interface Props {
         </div>
     )
 }
+export default MainPage;

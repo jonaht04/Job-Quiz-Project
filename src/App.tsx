@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import BasicQuestion1 from './Basic_Question1';
 import DetailedQuestion from './DetailedQuestion';
+import MainPage from './Main_Page';
 
 function App() {
   const [key, setKey] = useState<string>('');
@@ -64,9 +65,7 @@ function App() {
             <button className="Submit-Button" type="button" onClick={handleSubmit}>Submit</button>
           </form>
         </div>
-      ) : currentPage === 'BasicQuestion1' ? (
-        <BasicQuestion1 goToHomePage={goToHomePage} />
-      ) : (<DetailedQuestion goToHomePage={goToHomePage} />)}
+      ) : currentPage === 'BasicQuestion1' ? (<BasicQuestion1 goToHomePage={goToHomePage} />) : currentPage === 'Main_Page' ? (<MainPage goToHomePage={goToHomePage}/>) : (<DetailedQuestion goToHomePage={goToHomePage} />)}
     </div>
   );
 }
