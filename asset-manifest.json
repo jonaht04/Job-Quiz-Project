@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Job-Quiz-Project/static/css/main.ed50f1fa.css",
-    "main.js": "/Job-Quiz-Project/static/js/main.ade1a164.js",
+    "main.css": "/Job-Quiz-Project/static/css/main.8908a234.css",
+    "main.js": "/Job-Quiz-Project/static/js/main.b604178c.js",
     "static/js/453.bad6c33a.chunk.js": "/Job-Quiz-Project/static/js/453.bad6c33a.chunk.js",
     "static/media/giphy.gif": "/Job-Quiz-Project/static/media/giphy.4be91b9cbd1e6bd07900.gif",
     "static/media/QwReiS0.gif": "/Job-Quiz-Project/static/media/QwReiS0.1f4a3a165b12934563a7.gif",
     "static/media/xUjg9eFRCjwANWb4t4P8Qbi1QKG_w-tpxnSSwFcRaSzm2IL7QEEggDsapCWUYTX_Yo13GcLeaRDXhXfgfCUHEOaxYdX6hfR-xHfzta1js6M.gif": "/Job-Quiz-Project/static/media/xUjg9eFRCjwANWb4t4P8Qbi1QKG_w-tpxnSSwFcRaSzm2IL7QEEggDsapCWUYTX_Yo13GcLeaRDXhXfgfCUHEOaxYdX6hfR-xHfzta1js6M.616ba53a3ee8feb6c2e3.gif",
     "static/media/logo.svg": "/Job-Quiz-Project/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Job-Quiz-Project/index.html",
-    "main.ed50f1fa.css.map": "/Job-Quiz-Project/static/css/main.ed50f1fa.css.map",
-    "main.ade1a164.js.map": "/Job-Quiz-Project/static/js/main.ade1a164.js.map",
+    "main.8908a234.css.map": "/Job-Quiz-Project/static/css/main.8908a234.css.map",
+    "main.b604178c.js.map": "/Job-Quiz-Project/static/js/main.b604178c.js.map",
     "453.bad6c33a.chunk.js.map": "/Job-Quiz-Project/static/js/453.bad6c33a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed50f1fa.css",
-    "static/js/main.ade1a164.js"
+    "static/css/main.8908a234.css",
+    "static/js/main.b604178c.js"
   ]
 }
