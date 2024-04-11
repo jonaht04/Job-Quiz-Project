@@ -3,17 +3,18 @@ body{
     color: #ffffff;
 }
 .header{
-    justify-content: space-between; /* Ensures buttons and counter span the header */
-    align-items: center;
+    justify-content: center; /* Ensures buttons and counter span the header */
+
     padding: 10px;
     background-color: #252525;
     display: flex;
-    align-items: center
+
 }
 .headerBody{
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
+
 .quizButton,
 .homeButton,
   .saveButton,
@@ -26,3 +27,14 @@ body{
     margin-left: 5px;
     cursor: pointer;
   }
+
+.promptContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 10px;
+    margin: auto;
+    justify-content: center;
+
+}
