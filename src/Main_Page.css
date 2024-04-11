@@ -14,10 +14,13 @@ body{
     justify-content: center;
 }
 .textContainer{
-    width: 175px;
+    width: 225px;
     display: flex;
     justify-content: center;
     margin:auto;
+}
+.spacer{
+    height: 2px;
 }
 .wideTextContainer{
     width: 500px;
