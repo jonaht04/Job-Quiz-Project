@@ -2,14 +2,13 @@ body{
     background-color: #121212;
     color: #ffffff;
 }
-.header{
-    justify-content: center; /* Ensures buttons are centered in the header */
+.homePgHeader{
+    justify-content: center; /* Ensures buttons are centered in the header*/
     padding: 10px;
     background-color: #252525;
     display: flex;
-
 }
-.headerBody{
+.homePgheaderBody{
     display: flex;
     justify-content: center;
 }
@@ -35,12 +34,16 @@ body{
     border-radius: 5px;
     margin-left: 5px;
 }
-.homeButton{
+.homePghomeButton{
     background-color: #121212;
     color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-left: 5px;
+    cursor: pointer;
 } 
-  .saveButton,
-  .helpButton { /*series of button declarations*/
+  .homePghelpButton { /*series of button declarations*/
     background-color: #121212;
     color: white;
     border: none;

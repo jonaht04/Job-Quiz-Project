@@ -10,12 +10,12 @@ interface Props {
   const MainPage: React.FC<Props> = ({ goToHomePage , goToDetailedQuestion, goToBasicQuestion}) => {
     return(
         <div>
-            <header className="header">
-            <div className="headerBody">
-            <button className="homeButton" onClick={goToHomePage}>Home</button>
-            <button className="homeButton" onClick={goToBasicQuestion}>Short Quiz</button>
-            <button className="homeButton" onClick={goToDetailedQuestion}>Long Quiz</button>
-            <button className="helpButton">Help</button>
+            <header className="homePgHeader">
+            <div className="homePgheaderBody">
+            <button className="homePghomeButton" onClick={goToHomePage}>Home</button>
+            <button className="homePghomeButton" onClick={goToBasicQuestion}>Short Quiz</button>
+            <button className="homePghomeButton" onClick={goToDetailedQuestion}>Long Quiz</button>
+            <button className="homePghelpButton">Help</button>
             </div>
             </header>
             <h1>Welcome to the (Placeholder Name) job quiz.</h1>

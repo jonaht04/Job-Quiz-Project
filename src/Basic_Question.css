@@ -1,54 +1,109 @@
-/* Basic_Question.css */
 body {
   background-color: #121212;
   color: #ffffff;
 }
-.header {
-    display: flex;
-    justify-content: space-between; /* Ensures buttons and counter span the header */
-    align-items: center;
-    padding: 10px;
-    background-color: #252525;
-  }
-  
-  .buttonContainer {
-    display: flex;
-  }
-  
-  .homeButton,
-  .saveButton,
-  .helpButton {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    margin-left: 5px;
-    cursor: pointer;
-  }
-  
-  .questionCounter {
-    margin: 0;
-  }
 
-  .buttonGrid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-  
-  .bigButton {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 20px;
-    font-size: 18px;
-  }
-  
-  .bigButton img {
-    width: 300px;
-    margin-bottom: 10px;
-  }
-  
+/* Header */
+.questionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #252525;
+}
+
+/* Dropdown Settings Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.dropdownButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.dropdownContent button {
+  display: block;
+  padding: 5px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.dropdown.open .dropdownContent {
+  display: block;
+}
+
+.dropdownItem:hover{
+  background-color: #888888;
+}
+
+/* Header Question Counter */
+.questionCounter{
+  margin: 10px;
+}
+
+/* Header Buttons */
+.buttonContainer {
+  display: flex;
+  align-items: center;
+}
+
+.homeButton,
+.saveButton{
+  background-color: #121212;
+  color: white;
+  border: none;
+  height: 0%;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+/* Question Answer Buttons */
+.buttonGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.bigButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.bigButton img {
+  width: 300px;
+  margin-bottom: 10px;
+}
