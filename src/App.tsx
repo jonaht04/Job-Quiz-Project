@@ -83,7 +83,7 @@ function App() {
     ) : currentPage === 'Main_Page' ? (
       <MainPage goToHomePage={goToHomePage} goToDetailedQuestion={goToDetailedQuestionPage} goToBasicQuestion={goToBasicQuestionPage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
     ) : (
-      <DetailedQuestion goToHomePage={goToHomePage}/>
+      <DetailedQuestion goToWIPMainPage={goToWIPMainPage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
     )}
     </div>
   );
