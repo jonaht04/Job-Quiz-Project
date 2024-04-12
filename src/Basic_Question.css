@@ -1,14 +1,12 @@
-body {
-  background-color: #121212;
-  color: #ffffff;
-}
-
 /* Header */
+.MainImage {
+  filter: invert(100%);
+}
 .questionHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #252525;
+  background-color: #cecece;
 }
 
 /* Dropdown Settings Menu */
@@ -29,7 +27,7 @@ body {
 .bar {
   width: 25px;
   height: 3px;
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   margin: 5px 0;
 }
 
@@ -76,8 +74,8 @@ body {
 
 .homeButton,
 .saveButton{
-  background-color: #121212;
-  color: white;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
   border: none;
   height: 0%;
   padding: 8px 16px;
@@ -106,4 +104,40 @@ body {
 .bigButton img {
   width: 300px;
   margin-bottom: 10px;
+}
+
+/* Dark mode styles */
+
+.dark-mode .container {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode .questionHeader {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode .bar {
+  background-color: white;
+}
+
+.dark-mode .dropdownContent {
+  background-color: #252525;
+  box-shadow: 0px 8px 16px 0px rgba(255,255,255,0.2);
+}
+
+.dark-mode .dropdownContent button {
+  color: #ffffff;
+}
+
+.dark-mode .homeButton,
+.dark-mode .saveButton {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark-mode .bigButton {
+  background-color: #252525;
+  color: #ffffff;
 }
