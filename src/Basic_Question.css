@@ -1,7 +1,4 @@
 /* Header */
-.MainImage {
-  filter: invert(100%);
-}
 .questionHeader {
   display: flex;
   justify-content: space-between;
@@ -82,6 +79,7 @@
   border-radius: 4px;
   margin-left: 5px;
   cursor: pointer;
+  display: flex;
 }
 
 /* Question Answer Buttons */
