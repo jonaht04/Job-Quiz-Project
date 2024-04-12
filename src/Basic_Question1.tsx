@@ -1,21 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import "./Basic_Question.css";
 import MainImage from './giphy.gif';
 import Button3 from './old_mac.jpg'
 import Button4 from './old_mac.jpg';
+import SettingsMenu from './Setting_menu';
 
 interface Props {
   goToWIPMainPage: () => void;
+  isDarkMode: boolean;
+  toggleDarkMode: () => void;
 }
 
-const BasicQuestion1: React.FC<Props> = ({ goToWIPMainPage }) => {
+const BasicQuestion1: React.FC<Props> = ({ goToWIPMainPage , isDarkMode, toggleDarkMode }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+
+  const toggleSettings = () => {
+    setIsSettingsOpen(!isSettingsOpen);
+  };
+
   return (
-    <div>
+    <div className={`container ${isDarkMode ? 'dark-mode' : ''}`}>
+      <div className='container'>
       <header className="questionHeader">
       <p className="questionCounter">Question 1/7</p>
       <div className="buttonContainer">
@@ -31,7 +41,7 @@ const BasicQuestion1: React.FC<Props> = ({ goToWIPMainPage }) => {
           <div className="dropdownContent">
             <button className="dropdownItem">Help</button>
             <button className="dropdownItem">Account</button>
-            <button className="dropdownItem">Settings</button>
+            <button className="dropdownItem" onClick={toggleSettings}>Settings</button>
             <button className="dropdownItem">Logout</button>
           </div>
         )}
@@ -41,7 +51,7 @@ const BasicQuestion1: React.FC<Props> = ({ goToWIPMainPage }) => {
 
       <h1>Question 1</h1>
       <h2>This is a placeholder question:</h2>
-      <img src={MainImage} alt="logo" />
+      <img className="MainImage" src={MainImage} alt="logo" />
       <div className="buttonGrid">
         <button className="bigButton">Yes</button>
         <button className="bigButton">No</button>
@@ -50,6 +60,9 @@ const BasicQuestion1: React.FC<Props> = ({ goToWIPMainPage }) => {
         <button className="bigButton">Another Example w/ picture
           <img src={Button4} alt="logo" /></button>
       </div>
+
+      <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode}/>
+    </div>
     </div>
   );
 };
