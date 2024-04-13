@@ -9,7 +9,7 @@ interface Props {
     return (
       <div>
         <header className="header">
-          <p className="questionCounter">Question 1/7</p>
+          <p className="questionCounter">Question 1/7  </p>
           <div className="buttonContainer">
             <button className="homeButton" onClick={goToHomePage}>Home</button>
             <button className="saveButton">Save</button>
