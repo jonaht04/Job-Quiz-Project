@@ -1,21 +1,53 @@
+import React, { useState} from 'react';
 import "./Main_Page.css";
+import SettingsMenu from './Setting_menu';
 
 interface Props {
     goToHomePage: () => void;
     goToDetailedQuestion: () => void;
     goToBasicQuestion: () => void;
+    isDarkMode: boolean;
+    toggleDarkMode: () => void;
   }
 
 
-  const MainPage: React.FC<Props> = ({ goToHomePage , goToDetailedQuestion, goToBasicQuestion}) => {
+  const MainPage: React.FC<Props> = ({ goToHomePage , goToDetailedQuestion, goToBasicQuestion, isDarkMode, toggleDarkMode }) => {
+
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+
+    const toggleDropdown = () => {
+        setIsDropdownOpen(!isDropdownOpen);
+    };
+
+    const toggleSettings = () => {
+        setIsSettingsOpen(!isSettingsOpen);
+    };
+
     return(
-        <div>
-            <header className="header">
-            <div className="headerBody">
-            <button className="homeButton" onClick={goToHomePage}>Home</button>
-            <button className="homeButton" onClick={goToBasicQuestion}>Short Quiz</button>
-            <button className="homeButton" onClick={goToDetailedQuestion}>Long Quiz</button>
-            <button className="helpButton">Help</button>
+        <div className={`container ${isDarkMode ? 'dark-mode' : ''}`}>
+            <header className="homePgHeader">
+            <div className="homePgheaderBody">
+            <button className="homePgHeaderButtons" onClick={goToHomePage}>Home</button>
+            <button className="homePgHeaderButtons" onClick={goToBasicQuestion}>Short Quiz</button>
+            <button className="homePgHeaderButtons" onClick={goToDetailedQuestion}>Long Quiz</button>
+            <button className="homePgHeaderButtons">Help</button>
+
+            <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
+                <button className="dropdownButton" onClick={toggleDropdown}>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                </button>
+                {isDropdownOpen && (
+                <div className="dropdownContent">
+                    <button className="dropdownItem">Help</button>
+                    <button className="dropdownItem">Account</button>
+                    <button className="dropdownItem" onClick={toggleSettings}>Settings</button>
+                    <button className="dropdownItem">Logout</button>
+                </div>
+                )}
+            </div>
             </div>
             </header>
             <h1>Welcome to the (Placeholder Name) job quiz.</h1>
@@ -39,6 +71,9 @@ interface Props {
         <p></p>
         <p></p>
         <p className="wideTextContainer">Understand that we collect some information about you in order to suggest careers. This information is not used elsewhere for any purpose.</p>
+
+
+        <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode}/>
         </div>
     )
 }

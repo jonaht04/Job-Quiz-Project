@@ -1,15 +1,15 @@
-body{
-    background-color: #121212;
-    color: #ffffff;
+.container
+{
+    background-color: #ffffff;
 }
-.header{
-    justify-content: center; /* Ensures buttons are centered in the header */
-    padding: 10px;
-    background-color: #252525;
-    display: flex;
 
+.homePgHeader{
+    justify-content: center; /* Ensures buttons are centered in the header*/
+    padding: 10px;
+    background-color: #cecece;
+    display: flex;
 }
-.headerBody{
+.homePgheaderBody{
     display: flex;
     justify-content: center;
 }
@@ -35,12 +35,7 @@ body{
     border-radius: 5px;
     margin-left: 5px;
 }
-.homeButton{
-    background-color: #121212;
-    color: white;
-} 
-  .saveButton,
-  .helpButton { /*series of button declarations*/
+.homePgHeaderButtons{
     background-color: #121212;
     color: white;
     border: none;
@@ -48,7 +43,7 @@ body{
     border-radius: 4px;
     margin-left: 5px;
     cursor: pointer;
-  }
+} 
 /*Container class for the buttons and the blurbs below them, so that they are side by side*/
 .promptContainer{
     display: flex;
@@ -59,4 +54,17 @@ body{
     margin: auto;
     justify-content: center;
 
+}
+
+.dark-mode .container {
+    background-color: black;
+}
+
+.dark-mode .homePgHeader {
+    background-color: #121212;
+}
+
+.dark-mode .homePgHeaderButtons {
+    background-color: #ffffff;
+    color: #121212;
 }
