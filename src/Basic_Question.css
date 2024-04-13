@@ -1,3 +1,4 @@
+
 /* Header */
 .questionHeader {
   display: flex;
@@ -103,7 +104,19 @@
   margin-bottom: 10px;
 }
 
+/* Detailed Answer Textbox */
+.detailedAnswerText{
+  width: 50%;
+  padding: 20px;
+  height: 300%;
+}
+
 /* Dark mode styles */
+
+.dark-mode .detailedAnswerText{
+  background-color: #121212;
+  color:#ffffff
+}
 
 .dark-mode .container {
   background-color: #121212;

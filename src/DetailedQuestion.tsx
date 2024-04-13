@@ -50,7 +50,9 @@ interface Props {
           <h1>Question 1</h1>
           <h2>This is a placeholder for detailed Question page, format to be done later</h2>
         </div>
-
+        <div>
+          <textarea id="input-text" className="detailedAnswerText" placeholder="Enter Answer Here..."></textarea>
+        </div>
         <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode}/>
       </div>
     );
