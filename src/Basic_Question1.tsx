@@ -1,3 +1,4 @@
+
 import React, { useState} from 'react';
 import "./Basic_Question.css";
 import MainImage from './giphy.gif';
@@ -56,6 +57,7 @@ const BasicQuestion1: React.FC<Props> = ({ goToWIPMainPage , isDarkMode, toggleD
         <button className="bigButton">Yes</button>
         <button className="bigButton">No</button>
         <button className="bigButton">Example with picture
+        <div></div>
           <img src={Button3} alt="logo" /></button>
         <button className="bigButton">Another Example w/ picture
           <img src={Button4} alt="logo" /></button>
