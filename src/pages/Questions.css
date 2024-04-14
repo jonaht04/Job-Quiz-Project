@@ -1,10 +1,11 @@
-
-/* Header */
 .questionHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #cecece;
+  width: 100%; /* Change width to percentage */
+  max-width: 1920px; /* Optional: Set a maximum width */
+  margin: 0 auto;
 }
 
 /* Dropdown Settings Menu */
@@ -75,11 +76,12 @@
   background-color: #000000;
   color: rgb(255, 255, 255);
   border: none;
-  padding: 8px 16px;
+  padding: 6px 16px;
   border-radius: 4px;
   margin-left: 5px;
   cursor: pointer;
   display: flex;
+  font-size: small;
 }
 
 /* Question Answer Buttons */
@@ -124,7 +126,7 @@
 }
 
 .dark-mode .questionHeader {
-  background-color: #121212;
+  background-color: #323232;
   color: #ffffff;
 }
 

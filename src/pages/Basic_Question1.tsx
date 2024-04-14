@@ -1,6 +1,6 @@
 
 import React, { useState} from 'react';
-import "./Basic_Question.css";
+import "./Questions.css";
 import MainImage from '../assets/giphy.gif';
 import Button3 from '../assets/old_mac.jpg'
 import Button4 from '../assets/old_mac.jpg';
@@ -25,30 +25,29 @@ const BasicQuestion1: React.FC<Props> = ({ goToWIPMainPage , isDarkMode, toggleD
   };
 
   return (
-    <div className={`container ${isDarkMode ? 'dark-mode' : ''}`}>
-      <div className='container'>
+    <div className='container'>
       <header className="questionHeader">
-      <p className="questionCounter">Question 1/7</p>
-      <div className="buttonContainer">
-        <button className="homeButton" onClick={goToWIPMainPage}>Home</button>
-        <button className="saveButton">Save</button>
-        <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
-        <button className="dropdownButton" onClick={toggleDropdown}>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-        </button>
-        {isDropdownOpen && (
-          <div className="dropdownContent">
-            <button className="dropdownItem">Help</button>
-            <button className="dropdownItem">Account</button>
-            <button className="dropdownItem" onClick={toggleSettings}>Settings</button>
-            <button className="dropdownItem">Logout</button>
-          </div>
-        )}
-      </div>
-      </div>
-    </header>
+          <p className="questionCounter">Question 1/7</p>
+        <div className="buttonContainer">
+          <button className="homeButton" onClick={goToWIPMainPage}>Home</button>
+          <button className="saveButton">Save</button>
+          <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
+          <button className="dropdownButton" onClick={toggleDropdown}>
+            <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div>
+          </button>
+          {isDropdownOpen && (
+            <div className="dropdownContent">
+              <button className="dropdownItem">Help</button>
+              <button className="dropdownItem">Account</button>
+              <button className="dropdownItem" onClick={toggleSettings}>Settings</button>
+              <button className="dropdownItem">Logout</button>
+            </div>
+          )}
+        </div>
+        </div>
+      </header>
 
       <h1>Question 1</h1>
       <h2>This is a placeholder question:</h2>
@@ -64,7 +63,6 @@ const BasicQuestion1: React.FC<Props> = ({ goToWIPMainPage , isDarkMode, toggleD
       </div>
 
       <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode}/>
-    </div>
     </div>
   );
 };

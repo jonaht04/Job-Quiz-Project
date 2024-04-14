@@ -4,8 +4,7 @@
 }
 
 .homePgHeader{
-    justify-content: center; /* Ensures buttons are centered in the header*/
-    padding: 10px;
+    justify-content: center;
     background-color: #cecece;
     display: flex;
 }
@@ -25,8 +24,8 @@
 .wideTextContainer{
     width: 500px;
     display: flex;
-    justify-content: center; /*centers content within the container*/
-    margin: auto; /* centers container*/
+    justify-content: center;
+    margin: auto;
 }
 .quizButton{
     background-color: #252525;
@@ -39,7 +38,7 @@
     background-color: #121212;
     color: white;
     border: none;
-    padding: 8px 16px;
+    padding: 6px 16px;
     border-radius: 4px;
     margin-left: 5px;
     cursor: pointer;
@@ -61,7 +60,7 @@
 }
 
 .dark-mode .homePgHeader {
-    background-color: #121212;
+    background-color: #323232;
 }
 
 .dark-mode .homePgHeaderButtons {
