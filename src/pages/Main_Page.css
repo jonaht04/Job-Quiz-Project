@@ -1,0 +1,70 @@
+.container
+{
+    background-color: #ffffff;
+}
+
+.homePgHeader{
+    justify-content: center; /* Ensures buttons are centered in the header*/
+    padding: 10px;
+    background-color: #cecece;
+    display: flex;
+}
+.homePgheaderBody{
+    display: flex;
+    justify-content: center;
+}
+.textContainer{
+    width: 225px;
+    display: flex;
+    justify-content: center;
+    margin:auto;
+}
+.spacer{
+    height: 2px;
+}
+.wideTextContainer{
+    width: 500px;
+    display: flex;
+    justify-content: center; /*centers content within the container*/
+    margin: auto; /* centers container*/
+}
+.quizButton{
+    background-color: #252525;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+.homePgHeaderButtons{
+    background-color: #121212;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-left: 5px;
+    cursor: pointer;
+} 
+/*Container class for the buttons and the blurbs below them, so that they are side by side*/
+.promptContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 10px;
+    margin: auto;
+    justify-content: center;
+
+}
+
+.dark-mode .container {
+    background-color: black;
+}
+
+.dark-mode .homePgHeader {
+    background-color: #121212;
+}
+
+.dark-mode .homePgHeaderButtons {
+    background-color: #ffffff;
+    color: #121212;
+}
