@@ -3,24 +3,26 @@
 > react-scripts test --coverage
 
 PASS src/App.test.tsx
-  ✓ renders learn react link (54 ms)
+  ✓ renders learn react link (51 ms)
 
-----------------------|---------|----------|---------|---------|-------------------
-File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
-----------------------|---------|----------|---------|---------|-------------------
-All files             |   19.29 |     6.25 |    8.69 |      20 |                   
- App.tsx              |   43.75 |       25 |      20 |   46.66 | 16,23-46          
- Basic_Question1.tsx  |    12.5 |        0 |       0 |    12.5 | 16-27             
- DetailedQuestion.tsx |    12.5 |        0 |       0 |    12.5 | 13-24             
- Main_Page.tsx        |    12.5 |        0 |       0 |    12.5 | 16-27             
- Setting_menu.tsx     |   16.66 |        0 |       0 |      20 | 12-18             
- index.tsx            |       0 |      100 |     100 |       0 | 7-19              
- reportWebVitals.ts   |       0 |        0 |       0 |       0 | 3-10              
-----------------------|---------|----------|---------|---------|-------------------
+-----------------------|---------|----------|---------|---------|-------------------
+File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-----------------------|---------|----------|---------|---------|-------------------
+All files              |   19.29 |     6.25 |    8.69 |      20 |                   
+ src                   |   24.24 |    14.28 |   14.28 |    25.8 |                   
+  App.tsx              |   43.75 |       25 |      20 |   46.66 | 16,23-46          
+  Setting_menu.tsx     |   16.66 |        0 |       0 |      20 | 12-18             
+  index.tsx            |       0 |      100 |     100 |       0 | 7-19              
+  reportWebVitals.ts   |       0 |        0 |       0 |       0 | 3-10              
+ src/pages             |    12.5 |        0 |       0 |    12.5 |                   
+  Basic_Question1.tsx  |    12.5 |        0 |       0 |    12.5 | 16-27             
+  DetailedQuestion.tsx |    12.5 |        0 |       0 |    12.5 | 13-24             
+  Main_Page.tsx        |    12.5 |        0 |       0 |    12.5 | 16-27             
+-----------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
-Time:        2.806 s
+Time:        2.737 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
