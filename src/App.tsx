@@ -2,9 +2,9 @@
 import React, { useState, useEffect  } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import BasicQuestion1 from './Basic_Question1';
-import DetailedQuestion from './DetailedQuestion';
-import MainPage from './Main_Page';
+import BasicQuestion1 from './pages/Basic_Question1';
+import DetailedQuestion from './pages/DetailedQuestion';
+import MainPage from './pages/Main_Page';
 
 function App() {
   const [key, setKey] = useState<string>('');
