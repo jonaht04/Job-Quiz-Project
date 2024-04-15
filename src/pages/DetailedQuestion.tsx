@@ -22,7 +22,7 @@ interface Props {
     };
 
     return (
-      <div className='container'>
+      <div>
         <header className="questionHeader">
             <p className="questionCounter">Question 1/7</p>
           <div className="buttonContainer">
@@ -45,13 +45,15 @@ interface Props {
             </div>
           </div>
         </header>
-    
-        <h1>Question 1</h1>
-        <h2>This is a placeholder for detailed Question page, format to be done later</h2>
-        <div>
-          <textarea id="input-text" className="detailedAnswerText" placeholder="Enter Answer Here..."></textarea>
+              
+        <div className='container'>
+          <h1>Question 1</h1>
+          <h2>This is a placeholder for detailed Question page, format to be done later</h2>
+          <div>
+            <textarea id="input-text" className="detailedAnswerText" placeholder="Enter Answer Here..."></textarea>
+          </div>
+          <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode}/>
         </div>
-        <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode}/>
       </div>
     );
   };
