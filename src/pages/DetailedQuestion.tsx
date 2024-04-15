@@ -3,12 +3,12 @@ import "./Questions.css";
 import SettingsMenu from '../Setting_menu';
 
 interface Props {
-    goToWIPMainPage: () => void;
+    goToHomePage: () => void;
     isDarkMode: boolean;
     toggleDarkMode: () => void;
   }
   
-  const DetailedQuestion: React.FC<Props> = ({ goToWIPMainPage , isDarkMode, toggleDarkMode }) => {
+  const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDarkMode }) => {
 
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -26,7 +26,7 @@ interface Props {
         <header className="questionHeader">
             <p className="questionCounter">Question 1/7</p>
           <div className="buttonContainer">
-            <button className="homeButton" onClick={goToWIPMainPage}>Home</button>
+            <button className="homeButton" onClick={goToHomePage}>Home</button>
             <button className="saveButton">Save</button>
             <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
               <button className="dropdownButton" onClick={toggleDropdown}>
