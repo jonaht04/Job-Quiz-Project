@@ -7,12 +7,12 @@ import Button4 from '../assets/old_mac.jpg';
 import SettingsMenu from '../Setting_menu';
 
 interface Props {
-  goToWIPMainPage: () => void;
+  goToHomePage: () => void;
   isDarkMode: boolean;
   toggleDarkMode: () => void;
 }
 
-const BasicQuestion1: React.FC<Props> = ({ goToWIPMainPage , isDarkMode, toggleDarkMode }) => {
+const BasicQuestion1: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDarkMode }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
@@ -29,7 +29,7 @@ const BasicQuestion1: React.FC<Props> = ({ goToWIPMainPage , isDarkMode, toggleD
       <header className="questionHeader">
           <p className="questionCounter">Question 1/7</p>
         <div className="buttonContainer">
-          <button className="homeButton" onClick={goToWIPMainPage}>Home</button>
+          <button className="homeButton" onClick={goToHomePage}>Home</button>
           <button className="saveButton">Save</button>
           <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
           <button className="dropdownButton" onClick={toggleDropdown}>
