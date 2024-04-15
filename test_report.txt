@@ -2,27 +2,189 @@
 > starter_helpi@0.1.0 test
 > react-scripts test --coverage
 
-PASS src/App.test.tsx
-  ✓ renders learn react link (36 ms)
+FAIL src/App.test.tsx
+  ✕ renders learn react link (45 ms)
+
+  ● renders learn react link
+
+    TestingLibraryElementError: Unable to find an element with the text: /learn react/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<div>[39m
+            [36m<div>[39m
+              [36m<header[39m
+                [33mclass[39m=[32m"homePgHeader"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"buttonContainer"[39m
+                [36m>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"homePgHeaderButtons"[39m
+                  [36m>[39m
+                    [0mHome[0m
+                  [36m</button>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"homePgHeaderButtons"[39m
+                  [36m>[39m
+                    [0mShort Quiz[0m
+                  [36m</button>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"homePgHeaderButtons"[39m
+                  [36m>[39m
+                    [0mLong Quiz[0m
+                  [36m</button>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"dropdown "[39m
+                  [36m>[39m
+                    [36m<button[39m
+                      [33mclass[39m=[32m"dropdownButton"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mclass[39m=[32m"bar"[39m
+                      [36m/>[39m
+                      [36m<div[39m
+                        [33mclass[39m=[32m"bar"[39m
+                      [36m/>[39m
+                      [36m<div[39m
+                        [33mclass[39m=[32m"bar"[39m
+                      [36m/>[39m
+                    [36m</button>[39m
+                  [36m</div>[39m
+                [36m</div>[39m
+              [36m</header>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"container"[39m
+            [36m>[39m
+              [36m<h1>[39m
+                [0mWelcome to the (Placeholder Name) job quiz.[0m
+              [36m</h1>[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"spacer"[39m
+              [36m>[39m
+                [0m [0m
+              [36m</p>[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"textContainer"[39m
+              [36m>[39m
+                [0mUnsure of what career is right for you? We have you covered.[0m
+              [36m</p>[39m
+              [36m<p />[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"textContainer"[39m
+              [36m>[39m
+                [0mWith our (Placeholder Name) job quiz, you can discover careers perfect for you in just 10 minutes. By answering a few simple questions, we will get you on the path to success.[0m
+              [36m</p>[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"spacer"[39m
+              [36m>[39m
+                [0m [0m
+              [36m</p>[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"spacer"[39m
+              [36m>[39m
+                [0m [0m
+              [36m</p>[39m
+              [36m<h2>[39m
+                [0mThere are two types of quizzes that you can take:[0m
+              [36m</h2>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"promptContainer"[39m
+              [36m>[39m
+                [36m<div>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"quizButton"[39m
+                  [36m>[39m
+                    [0mMultiple Choice[0m
+                  [36m</button>[39m
+                  [36m<p[39m
+                    [33mclass[39m=[32m"textContainer"[39m
+                  [36m>[39m
+                    [0mThis exam is the shorter quiz. Its questions are all multiple choice and shouldn’t take too long to complete. Choose the answer that best matches your own preferences, beliefs, and opinions. This test is powered by ChatGPT’s Large Language Model.[0m
+                  [36m</p>[39m
+                [36m</div>[39m
+                [36m<div>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"quizButton"[39m
+                  [36m>[39m
+                    [0mShort Answer[0m
+                  [36m</button>[39m
+                  [36m<p[39m
+                    [33mclass[39m=[32m"textContainer"[39m
+                  [36m>[39m
+                    [0mThis exam has more complex questions that require more thought with fill-in-the-blank answers being required. Expect this to take longer than the multiple choice. This test is powered by ChatGPT’s Large Language Model.[0m
+                  [36m</p>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<p />[39m
+              [36m<p />[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"wideTextContainer"[39m
+              [36m>[39m
+                [0mUnderstand that we collect some information about you in order to suggest careers. This information is not used elsewhere for any purpose.[0m
+              [36m</p>[39m
+              [36m<form>[39m
+                [36m<label>[39m
+                  [0mAPI Key:[0m
+                [36m</label>[39m
+                [36m<input[39m
+                  [33mplaceholder[39m=[32m"Insert API Key Here"[39m
+                  [33mtype[39m=[32m"password"[39m
+                [36m/>[39m
+                [36m<br />[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"Submit-Button"[39m
+                  [33mtype[39m=[32m"button"[39m
+                [36m>[39m
+                  [0mSubmit[0m
+                [36m</button>[39m
+              [36m</form>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+       5 | test('renders learn react link', () => {
+       6 |   render(<App />);
+    >  7 |   const linkElement = screen.getByText(/learn react/i);
+         |                              ^
+       8 |   expect(linkElement).toBeInTheDocument();
+       9 | });
+      10 |
+
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at getByText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+      at Object.<anonymous> (src/App.test.tsx:7:30)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 -----------------------|---------|----------|---------|---------|-------------------
 File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -----------------------|---------|----------|---------|---------|-------------------
-All files              |   19.29 |     7.69 |    8.69 |      20 |                   
- src                   |   24.24 |    14.28 |   14.28 |    25.8 |                   
-  App.tsx              |   43.75 |       25 |      20 |   46.66 | 16,23-46          
-  Setting_menu.tsx     |   16.66 |        0 |       0 |      20 | 12-18             
+All files              |   29.62 |    26.92 |   14.28 |   28.84 |                   
+ src                   |   36.84 |    38.88 |      20 |   36.11 |                   
+  App.tsx              |   52.38 |       50 |   18.18 |      55 | 15,19,24,31-51    
+  Setting_menu.tsx     |      50 |       50 |      50 |      40 | 14-18             
   index.tsx            |       0 |      100 |     100 |       0 | 7-19              
   reportWebVitals.ts   |       0 |        0 |       0 |       0 | 3-10              
  src/pages             |    12.5 |        0 |       0 |    12.5 |                   
   Basic_Question1.tsx  |    12.5 |        0 |       0 |    12.5 | 16-27             
   DetailedQuestion.tsx |    12.5 |        0 |       0 |    12.5 | 13-24             
-  Main_Page.tsx        |    12.5 |        0 |       0 |    12.5 | 16-27             
 -----------------------|---------|----------|---------|---------|-------------------
-Test Suites: 1 passed, 1 total
-Tests:       1 passed, 1 total
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.903 s
+Time:        3.254 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
