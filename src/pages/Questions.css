@@ -3,8 +3,6 @@
   justify-content: space-between;
   align-items: center;
   background-color: #cecece;
-  width: 100%; /* Change width to percentage */
-  max-width: 1920px; /* Optional: Set a maximum width */
   margin: 0 auto;
 }
 

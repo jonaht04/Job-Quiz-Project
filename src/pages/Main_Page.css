@@ -38,10 +38,11 @@
     background-color: #121212;
     color: white;
     border: none;
-    padding: 6px 16px;
+    padding: 3px 16px;
     border-radius: 4px;
     margin-left: 5px;
     cursor: pointer;
+    font-size: medium;
 } 
 /*Container class for the buttons and the blurbs below them, so that they are side by side*/
 .promptContainer{
