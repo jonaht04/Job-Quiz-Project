@@ -111,6 +111,17 @@
   height: 300%;
 }
 
+/* Detailed Answer Progress Buttons*/
+.changeProgressButton{
+  background-color: #dddddd;
+  border: 13px;
+  border-color: #000000;
+  padding: 6px 16px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 10px;
+}
+
 /* Dark mode styles */
 
 .dark-mode .detailedAnswerText{
