@@ -54,6 +54,10 @@ interface Props {
           </div>
           <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode}/>
         </div>
+        <div className='container'>
+        <button className="changeProgressButton">Next Question</button>
+        <button className="changeProgressButton">Previous Question</button>
+        </div>
       </div>
     );
   };
