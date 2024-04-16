@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Job-Quiz-Project/static/css/main.b80cc50e.css",
-    "main.js": "/Job-Quiz-Project/static/js/main.4cdc122a.js",
+    "main.css": "/Job-Quiz-Project/static/css/main.08731927.css",
+    "main.js": "/Job-Quiz-Project/static/js/main.8ca9dd8c.js",
     "static/js/453.bad6c33a.chunk.js": "/Job-Quiz-Project/static/js/453.bad6c33a.chunk.js",
     "static/media/old_mac.jpg": "/Job-Quiz-Project/static/media/old_mac.f7c1cca58efa5d2b9699.jpg",
     "static/media/giphy.gif": "/Job-Quiz-Project/static/media/giphy.4be91b9cbd1e6bd07900.gif",
     "index.html": "/Job-Quiz-Project/index.html",
-    "main.b80cc50e.css.map": "/Job-Quiz-Project/static/css/main.b80cc50e.css.map",
-    "main.4cdc122a.js.map": "/Job-Quiz-Project/static/js/main.4cdc122a.js.map",
+    "main.08731927.css.map": "/Job-Quiz-Project/static/css/main.08731927.css.map",
+    "main.8ca9dd8c.js.map": "/Job-Quiz-Project/static/js/main.8ca9dd8c.js.map",
     "453.bad6c33a.chunk.js.map": "/Job-Quiz-Project/static/js/453.bad6c33a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b80cc50e.css",
-    "static/js/main.4cdc122a.js"
+    "static/css/main.08731927.css",
+    "static/js/main.8ca9dd8c.js"
   ]
 }
