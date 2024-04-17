@@ -71,8 +71,8 @@
 
 .homeButton,
 .saveButton{
-  background-color: #000000;
-  color: rgb(255, 255, 255);
+  background-color: #969696;
+  color: black;
   border: none;
   padding: 6px 16px;
   border-radius: 4px;
@@ -113,7 +113,7 @@
 
 /* Detailed Answer Progress Buttons*/
 .changeProgressButton{
-  background-color: #dddddd;
+  background-color: #cecece;
   border: 13px;
   border-color: #000000;
   padding: 6px 16px;
@@ -124,13 +124,18 @@
 
 /* Dark mode styles */
 
+.dark-mode .changeProgressButton{
+  background-color: #151515;
+  color: white;
+}
+
 .dark-mode .detailedAnswerText{
   background-color: #121212;
   color:#ffffff
 }
 
 .dark-mode .container {
-  background-color: #121212;
+  background-color: #232323;
   color: #ffffff;
 }
 
@@ -144,8 +149,9 @@
 }
 
 .dark-mode .dropdownContent {
-  background-color: #252525;
+  background-color: #151515;
   box-shadow: 0px 8px 16px 0px rgba(255,255,255,0.2);
+  border-radius: 2.5%;
 }
 
 .dark-mode .dropdownContent button {
@@ -154,11 +160,11 @@
 
 .dark-mode .homeButton,
 .dark-mode .saveButton {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #151515;
+  color: #ffffff;
 }
 
 .dark-mode .bigButton {
-  background-color: #252525;
+  background-color: #151515;
   color: #ffffff;
 }
