@@ -32,21 +32,23 @@
     margin: auto;
 }
 .quizButton{
-    background-color: #252525;
-    color: white;
-    padding: 6px 14px;
+    background-color: #cecece;
+    color: black;
+    padding: 6px 16px;
     border-radius: 5px;
     margin-left: 5px;
+    border: 15px;
 }
 .homePgHeaderButtons{
-    background-color: #121212;
-    color: white;
+    background-color: #969696;
+    color: Black;
     border: none;
     padding: 3px 16px;
     border-radius: 4px;
     margin-left: 5px;
     cursor: pointer;
     font-size: medium;
+    height: 80%;
 } 
 /*Container class for the buttons and the blurbs below them, so that they are side by side*/
 .promptContainer{
@@ -60,6 +62,12 @@
 
 }
 
+.dark-mode .quizButton{
+    background-color: #151515;
+    color: white;
+    border-color: #000000;
+}
+
 .dark-mode .container {
     background-color: black;
 }
@@ -69,10 +77,10 @@
 }
 
 .dark-mode .homePgHeaderButtons {
-    background-color: #ffffff;
-    color: #121212;
+    background-color: #151515;
+    color: white;
 }
 
 .dark-mode {
-  background-color: #121212;
+  background-color: #232323;
 }
