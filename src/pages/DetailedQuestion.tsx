@@ -30,18 +30,22 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
 
   return (
     <div>
-      <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode}/>
+      {/*Header for Questions*/}
       <header className="questionHeader">
           <p className="questionCounter">Question 1/7</p>
         <div className="buttonContainer">
           <button className="homeButton" onClick={goToHomePage}>Home</button>
           <button className="saveButton">Save</button>
+
+        {/*Settings Menu*/}
+          <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode}/>
           <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
           <button className="dropdownButton" onClick={toggleDropdown}>
             <div className="bar"></div>
             <div className="bar"></div>
             <div className="bar"></div>
           </button>
+          {/*Settings Options*/}
           {isDropdownOpen && (
             <div className="dropdownContent">
               <button className="dropdownItem">Help</button>
@@ -54,6 +58,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
         </div>
       </header>
           
+      {/*Page Counter && Logic*/}
       <div className='container'>
         {currentPage === 1 ?
           <Detailed1/> : currentPage === 2 ?
@@ -63,6 +68,8 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
                   <Detailed5/> : currentPage === 6 ?
                     <Detailed6/> : <Detailed7/>}
     </div>
+
+    {/*Next and Previous Page Buttons*/}
     <div className='container'>
       <button className="changeProgressButton" disabled={currentPage===1} onClick={() => {
         setCurrentPage(currentPage - 1)}}>Previous Question</button>
