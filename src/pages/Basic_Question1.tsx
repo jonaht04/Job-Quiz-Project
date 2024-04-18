@@ -1,10 +1,13 @@
-
 import React, { useState} from 'react';
 import "./Questions.css";
-import MainImage from '../assets/giphy.gif';
-import Button3 from '../assets/old_mac.jpg'
-import Button4 from '../assets/old_mac.jpg';
 import SettingsMenu from '../Setting_menu';
+import Question1 from './BasicQuestions/Question1';
+import Question2 from './BasicQuestions/Question2';
+import Question3 from './BasicQuestions/Question3';
+import Question4 from './BasicQuestions/Question4';
+import Question5 from './BasicQuestions/Question5';
+import Question6 from './BasicQuestions/Question6';
+import Question7 from './BasicQuestions/Question7';
 
 interface Props {
   goToHomePage: () => void;
@@ -15,6 +18,7 @@ interface Props {
 const BasicQuestion1: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDarkMode }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -23,9 +27,16 @@ const BasicQuestion1: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDark
   const toggleSettings = () => {
     setIsSettingsOpen(!isSettingsOpen);
   };
+  
+  /*const changePage = (incrementer: number) => {
+    if (currentPage !== 1 && currentPage !== 7){
+      setCurrentPage(currentPage - incrementer);
+    }
+  }*/
 
   return (
     <div>
+      <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode}/>
       <header className="questionHeader">
           <p className="questionCounter">Question 1/7</p>
         <div className="buttonContainer">
@@ -50,20 +61,19 @@ const BasicQuestion1: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDark
       </header>
 
       <div className='container'>
-        <h1>Question 1</h1>
-        <h2>This is a placeholder question:</h2>
-        <img className="MainImage" src={MainImage} alt="logo" />
-        <div className="buttonGrid">
-          <button className="bigButton">Yes</button>
-          <button className="bigButton">No</button>
-          <button className="bigButton">Example with picture
-          <div></div>
-            <img src={Button3} alt="logo" /></button>
-          <button className="bigButton">Another Example w/ picture
-            <img src={Button4} alt="logo" /></button>
-        </div>
-
-        <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode}/>
+        {currentPage === 1 ?
+         <Question1/> : currentPage === 2 ?
+          <Question2/> : currentPage === 3 ?
+           <Question3/> : currentPage === 4 ?
+            <Question4/> : currentPage === 5 ?
+             <Question5/> : currentPage === 6 ?
+              <Question6/> : <Question7/>}
+      </div>
+      <div className='container'>
+        <button className="changeProgressButton" disabled={currentPage===1} onClick={() => {
+          setCurrentPage(currentPage - 1)}}>Previous Question</button>
+        <button className="changeProgressButton" disabled={currentPage===7} onClick={() => {
+          setCurrentPage(currentPage + 1);}}>Next Question</button>
       </div>
     </div>
   );
