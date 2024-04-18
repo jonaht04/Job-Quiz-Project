@@ -1,17 +1,19 @@
 {
   "files": {
     "main.css": "/Job-Quiz-Project/static/css/main.84a39307.css",
-    "main.js": "/Job-Quiz-Project/static/js/main.5d298bab.js",
+    "main.js": "/Job-Quiz-Project/static/js/main.d9792a96.js",
     "static/js/453.bad6c33a.chunk.js": "/Job-Quiz-Project/static/js/453.bad6c33a.chunk.js",
-    "static/media/old_mac.jpg": "/Job-Quiz-Project/static/media/old_mac.f7c1cca58efa5d2b9699.jpg",
+    "static/media/Hospital.gif": "/Job-Quiz-Project/static/media/Hospital.af734aa6a95e861c5bb5.gif",
+    "static/media/coding-typing.gif": "/Job-Quiz-Project/static/media/coding-typing.f1b0e8ca2e44a70cf6b9.gif",
+    "static/media/Business.gif": "/Job-Quiz-Project/static/media/Business.33f405a675e224183beb.gif",
     "static/media/giphy.gif": "/Job-Quiz-Project/static/media/giphy.0ffe18477ca4de1f4759.gif",
     "index.html": "/Job-Quiz-Project/index.html",
     "main.84a39307.css.map": "/Job-Quiz-Project/static/css/main.84a39307.css.map",
-    "main.5d298bab.js.map": "/Job-Quiz-Project/static/js/main.5d298bab.js.map",
+    "main.d9792a96.js.map": "/Job-Quiz-Project/static/js/main.d9792a96.js.map",
     "453.bad6c33a.chunk.js.map": "/Job-Quiz-Project/static/js/453.bad6c33a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.84a39307.css",
-    "static/js/main.5d298bab.js"
+    "static/js/main.d9792a96.js"
   ]
 }
