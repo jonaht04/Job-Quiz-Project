@@ -26,7 +26,7 @@ interface Props {
   toggleDarkMode: () => void;
 }
 
-const BasicQuestion1: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDarkMode }) => {
+const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDarkMode }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
@@ -127,4 +127,4 @@ const BasicQuestion1: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDark
   );
 };
 
-export default BasicQuestion1;
+export default BasicQuestionOverlay;

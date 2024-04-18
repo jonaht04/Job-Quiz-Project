@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React from 'react';
 import "../Questions.css";
 import MainImage from '../../assets/giphy.gif';
 import Technology from '../../assets/coding-typing.gif'
