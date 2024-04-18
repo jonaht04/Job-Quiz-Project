@@ -1,6 +1,4 @@
-import React, { useState} from 'react';
 import "../Questions.css";
-import SettingsMenu from '../../Setting_menu';
 
 export function Detailed4() {
     return (<div className='container'>
