@@ -38,7 +38,7 @@ const BasicQuestion1: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDark
     <div>
       <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode}/>
       <header className="questionHeader">
-          <p className="questionCounter">Question 1/7</p>
+          <p className="questionCounter">Question {currentPage}/7</p>
         <div className="buttonContainer">
           <button className="homeButton" onClick={goToHomePage}>Home</button>
           <button className="saveButton">Save</button>
@@ -61,6 +61,7 @@ const BasicQuestion1: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDark
       </header>
 
       <div className='container'>
+      <progress value={currentPage/7} className='progressBar' />
         {currentPage === 1 ?
          <Question1/> : currentPage === 2 ?
           <Question2/> : currentPage === 3 ?

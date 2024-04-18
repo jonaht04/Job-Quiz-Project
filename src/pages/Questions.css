@@ -122,6 +122,11 @@
   margin: 10px;
 }
 
+.progressBar {
+  width: 100%;
+  padding: 10px;
+  color: #292626;
+}
 /* Dark mode styles */
 
 .dark-mode .changeProgressButton{
