@@ -168,32 +168,6 @@ FAIL src/App.test.tsx
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
---------------------------|---------|----------|---------|---------|-------------------
-File                      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
---------------------------|---------|----------|---------|---------|-------------------
-All files                 |      25 |    18.42 |      10 |   24.19 |                   
- src                      |   36.84 |    38.88 |      20 |   36.11 |                   
-  App.tsx                 |   52.38 |       50 |   18.18 |      55 | 15,19,24,31-51    
-  Setting_menu.tsx        |      50 |       50 |      50 |      40 | 14-18             
-  index.tsx               |       0 |      100 |     100 |       0 | 7-19              
-  reportWebVitals.ts      |       0 |        0 |       0 |       0 | 3-10              
- src/pages                |   10.52 |        0 |       0 |   10.52 |                   
-  Basic_Question1.tsx     |    9.09 |        0 |       0 |    9.09 | 19-76             
-  DetailedQuestion.tsx    |    12.5 |        0 |       0 |    12.5 | 13-24             
- src/pages/BasicQuestions |       0 |      100 |       0 |       0 |                   
-  Question1.tsx           |       0 |      100 |       0 |       0 | 7                 
-  Question2.tsx           |       0 |      100 |       0 |       0 | 7                 
-  Question3.tsx           |       0 |      100 |       0 |       0 | 7                 
-  Question4.tsx           |       0 |      100 |       0 |       0 | 7                 
-  Question5.tsx           |       0 |      100 |       0 |       0 | 7                 
-  Question6.tsx           |       0 |      100 |       0 |       0 | 7                 
-  Question7.tsx           |       0 |      100 |       0 |       0 | 7                 
---------------------------|---------|----------|---------|---------|-------------------
-Test Suites: 1 failed, 1 total
-Tests:       1 failed, 1 total
-Snapshots:   0 total
-Time:        3.334 s
-Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
 declaring it in its dependencies. This is currently working because
@@ -206,3 +180,37 @@ ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
 your devDependencies to work around this error. This will make this message
 go away.[0m
   
+-----------------------------|---------|----------|---------|---------|-------------------
+File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-----------------------------|---------|----------|---------|---------|-------------------
+All files                    |   21.62 |       14 |    7.69 |   20.83 |                   
+ src                         |   36.84 |    38.88 |      20 |   36.11 |                   
+  App.tsx                    |   52.38 |       50 |   18.18 |      55 | 15,19,24,31-51    
+  Setting_menu.tsx           |      50 |       50 |      50 |      40 | 14-18             
+  index.tsx                  |       0 |      100 |     100 |       0 | 7-19              
+  reportWebVitals.ts         |       0 |        0 |       0 |       0 | 3-10              
+ src/pages                   |    9.09 |        0 |       0 |    9.09 |                   
+  Basic_Question1.tsx        |    9.09 |        0 |       0 |    9.09 | 19-76             
+  DetailedQuestion.tsx       |    9.09 |        0 |       0 |    9.09 | 19-70             
+ src/pages/BasicQuestions    |       0 |      100 |       0 |       0 |                   
+  Question1.tsx              |       0 |      100 |       0 |       0 | 7                 
+  Question2.tsx              |       0 |      100 |       0 |       0 | 7                 
+  Question3.tsx              |       0 |      100 |       0 |       0 | 7                 
+  Question4.tsx              |       0 |      100 |       0 |       0 | 7                 
+  Question5.tsx              |       0 |      100 |       0 |       0 | 7                 
+  Question6.tsx              |       0 |      100 |       0 |       0 | 7                 
+  Question7.tsx              |       0 |      100 |       0 |       0 | 7                 
+ src/pages/DetailedQuestions |       0 |      100 |       0 |       0 |                   
+  Detailed1.tsx              |       0 |      100 |       0 |       0 | 4                 
+  Detailed2.tsx              |       0 |      100 |       0 |       0 | 4                 
+  Detailed3.tsx              |       0 |      100 |       0 |       0 | 4                 
+  Detailed4.tsx              |       0 |      100 |       0 |       0 | 4                 
+  Detailed5.tsx              |       0 |      100 |       0 |       0 | 4                 
+  Detailed6.tsx              |       0 |      100 |       0 |       0 | 4                 
+  Detailed7.tsx              |       0 |      100 |       0 |       0 | 4                 
+-----------------------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        3.462 s
+Ran all test suites.
