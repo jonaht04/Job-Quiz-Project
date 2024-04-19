@@ -43,7 +43,7 @@ const Question1: React.FC<Props> = ({ setSelectedString, handleAnswerSelect }) =
           <img src={Technology} alt="logo"></img>
         </button>
 
-        <button className="answerButton" onClick={() => handleButtonClick("Healthcare")}>Medical
+        <button className="answerButton" onClick={() => handleButtonClick("Healthcare")}>Healthcare
           <img src={Medical} alt="logo"></img>
         </button>
 
