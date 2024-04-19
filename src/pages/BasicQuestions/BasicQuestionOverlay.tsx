@@ -22,7 +22,12 @@ import HealthcareQ6 from './Healthcare Questions/HealthcareQ6';
 //#endregion
 
 //#region Business Questions
-
+import BusinessQ1 from './Business Questions/BusinessQ1';
+import BusinessQ2 from './Business Questions/BusinessQ2';
+import BusinessQ3 from './Business Questions/BusinessQ3';
+import BusinessQ4 from './Business Questions/BusinessQ4';
+import BusinessQ5 from './Business Questions/BusinessQ5';
+import BusinessQ6 from './Business Questions/BusinessQ6';
 //#endregion
 
 interface Props {
@@ -74,7 +79,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
         switch(selectedString) {
           case "Technology": return <TechQ1 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Healthcare": return <HealthcareQ1 handleAnswerSelect={handleAnswerSelectSubQ}/>;
-          case "Business": return <TechQ1 handleAnswerSelect={handleAnswerSelectSubQ}/>;
+          case "Business": return <BusinessQ1 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Math": return <TechQ1 handleAnswerSelect={handleAnswerSelectSubQ}/>;
         }
         break;
@@ -82,7 +87,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
         switch(selectedString) {
           case "Technology": return <TechQ2 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Healthcare": return <HealthcareQ2 handleAnswerSelect={handleAnswerSelectSubQ}/>
-          case "Business": return <TechQ2 handleAnswerSelect={handleAnswerSelectSubQ}/>
+          case "Business": return <BusinessQ2 handleAnswerSelect={handleAnswerSelectSubQ}/>
           case "Math":return <TechQ2 handleAnswerSelect={handleAnswerSelectSubQ}/>
         }
         break;
@@ -90,7 +95,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
         switch(selectedString) {
           case "Technology": return <TechQ3 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Healthcare": return <HealthcareQ3 handleAnswerSelect={handleAnswerSelectSubQ}/>;
-          case "Business": return <TechQ3 handleAnswerSelect={handleAnswerSelectSubQ}/>;
+          case "Business": return <BusinessQ3 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Math": return <TechQ3 handleAnswerSelect={handleAnswerSelectSubQ}/>;
         }
         break;
@@ -98,7 +103,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
         switch(selectedString) {
           case "Technology": return <TechQ4 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Healthcare": return <HealthcareQ4 handleAnswerSelect={handleAnswerSelectSubQ}/>;
-          case "Business": return <TechQ4 handleAnswerSelect={handleAnswerSelectSubQ}/>;
+          case "Business": return <BusinessQ4 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Math": return <TechQ4 handleAnswerSelect={handleAnswerSelectSubQ}/>;
         }
         break;
@@ -106,7 +111,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
         switch(selectedString) {
           case "Technology": return <TechQ5 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Healthcare": return <HealthcareQ5 handleAnswerSelect={handleAnswerSelectSubQ}/>;
-          case "Business": return <TechQ5 handleAnswerSelect={handleAnswerSelectSubQ}/>;
+          case "Business": return <BusinessQ5 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Math": return <TechQ5 handleAnswerSelect={handleAnswerSelectSubQ}/>;
         }
         break;
@@ -114,7 +119,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
         switch(selectedString) {
           case "Technology": return <TechQ6 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Healthcare": return <HealthcareQ6 handleAnswerSelect={handleAnswerSelectSubQ}/>;
-          case "Business": return <TechQ6 handleAnswerSelect={handleAnswerSelectSubQ}/>;
+          case "Business": return <BusinessQ6 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Math": return <TechQ6 handleAnswerSelect={handleAnswerSelectSubQ}/>;
         }
         break;
