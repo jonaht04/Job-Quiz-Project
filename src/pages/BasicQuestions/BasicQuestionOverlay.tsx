@@ -30,6 +30,15 @@ import BusinessQ5 from './Business Questions/BusinessQ5';
 import BusinessQ6 from './Business Questions/BusinessQ6';
 //#endregion
 
+//#region Math Questions
+import MathQ1 from './Math Questions/MathQ1';
+import MathQ2 from './Math Questions/MathQ2';
+import MathQ3 from './Math Questions/MathQ3';
+import MathQ4 from './Math Questions/MathQ4';
+import MathQ5 from './Math Questions/MathQ5';
+import MathQ6 from './Math Questions/MathQ6';
+//#endregion
+
 interface Props {
   goToHomePage: () => void;
   isDarkMode: boolean;
@@ -80,7 +89,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
           case "Technology": return <TechQ1 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Healthcare": return <HealthcareQ1 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Business": return <BusinessQ1 handleAnswerSelect={handleAnswerSelectSubQ}/>;
-          case "Math": return <TechQ1 handleAnswerSelect={handleAnswerSelectSubQ}/>;
+          case "Math": return <MathQ1 handleAnswerSelect={handleAnswerSelectSubQ}/>;
         }
         break;
       case 3:
@@ -88,7 +97,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
           case "Technology": return <TechQ2 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Healthcare": return <HealthcareQ2 handleAnswerSelect={handleAnswerSelectSubQ}/>
           case "Business": return <BusinessQ2 handleAnswerSelect={handleAnswerSelectSubQ}/>
-          case "Math":return <TechQ2 handleAnswerSelect={handleAnswerSelectSubQ}/>
+          case "Math":return <MathQ2 handleAnswerSelect={handleAnswerSelectSubQ}/>
         }
         break;
       case 4:
@@ -96,7 +105,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
           case "Technology": return <TechQ3 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Healthcare": return <HealthcareQ3 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Business": return <BusinessQ3 handleAnswerSelect={handleAnswerSelectSubQ}/>;
-          case "Math": return <TechQ3 handleAnswerSelect={handleAnswerSelectSubQ}/>;
+          case "Math": return <MathQ3 handleAnswerSelect={handleAnswerSelectSubQ}/>;
         }
         break;
       case 5:
@@ -104,7 +113,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
           case "Technology": return <TechQ4 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Healthcare": return <HealthcareQ4 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Business": return <BusinessQ4 handleAnswerSelect={handleAnswerSelectSubQ}/>;
-          case "Math": return <TechQ4 handleAnswerSelect={handleAnswerSelectSubQ}/>;
+          case "Math": return <MathQ4 handleAnswerSelect={handleAnswerSelectSubQ}/>;
         }
         break;
       case 6:
@@ -112,7 +121,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
           case "Technology": return <TechQ5 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Healthcare": return <HealthcareQ5 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Business": return <BusinessQ5 handleAnswerSelect={handleAnswerSelectSubQ}/>;
-          case "Math": return <TechQ5 handleAnswerSelect={handleAnswerSelectSubQ}/>;
+          case "Math": return <MathQ5 handleAnswerSelect={handleAnswerSelectSubQ}/>;
         }
         break;
       case 7:
@@ -120,7 +129,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
           case "Technology": return <TechQ6 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Healthcare": return <HealthcareQ6 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Business": return <BusinessQ6 handleAnswerSelect={handleAnswerSelectSubQ}/>;
-          case "Math": return <TechQ6 handleAnswerSelect={handleAnswerSelectSubQ}/>;
+          case "Math": return <MathQ6 handleAnswerSelect={handleAnswerSelectSubQ}/>;
         }
         break;
       default:
