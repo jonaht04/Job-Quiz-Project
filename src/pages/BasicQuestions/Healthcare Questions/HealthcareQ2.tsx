@@ -1,15 +1,19 @@
 import "../../Questions.css";
 
-export function HealthcareQ2() {
+interface Props {
+  handleAnswerSelect: () => void;
+}
+
+export const HealthcareQ2: React.FC<Props> = ({ handleAnswerSelect }) => {
   return (
     <div className='container'>
       <h1>Healthcare Branch: Question 2</h1>
       <h2>What area of medicine or healthcare are you passionate about?</h2>
       <div className="answerGrid">
-        <button className="answerButton">Pediatrics</button>
-        <button className="answerButton">Dentistry</button>
-        <button className="answerButton">Psychiatry</button>
-        <button className="answerButton">Emergency Medicine</button>
+        <button className="answerButton" onClick={handleAnswerSelect}>Pediatrics</button>
+        <button className="answerButton" onClick={handleAnswerSelect}>Dentistry</button>
+        <button className="answerButton" onClick={handleAnswerSelect}>Psychiatry</button>
+        <button className="answerButton" onClick={handleAnswerSelect}>Emergency Medicine</button>
       </div>
     </div>
   )

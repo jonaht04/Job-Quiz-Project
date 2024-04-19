@@ -73,7 +73,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
       case 2:
         switch(selectedString) {
           case "Technology": return <TechQ1 handleAnswerSelect={handleAnswerSelectSubQ}/>;
-          case "Healthcare": return <HealthcareQ1/>;
+          case "Healthcare": return <HealthcareQ1 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Business": return <TechQ1 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Film Making": return <TechQ1 handleAnswerSelect={handleAnswerSelectSubQ}/>;
         }
@@ -81,7 +81,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
       case 3:
         switch(selectedString) {
           case "Technology": return <TechQ2 handleAnswerSelect={handleAnswerSelectSubQ}/>;
-          case "Healthcare": return <HealthcareQ2/>
+          case "Healthcare": return <HealthcareQ2 handleAnswerSelect={handleAnswerSelectSubQ}/>
           case "Business": return <TechQ2 handleAnswerSelect={handleAnswerSelectSubQ}/>
           case "Film Making":return <TechQ2 handleAnswerSelect={handleAnswerSelectSubQ}/>
         }
@@ -89,7 +89,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
       case 4:
         switch(selectedString) {
           case "Technology": return <TechQ3 handleAnswerSelect={handleAnswerSelectSubQ}/>;
-          case "Healthcare": return <HealthcareQ3/>;
+          case "Healthcare": return <HealthcareQ3 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Business": return <TechQ3 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Film Making": return <TechQ3 handleAnswerSelect={handleAnswerSelectSubQ}/>;
         }
@@ -97,7 +97,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
       case 5:
         switch(selectedString) {
           case "Technology": return <TechQ4 handleAnswerSelect={handleAnswerSelectSubQ}/>;
-          case "Healthcare": return <HealthcareQ4/>;
+          case "Healthcare": return <HealthcareQ4 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Business": return <TechQ4 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Film Making": return <TechQ4 handleAnswerSelect={handleAnswerSelectSubQ}/>;
         }
@@ -105,7 +105,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
       case 6:
         switch(selectedString) {
           case "Technology": return <TechQ5 handleAnswerSelect={handleAnswerSelectSubQ}/>;
-          case "Healthcare": return <HealthcareQ5/>;
+          case "Healthcare": return <HealthcareQ5 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Business": return <TechQ5 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Film Making": return <TechQ5 handleAnswerSelect={handleAnswerSelectSubQ}/>;
         }
@@ -113,7 +113,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
       case 7:
         switch(selectedString) {
           case "Technology": return <TechQ6 handleAnswerSelect={handleAnswerSelectSubQ}/>;
-          case "Healthcare": return <HealthcareQ6/>;
+          case "Healthcare": return <HealthcareQ6 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Business": return <TechQ6 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Film Making": return <TechQ6 handleAnswerSelect={handleAnswerSelectSubQ}/>;
         }
