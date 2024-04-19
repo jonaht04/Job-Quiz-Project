@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
 import "../Questions.css";
 import SettingsMenu from '../../Setting_menu';
 import MainBasicQ from './MainBasicQ';
@@ -36,6 +36,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedString, setSelectedString] = useState("");
+  const [isAnswerSelected, setIsAnswerSelected] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -45,60 +46,80 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
     setIsSettingsOpen(!isSettingsOpen);
   };
 
+  const handleAnswerSelect = (selectedString: string) => {
+    setSelectedString(selectedString);
+    setIsAnswerSelected(true);
+  };
+
+  const handleAnswerSelectSubQ = () => {
+    setIsAnswerSelected(true);
+  }
+
+  const handleNextButtonClick = () => {
+    if (isAnswerSelected) {
+      setCurrentPage(currentPage + 1)
+      setIsAnswerSelected(false);
+    }
+  };
+
+  useEffect(() => {
+    setIsAnswerSelected(false);
+  }, [currentPage]);
+
   const renderCurrentPage = () => {
     switch(currentPage) {
       case 1:
-        return <MainBasicQ setSelectedString={setSelectedString}/>;
+        return <MainBasicQ setSelectedString={setSelectedString} handleAnswerSelect={handleAnswerSelect}/>;
       case 2:
         switch(selectedString) {
-          case "Technology": return <TechQ1/>;
+          case "Technology": return <TechQ1 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Healthcare": return <HealthcareQ1/>;
-          case "Business": return <TechQ1/>;
-          case "Film Making": return <TechQ1/>;
+          case "Business": return <TechQ1 handleAnswerSelect={handleAnswerSelectSubQ}/>;
+          case "Film Making": return <TechQ1 handleAnswerSelect={handleAnswerSelectSubQ}/>;
         }
         break;
       case 3:
         switch(selectedString) {
-          case "Technology": return <TechQ2/>;
+          case "Technology": return <TechQ2 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Healthcare": return <HealthcareQ2/>
-          case "Business": return <TechQ2/>
-          case "Film Making":return <TechQ2/>
+          case "Business": return <TechQ2 handleAnswerSelect={handleAnswerSelectSubQ}/>
+          case "Film Making":return <TechQ2 handleAnswerSelect={handleAnswerSelectSubQ}/>
         }
         break;
       case 4:
         switch(selectedString) {
-          case "Technology": return <TechQ3/>;
+          case "Technology": return <TechQ3 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Healthcare": return <HealthcareQ3/>;
-          case "Business": return <TechQ3/>;
-          case "Film Making": return <TechQ3/>;
+          case "Business": return <TechQ3 handleAnswerSelect={handleAnswerSelectSubQ}/>;
+          case "Film Making": return <TechQ3 handleAnswerSelect={handleAnswerSelectSubQ}/>;
         }
         break;
       case 5:
         switch(selectedString) {
-          case "Technology": return <TechQ4/>;
+          case "Technology": return <TechQ4 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Healthcare": return <HealthcareQ4/>;
-          case "Business": return <TechQ4/>;
-          case "Film Making": return <TechQ4/>;
+          case "Business": return <TechQ4 handleAnswerSelect={handleAnswerSelectSubQ}/>;
+          case "Film Making": return <TechQ4 handleAnswerSelect={handleAnswerSelectSubQ}/>;
         }
         break;
       case 6:
         switch(selectedString) {
-          case "Technology": return <TechQ5/>;
+          case "Technology": return <TechQ5 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Healthcare": return <HealthcareQ5/>;
-          case "Business": return <TechQ5/>;
-          case "Film Making": return <TechQ5/>;
+          case "Business": return <TechQ5 handleAnswerSelect={handleAnswerSelectSubQ}/>;
+          case "Film Making": return <TechQ5 handleAnswerSelect={handleAnswerSelectSubQ}/>;
         }
         break;
       case 7:
         switch(selectedString) {
-          case "Technology": return <TechQ6/>;
+          case "Technology": return <TechQ6 handleAnswerSelect={handleAnswerSelectSubQ}/>;
           case "Healthcare": return <HealthcareQ6/>;
-          case "Business": return <TechQ6/>;
-          case "Film Making": return <TechQ6/>;
+          case "Business": return <TechQ6 handleAnswerSelect={handleAnswerSelectSubQ}/>;
+          case "Film Making": return <TechQ6 handleAnswerSelect={handleAnswerSelectSubQ}/>;
         }
         break;
       default:
-        return <MainBasicQ setSelectedString={setSelectedString}/>;
+        return <MainBasicQ setSelectedString={setSelectedString} handleAnswerSelect={handleAnswerSelect}/>;
     }
   };
   
@@ -143,8 +164,8 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
         {currentPage < 7 && (
           <button 
             className={`changeProgressButton ${currentPage === 7 ? 'disabled' : ''}`} 
-            disabled={currentPage === 7}
-            onClick={() => setCurrentPage(currentPage + 1)}>
+            disabled={!isAnswerSelected}
+            onClick={handleNextButtonClick}>
             Next Question
           </button>
         )}

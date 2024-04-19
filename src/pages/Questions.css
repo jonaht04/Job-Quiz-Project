@@ -126,7 +126,7 @@
   margin: 10px;
 }
 
-.disabled {
+.disabled{
   color: grey;
 }
 
@@ -139,6 +139,10 @@
 .dark-mode .changeProgressButton{
   background-color: #151515;
   color: white;
+}
+
+.dark-mode .changeProgressButton:disabled {
+  color: grey;
 }
 
 .dark-mode .detailedAnswerText{

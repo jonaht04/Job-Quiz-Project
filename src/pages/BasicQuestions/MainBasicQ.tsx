@@ -9,11 +9,13 @@ import MIITheme from '../../assets/MII_Theme.mp3'
 
 interface Props {
   setSelectedString: (selectedString: string) => void;
+  handleAnswerSelect: (selectedString: string) => void;
 }
 
-const Question1: React.FC<Props> = ({ setSelectedString }) => {
+const Question1: React.FC<Props> = ({ setSelectedString, handleAnswerSelect }) => {
   const handleButtonClick = (selectedString: string) => {
     setSelectedString(selectedString);
+    handleAnswerSelect(selectedString);
   };
 
   const [isPlaying, setIsPlaying] = useState(false);

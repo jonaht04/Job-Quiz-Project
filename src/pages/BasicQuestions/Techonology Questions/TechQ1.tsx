@@ -1,15 +1,20 @@
 import "../../Questions.css";
+import React from 'react';
 
-export function TechQ1() {
+interface Props {
+  handleAnswerSelect: () => void;
+}
+
+export const TechQ1: React.FC<Props> = ({ handleAnswerSelect }) => {
   return (
     <div className='container'>
       <h1>Technology Branch: Question 1</h1>
       <h2>Which aspect of technology interests you the most?</h2>
       <div className="answerGrid">
-        <button className="answerButton">Software Engineering</button>
-        <button className="answerButton">Data Science and Analytics</button>
-        <button className="answerButton">Cybersecurity</button>
-        <button className="answerButton">Artificial Intelligence and Machine Learning</button>
+        <button className="answerButton" onClick={handleAnswerSelect}>Software Engineering</button>
+        <button className="answerButton" onClick={handleAnswerSelect}>Data Science and Analytics</button>
+        <button className="answerButton" onClick={handleAnswerSelect}>Cybersecurity</button>
+        <button className="answerButton" onClick={handleAnswerSelect}>Artificial Intelligence and Machine Learning</button>
       </div>
       <div className="spacer"></div>
       <button className="answerButton">IT Management</button>
