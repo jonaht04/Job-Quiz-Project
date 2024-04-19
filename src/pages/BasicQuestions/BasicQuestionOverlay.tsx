@@ -10,11 +10,15 @@ import TechQ3 from './Techonology Questions/TechQ3';
 import TechQ4 from './Techonology Questions/TechQ4';
 import TechQ5 from './Techonology Questions/TechQ5';
 import TechQ6 from './Techonology Questions/TechQ6';
-
 //#endregion
 
 //#region Medical Questions
-
+import HealthcareQ1 from './Healthcare Questions/HealthcareQ1';
+import HealthcareQ2 from './Healthcare Questions/HealthcareQ2';
+import HealthcareQ3 from './Healthcare Questions/HealthcareQ3';
+import HealthcareQ4 from './Healthcare Questions/HealthcareQ4';
+import HealthcareQ5 from './Healthcare Questions/HealthcareQ5';
+import HealthcareQ6 from './Healthcare Questions/HealthcareQ6';
 //#endregion
 
 //#region Business Questions
@@ -48,7 +52,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
       case 2:
         switch(selectedString) {
           case "Technology": return <TechQ1/>;
-          case "Medical": return <TechQ1/>;
+          case "Healthcare": return <HealthcareQ1/>;
           case "Business": return <TechQ1/>;
           case "Film Making": return <TechQ1/>;
         }
@@ -56,7 +60,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
       case 3:
         switch(selectedString) {
           case "Technology": return <TechQ2/>;
-          case "Medical": return <TechQ2/>
+          case "Healthcare": return <HealthcareQ2/>
           case "Business": return <TechQ2/>
           case "Film Making":return <TechQ2/>
         }
@@ -64,7 +68,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
       case 4:
         switch(selectedString) {
           case "Technology": return <TechQ3/>;
-          case "Medical": return <TechQ3/>;
+          case "Healthcare": return <HealthcareQ3/>;
           case "Business": return <TechQ3/>;
           case "Film Making": return <TechQ3/>;
         }
@@ -72,7 +76,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
       case 5:
         switch(selectedString) {
           case "Technology": return <TechQ4/>;
-          case "Medical": return <TechQ4/>;
+          case "Healthcare": return <HealthcareQ4/>;
           case "Business": return <TechQ4/>;
           case "Film Making": return <TechQ4/>;
         }
@@ -80,7 +84,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
       case 6:
         switch(selectedString) {
           case "Technology": return <TechQ5/>;
-          case "Medical": return <TechQ5/>;
+          case "Healthcare": return <HealthcareQ5/>;
           case "Business": return <TechQ5/>;
           case "Film Making": return <TechQ5/>;
         }
@@ -88,7 +92,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
       case 7:
         switch(selectedString) {
           case "Technology": return <TechQ6/>;
-          case "Medical": return <TechQ6/>;
+          case "Healthcare": return <HealthcareQ6/>;
           case "Business": return <TechQ6/>;
           case "Film Making": return <TechQ6/>;
         }

@@ -3,7 +3,7 @@ import "../Questions.css";
 import MainImage from '../../assets/giphy.gif';
 import Technology from '../../assets/coding-typing.gif'
 import Business from '../../assets/Business.gif'
-import Medical from '../../assets/Hospital.gif'
+import Medical from '../../assets/Healthcare.gif'
 import MIITheme from '../../assets/MII_Theme.mp3'
 
 interface Props {
@@ -40,7 +40,7 @@ const Question1: React.FC<Props> = ({ setSelectedString }) => {
           <img src={Technology} alt="logo"></img>
         </button>
 
-        <button className="answerButton" onClick={() => handleButtonClick("Medical")}>Medical
+        <button className="answerButton" onClick={() => handleButtonClick("Healthcare")}>Medical
           <img src={Medical} alt="logo"></img>
         </button>
 
