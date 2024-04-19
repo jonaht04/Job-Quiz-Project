@@ -10,7 +10,6 @@ import TechQ3 from './Techonology Questions/TechQ3';
 import TechQ4 from './Techonology Questions/TechQ4';
 import TechQ5 from './Techonology Questions/TechQ5';
 import TechQ6 from './Techonology Questions/TechQ6';
-import { isDisabled } from '@testing-library/user-event/dist/utils';
 
 //#endregion
 
