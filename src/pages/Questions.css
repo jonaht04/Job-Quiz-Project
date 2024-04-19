@@ -90,7 +90,7 @@
 .answerGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 5px;
 }
 
 .answerButton {
@@ -104,7 +104,7 @@
 }
 
 .answerButton img {
-  width: 280px;
+  width: 250px;
   margin-bottom: 10px;
 }
 
@@ -131,7 +131,7 @@
 }
 
 .spacer {
-  height: 10px;
+  height: 5px;
 }
 
 /* Dark mode styles */

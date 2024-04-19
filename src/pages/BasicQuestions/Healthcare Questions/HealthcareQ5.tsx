@@ -6,7 +6,6 @@ export function HealthcareQ5() {
     <div className='container'>
       <h1>Healthcare Branch: Question 5</h1>
       <h2>Are you comfortable working in high-stress environments such as hospitals or clinics?</h2>
-      <img className="MainImage" src={MainImage} alt="logo" />
       <div className="answerGrid">
         <button className="answerButton">Yes</button>
         <button className="answerButton">No</button>

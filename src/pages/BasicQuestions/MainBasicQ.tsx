@@ -4,6 +4,7 @@ import MainImage from '../../assets/giphy.gif';
 import Technology from '../../assets/coding-typing.gif'
 import Business from '../../assets/Business.gif'
 import Medical from '../../assets/Healthcare.gif'
+import FilmMaking from '../../assets/FilmMaking.gif'
 import MIITheme from '../../assets/MII_Theme.mp3'
 
 interface Props {
@@ -49,6 +50,7 @@ const Question1: React.FC<Props> = ({ setSelectedString }) => {
         </button>
         
         <button className="answerButton" onClick={() => handleButtonClick("Film Making")}>Film Making
+          <img src={FilmMaking} alt="logo"></img>
         </button>
       </div>
 

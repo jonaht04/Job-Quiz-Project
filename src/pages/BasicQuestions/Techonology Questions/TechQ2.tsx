@@ -6,7 +6,6 @@ export function TechQ2() {
     <div className='container'>
       <h1>Technology Branch: Question 2</h1>
       <h2>Are you interested in working with hardware or software development?</h2>
-      <img className="MainImage" src={MainImage} alt="logo" />
       <div className="answerGrid">
         <button className="answerButton">Hardware</button>
         <button className="answerButton">Software</button>

@@ -6,7 +6,6 @@ export function HealthcareQ2() {
     <div className='container'>
       <h1>Healthcare Branch: Question 2</h1>
       <h2>What area of medicine or healthcare are you passionate about?</h2>
-      <img className="MainImage" src={MainImage} alt="logo" />
       <div className="answerGrid">
         <button className="answerButton">Pediatrics</button>
         <button className="answerButton">Dentistry</button>
