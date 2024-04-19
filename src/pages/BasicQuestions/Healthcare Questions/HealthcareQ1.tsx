@@ -1,5 +1,4 @@
 import "../../Questions.css";
-import MainImage from '../../../assets/giphy.gif';
 
 export function HealthcareQ1() {
   return (
