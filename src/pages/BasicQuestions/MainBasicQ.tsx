@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "../Questions.css";
 import MainImage from '../../assets/giphy.gif';
-import Technology from '../../assets/coding-typing.gif'
+import Technology from '../../assets/Technology.gif'
 import Business from '../../assets/Business.gif'
 import Medical from '../../assets/Healthcare.gif'
 import FilmMaking from '../../assets/Math.gif'
