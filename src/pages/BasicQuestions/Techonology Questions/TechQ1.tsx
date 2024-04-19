@@ -7,13 +7,14 @@ export function TechQ1() {
       <h1>Technology Branch: Question 1</h1>
       <h2>Which aspect of technology interests you the most?</h2>
       <img className="MainImage" src={MainImage} alt="logo" />
-      <div className="buttonGrid">
-        <button className="bigButton">Yes</button>
-        <button className="bigButton">No</button>
-        <button className="bigButton">Example with picture</button>
-        <button className="bigButton">Another Example w/ picture</button>
+      <div className="answerGrid">
+        <button className="answerButton">Software Engineering</button>
+        <button className="answerButton">Data Science and Analytics</button>
+        <button className="answerButton">Cybersecurity</button>
+        <button className="answerButton">Artificial Intelligence and Machine Learning</button>
       </div>
-      <button className="bigButton">Example with picture</button>
+      <div className="spacer"></div>
+      <button className="answerButton">IT Management</button>
     </div>
   )
 }

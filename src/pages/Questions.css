@@ -6,6 +6,10 @@
   margin: 0 auto;
 }
 
+.MainImage {
+  margin-bottom: 20px;
+}
+
 /* Dropdown Settings Menu */
 .dropdown {
   position: relative;
@@ -83,13 +87,13 @@
 }
 
 /* Question Answer Buttons */
-.buttonGrid {
+.answerGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
 
-.bigButton {
+.answerButton {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,8 +103,8 @@
   font-size: 18px;
 }
 
-.bigButton img {
-  width: 300px;
+.answerButton img {
+  width: 280px;
   margin-bottom: 10px;
 }
 
@@ -120,6 +124,14 @@
   text-align: center;
   border-radius: 5px;
   margin: 10px;
+}
+
+.disabled {
+  color: grey;
+}
+
+.spacer {
+  height: 10px;
 }
 
 /* Dark mode styles */
@@ -164,7 +176,11 @@
   color: #ffffff;
 }
 
-.dark-mode .bigButton {
+.dark-mode .answerButton {
   background-color: #151515;
   color: #ffffff;
+}
+
+.dark-mode .disabled {
+  color: grey;
 }

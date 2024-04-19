@@ -5,15 +5,16 @@ export function TechQ6() {
   return (
     <div className='container'>
       <h1>Technology Branch: Question 6</h1>
-      <h2>Which aspect of technology interests you the most?</h2>
+      <h2>What industries are you interested in applying your technology skills to?</h2>
       <img className="MainImage" src={MainImage} alt="logo" />
-      <div className="buttonGrid">
-        <button className="bigButton">Yes</button>
-        <button className="bigButton">No</button>
-        <button className="bigButton">Example with picture</button>
-        <button className="bigButton">Another Example w/ picture</button>
+      <div className="answerGrid">
+        <button className="answerButton">Healthcare</button>
+        <button className="answerButton">Finance</button>
+        <button className="answerButton">Entertainment</button>
+        <button className="answerButton">Education</button>
+        <button className="answerButton">Robotics/AI</button>
+        <button className="answerButton">Transportation</button>
       </div>
-      <button className="bigButton">Example with picture</button>
     </div>
   )
 }

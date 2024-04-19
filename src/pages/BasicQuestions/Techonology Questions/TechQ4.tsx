@@ -5,15 +5,14 @@ export function TechQ4() {
   return (
     <div className='container'>
       <h1>Technology Branch: Question 4</h1>
-      <h2>Which aspect of technology interests you the most?</h2>
+      <h2>Do you prefer working in a large corporate environment or a startup culture?</h2>
       <img className="MainImage" src={MainImage} alt="logo" />
-      <div className="buttonGrid">
-        <button className="bigButton">Yes</button>
-        <button className="bigButton">No</button>
-        <button className="bigButton">Example with picture</button>
-        <button className="bigButton">Another Example w/ picture</button>
+      <div className="answerGrid">
+        <button className="answerButton">Large Corporation</button>
+        <button className="answerButton">Startup</button>
       </div>
-      <button className="bigButton">Example with picture</button>
+      <div className="spacer"></div>
+      <button className="answerButton">No Preference</button>
     </div>
   )
 }

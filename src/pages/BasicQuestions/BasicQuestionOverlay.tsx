@@ -10,6 +10,7 @@ import TechQ3 from './Techonology Questions/TechQ3';
 import TechQ4 from './Techonology Questions/TechQ4';
 import TechQ5 from './Techonology Questions/TechQ5';
 import TechQ6 from './Techonology Questions/TechQ6';
+import { isDisabled } from '@testing-library/user-event/dist/utils';
 
 //#endregion
 
@@ -127,10 +128,27 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
         {renderCurrentPage()}
       </div>
       <div className='container'>
-        <button className="changeProgressButton" disabled={currentPage===1} onClick={() => {
-          setCurrentPage(currentPage - 1)}}>Previous Question</button>
-        <button className="changeProgressButton" disabled={currentPage===7} onClick={() => {
-          setCurrentPage(currentPage + 1);}}>Next Question</button>
+        {currentPage > 1 && (
+          <button 
+            className={`changeProgressButton ${currentPage === 1 ? 'disabled' : ''}`} 
+            disabled={currentPage === 1}
+            onClick={() => setCurrentPage(currentPage - 1)}>
+            Previous Question
+          </button>
+        )}
+        
+        {currentPage < 7 && (
+          <button 
+            className={`changeProgressButton ${currentPage === 7 ? 'disabled' : ''}`} 
+            disabled={currentPage === 7}
+            onClick={() => setCurrentPage(currentPage + 1)}>
+            Next Question
+          </button>
+        )}
+
+        {currentPage === 7 && (
+          <button className='changeProgressButton'> Submit </button>
+        )}
       </div>
     </div>
   );
