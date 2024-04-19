@@ -7,7 +7,7 @@ interface Props {
 export const TechQ5: React.FC<Props> = ({ handleAnswerSelect }) => {
   return (
     <div className='container'>
-      <h1>Technology Branch: Question 5</h1>
+      <h1><strong>Technology Branch: Question 5</strong></h1>
       <h2>Are you interested in pursuing further education or certifications in your field?</h2>
       <div className="answerGrid">
         <button className="answerButton" onClick={handleAnswerSelect}>Yes</button>

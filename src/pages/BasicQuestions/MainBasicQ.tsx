@@ -35,7 +35,7 @@ const Question1: React.FC<Props> = ({ setSelectedString, handleAnswerSelect }) =
 
   return (
     <div className='container'>
-      <h1>Question 1</h1>
+      <h1><strong>Question 1</strong></h1>
       <h2>Which of the following areas interests you the most?</h2>
       <img className="MainImage" src={MainImage} alt="logo" onClick={togglePlay}/>
       <div className="answerGrid">

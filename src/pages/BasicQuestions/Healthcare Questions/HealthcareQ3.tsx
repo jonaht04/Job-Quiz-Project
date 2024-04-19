@@ -7,7 +7,7 @@ interface Props {
 export const HealthcareQ3: React.FC<Props> = ({ handleAnswerSelect }) => {
   return (
     <div className='container'>
-      <h1>Healthcare Branch: Question 3</h1>
+      <h1><strong>Healthcare Branch: Question 3</strong></h1>
       <h2>Are you interested in patient care or research-oriented roles?</h2>
       <div className="answerGrid">
         <button className="answerButton" onClick={handleAnswerSelect}>Patient Care</button>

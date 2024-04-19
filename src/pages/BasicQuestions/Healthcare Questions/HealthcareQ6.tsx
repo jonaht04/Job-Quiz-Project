@@ -7,7 +7,7 @@ interface Props {
 export const HealthcareQ6: React.FC<Props> = ({ handleAnswerSelect }) => {
   return (
     <div className='container'>
-      <h1>Healthcare Branch: Question 6</h1>
+      <h1><strong>Healthcare Branch: Question 6</strong></h1>
       <h2>Are you interested in always being “On-call”?</h2>
       <h2>(you get called in for work whenever you are needed, can be at any time)</h2>
       <div className="answerGrid">
