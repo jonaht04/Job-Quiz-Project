@@ -115,6 +115,8 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
     }
   };
 
+  //#region report generation functions
+
   useEffect(() => {
     setIsAnswerSelected(false);
   }, [currentPage]);
