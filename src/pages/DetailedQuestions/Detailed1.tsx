@@ -1,0 +1,15 @@
+import "../Questions.css";
+
+export function Detailed1() {
+    return (<div className='container'>
+    <h1>Question 1</h1>
+    <h2>What was your favorite subject in highschool and why?</h2>
+    <div>
+            <textarea id="input-text" className="detailedAnswerText" placeholder="Enter Answer Here..."></textarea>
+        </div>
+  </div>
+  
+)
+}
+export {}
+export default Detailed1;
