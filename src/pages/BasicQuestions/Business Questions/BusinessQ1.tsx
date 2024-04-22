@@ -1,22 +1,28 @@
 import "../../Questions.css";
 
 interface Props {
-  handleAnswerSelect: () => void;
+  setSelectedString: (selectedString: string) => void;
+  handleAnswerSelect: (selectedString: string) => void;
 }
 
-export const BusinessQ1: React.FC<Props> = ({ handleAnswerSelect }) => {
+export const BusinessQ1: React.FC<Props> = ({ setSelectedString, handleAnswerSelect }) => {
+  const handleButtonClick = (selectedString: string) => {
+    setSelectedString(selectedString);
+    handleAnswerSelect(selectedString);
+  };
+
   return (
     <div className='container'>
       <h1><strong>Business Branch: Question 1</strong></h1>
       <h2>Which area of business are you most interested in?</h2>
       <div className="answerGrid">
-        <button className="answerButton" onClick={handleAnswerSelect}>Finance</button>
-        <button className="answerButton" onClick={handleAnswerSelect}>Marketing</button>
-        <button className="answerButton" onClick={handleAnswerSelect}>Management</button>
-        <button className="answerButton" onClick={handleAnswerSelect}>Entrepreneurship</button>
+        <button className="answerButton" onClick={() => handleButtonClick("Medicine")}>Finance</button>
+        <button className="answerButton" onClick={() => handleButtonClick("Medicine")}>Marketing</button>
+        <button className="answerButton" onClick={() => handleButtonClick("Medicine")}>Management</button>
+        <button className="answerButton" onClick={() => handleButtonClick("Medicine")}>Entrepreneurship</button>
       </div>
       <div className="spacer"></div>
-      <button className="answerButton" onClick={handleAnswerSelect}>Consulting</button>
+      <button className="answerButton" onClick={() => handleButtonClick("Medicine")}>Consulting</button>
     </div>
   )
 }
