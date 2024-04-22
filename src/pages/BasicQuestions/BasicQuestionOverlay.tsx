@@ -120,10 +120,14 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
 
   //#region report generation functions
   const generateBasicQuestionReport = () => {
-    if(Q1Answer == "Technology"){
-      var reportPrompt = "Which aspect of technology interests you the most? Answer: "  + Q2Answer + " Are you interested in working with hardware or software development? Answer: " + Q3Answer + " What programming languages or technical skills are you most proficient in?  Answer: " + Q4Answer + " Do you prefer in a large corporate environment or a startup culture? Answer: " + Q5Answer + " Are you interested in pursuing further education or certifications in your field? Answer: " + Q6Answer + " What industries are you interested in applying your technology skills to? Answer: " + Q7Answer;
+    var reportPrompt;
+    if(Q1Answer === "Technology"){
+      reportPrompt = "Which aspect of technology interests you the most? Answer: "  + Q2Answer + " Are you interested in working with hardware or software development? Answer: " + Q3Answer + " What programming languages or technical skills are you most proficient in?  Answer: " + Q4Answer + " Do you prefer in a large corporate environment or a startup culture? Answer: " + Q5Answer + " Are you interested in pursuing further education or certifications in your field? Answer: " + Q6Answer + " What industries are you interested in applying your technology skills to? Answer: " + Q7Answer;
     }
-
+    if(Q1Answer === "Healthcare"){
+      reportPrompt = "Which type of healthcare role interests you the most? Answer: "  + Q2Answer + " What area of medicine or healthcare are you passionate about? Answer: " + Q3Answer + " Are you interested in patient care or research-oriented roles?  Answer: " + Q4Answer + " Do you have any specific medical conditions or areas of interest you'd like to focus on? Answer: " + Q5Answer + " Are you comfortable working in high-stress environments such as hospitals or clinics? Answer: " + Q6Answer + " Are you interested in always being “On-call”? Answer: " + Q7Answer;
+    }
+    genReport(reportPrompt);
   }
 
   useEffect(() => {
