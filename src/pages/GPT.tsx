@@ -1,7 +1,6 @@
 import OpenAI from "openai";
-
-const openai = new OpenAI();
 const apiKey: string = "";
+const openai = new OpenAI({apiKey: ""});
 //this is a fairly barebones implementation but it doesn't need to be much more than that.
 
 const genReport = (responses: string) => {
