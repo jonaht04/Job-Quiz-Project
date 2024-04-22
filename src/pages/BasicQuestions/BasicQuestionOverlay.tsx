@@ -39,6 +39,9 @@ import MathQ5 from './Math Questions/MathQ5';
 import MathQ6 from './Math Questions/MathQ6';
 //#endregion
 
+//#region GPT imports
+import genReport from '../GPT';
+
 interface Props {
   goToHomePage: () => void;
   isDarkMode: boolean;
