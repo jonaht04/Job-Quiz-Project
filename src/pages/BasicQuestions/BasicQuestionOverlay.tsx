@@ -56,12 +56,12 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
 
   //#region Question Answers
   const [Q1Answer, setQ1Answer] = useState("");
-  const [/*Q2Answer*/, setQ2Answer] = useState("");
-  const [/*Q3Answer*/, setQ3Answer] = useState("");
-  const [/*Q4Answer*/, setQ4Answer] = useState("");
-  const [/*Q5Answer*/, setQ5Answer] = useState("");
-  const [/*Q6Answer*/, setQ6Answer] = useState("");
-  const [/*Q7Answer*/, setQ7Answer] = useState("");
+  const [Q2Answer, setQ2Answer] = useState("");
+  const [Q3Answer, setQ3Answer] = useState("");
+  const [Q4Answer, setQ4Answer] = useState("");
+  const [Q5Answer, setQ5Answer] = useState("");
+  const [Q6Answer, setQ6Answer] = useState("");
+  const [Q7Answer, setQ7Answer] = useState("");
   //#endregion
 
   //#region Question Answer functions
@@ -119,6 +119,12 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
   };
 
   //#region report generation functions
+  const generateBasicQuestionReport = () => {
+    if(Q1Answer == "Technology"){
+      var reportPrompt = "Which aspect of technology interests you the most? Answer: "  + Q2Answer + " Are you interested in working with hardware or software development? Answer: " + Q3Answer + " What programming languages or technical skills are you most proficient in?  Answer: " + Q4Answer + " Do you prefer in a large corporate environment or a startup culture? Answer: " + Q5Answer + " Are you interested in pursuing further education or certifications in your field? Answer: " + Q6Answer + " What industries are you interested in applying your technology skills to? Answer: " + Q7Answer;
+    }
+
+  }
 
   useEffect(() => {
     setIsAnswerSelected(false);
