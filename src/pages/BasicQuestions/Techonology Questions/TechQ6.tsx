@@ -1,19 +1,22 @@
 import "../../Questions.css";
-import MainImage from '../../../assets/giphy.gif';
 
-export function TechQ6() {
+interface Props {
+  handleAnswerSelect: () => void;
+}
+
+export const TechQ6: React.FC<Props> = ({ handleAnswerSelect }) => {
   return (
     <div className='container'>
-      <h1>Technology Branch: Question 6</h1>
-      <h2>Which aspect of technology interests you the most?</h2>
-      <img className="MainImage" src={MainImage} alt="logo" />
-      <div className="buttonGrid">
-        <button className="bigButton">Yes</button>
-        <button className="bigButton">No</button>
-        <button className="bigButton">Example with picture</button>
-        <button className="bigButton">Another Example w/ picture</button>
+      <h1><strong>Technology Branch: Question 6</strong></h1>
+      <h2>What industries are you interested in applying your technology skills to?</h2>
+      <div className="answerGrid">
+        <button className="answerButton" onClick={handleAnswerSelect}>Healthcare</button>
+        <button className="answerButton" onClick={handleAnswerSelect}>Finance</button>
+        <button className="answerButton" onClick={handleAnswerSelect}>Entertainment</button>
+        <button className="answerButton" onClick={handleAnswerSelect}>Education</button>
+        <button className="answerButton" onClick={handleAnswerSelect}>Robotics/AI</button>
+        <button className="answerButton" onClick={handleAnswerSelect}>Transportation</button>
       </div>
-      <button className="bigButton">Example with picture</button>
     </div>
   )
 }

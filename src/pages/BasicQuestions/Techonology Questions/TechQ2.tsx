@@ -1,19 +1,20 @@
 import "../../Questions.css";
-import MainImage from '../../../assets/giphy.gif';
 
-export function TechQ2() {
+interface Props {
+  handleAnswerSelect: () => void;
+}
+
+export const TechQ2: React.FC<Props> = ({ handleAnswerSelect }) => {
   return (
     <div className='container'>
-      <h1>Technology Branch: Question 2</h1>
-      <h2>Which aspect of technology interests you the most?</h2>
-      <img className="MainImage" src={MainImage} alt="logo" />
-      <div className="buttonGrid">
-        <button className="bigButton">Yes</button>
-        <button className="bigButton">No</button>
-        <button className="bigButton">Example with picture</button>
-        <button className="bigButton">Another Example w/ picture</button>
+      <h1><strong>Technology Branch: Question 2</strong></h1>
+      <h2>Are you interested in working with hardware or software development?</h2>
+      <div className="answerGrid">
+        <button className="answerButton" onClick={handleAnswerSelect}>Hardware</button>
+        <button className="answerButton" onClick={handleAnswerSelect}>Software</button>
       </div>
-      <button className="bigButton">Example with picture</button>
+      <div className="spacer"></div>
+      <button className="answerButton" onClick={handleAnswerSelect}>Both</button>
     </div>
   )
 }

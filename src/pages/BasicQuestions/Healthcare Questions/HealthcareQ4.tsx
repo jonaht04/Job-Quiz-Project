@@ -4,18 +4,18 @@ interface Props {
   handleAnswerSelect: () => void;
 }
 
-export const TechQ5: React.FC<Props> = ({ handleAnswerSelect }) => {
+export const HealthcareQ4: React.FC<Props> = ({ handleAnswerSelect }) => {
   return (
     <div className='container'>
-      <h1><strong>Technology Branch: Question 5</strong></h1>
-      <h2>Are you interested in pursuing further education or certifications in your field?</h2>
+      <h1><strong>Healthcare Branch: Question 4</strong></h1>
+      <h2>Do you have any specific medical conditions or areas of interest you'd like to focus on?</h2>
       <div className="answerGrid">
         <button className="answerButton" onClick={handleAnswerSelect}>Yes</button>
         <button className="answerButton" onClick={handleAnswerSelect}>No</button>
       </div>
       <div className="spacer"></div>
-      <button className="answerButton" onClick={handleAnswerSelect}>Maybe</button>
+      <button className="answerButton" onClick={handleAnswerSelect}>Not Sure</button>
     </div>
   )
 }
-export default TechQ5;
+export default HealthcareQ4;

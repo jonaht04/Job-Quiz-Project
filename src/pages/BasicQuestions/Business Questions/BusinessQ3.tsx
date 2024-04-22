@@ -4,13 +4,13 @@ interface Props {
   handleAnswerSelect: () => void;
 }
 
-export const TechQ4: React.FC<Props> = ({ handleAnswerSelect }) => {
+export const BusinessQ3: React.FC<Props> = ({ handleAnswerSelect }) => {
   return (
     <div className='container'>
-      <h1><strong>Technology Branch: Question 4</strong></h1>
-      <h2>Do you prefer working in a large corporate environment or a startup culture?</h2>
+      <h1><strong>Business Branch: Question 3</strong></h1>
+      <h2>Do you have a preference for working in corporate settings or startups?</h2>
       <div className="answerGrid">
-        <button className="answerButton" onClick={handleAnswerSelect}>Large Corporation</button>
+        <button className="answerButton" onClick={handleAnswerSelect}>Corporate</button>
         <button className="answerButton" onClick={handleAnswerSelect}>Startup</button>
       </div>
       <div className="spacer"></div>
@@ -18,4 +18,4 @@ export const TechQ4: React.FC<Props> = ({ handleAnswerSelect }) => {
     </div>
   )
 }
-export default TechQ4;
+export default BusinessQ3;
