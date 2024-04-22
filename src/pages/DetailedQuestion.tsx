@@ -21,6 +21,8 @@ interface Props {
       setIsSettingsOpen(!isSettingsOpen);
     };
 
+    
+
     return (
       <div>
         <header className="questionHeader">
