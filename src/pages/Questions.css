@@ -6,6 +6,10 @@
   margin: 0 auto;
 }
 
+.MainImage {
+  margin-bottom: 20px;
+}
+
 /* Dropdown Settings Menu */
 .dropdown {
   position: relative;
@@ -83,13 +87,13 @@
 }
 
 /* Question Answer Buttons */
-.buttonGrid {
+.answerGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 5px;
 }
 
-.bigButton {
+.answerButton {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,8 +103,8 @@
   font-size: 18px;
 }
 
-.bigButton img {
-  width: 300px;
+.answerButton img {
+  width: 280px;
   margin-bottom: 10px;
 }
 
@@ -122,6 +126,14 @@
   margin: 10px;
 }
 
+.disabled{
+  color: grey;
+}
+
+.spacer {
+  height: 5px;
+}
+
 .progressBar {
   width: 100%;
   padding: 10px;
@@ -132,6 +144,10 @@
 .dark-mode .changeProgressButton{
   background-color: #151515;
   color: white;
+}
+
+.dark-mode .changeProgressButton:disabled {
+  color: grey;
 }
 
 .dark-mode .detailedAnswerText{
@@ -169,7 +185,11 @@
   color: #ffffff;
 }
 
-.dark-mode .bigButton {
+.dark-mode .answerButton {
   background-color: #151515;
   color: #ffffff;
+}
+
+.dark-mode .disabled {
+  color: grey;
 }

@@ -5,7 +5,7 @@ interface Props {
   isOpen: boolean;
   onClose: () => void;
   onDarkModeToggle: (isChecked: boolean) => void;
-  isDarkMode: boolean; // New prop for dark mode state
+  isDarkMode: boolean;
 }
 
 const SettingsMenu: React.FC<Props> = ({ isOpen, onClose, onDarkModeToggle, isDarkMode }) => {
