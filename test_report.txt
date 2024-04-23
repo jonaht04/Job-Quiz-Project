@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (54 ms)
+  ✕ renders learn react link (58 ms)
 
   ● renders learn react link
 
@@ -183,14 +183,14 @@ go away.[0m
 ------------------------------------------------|---------|----------|---------|---------|-------------------------
 File                                            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s       
 ------------------------------------------------|---------|----------|---------|---------|-------------------------
-All files                                       |   11.08 |     6.48 |    1.58 |   10.91 |                         
+All files                                       |   11.33 |     6.36 |    1.58 |   11.16 |                         
  src                                            |   36.95 |    38.88 |   17.64 |   36.36 |                         
   App.tsx                                       |   48.27 |       50 |   15.38 |      50 | 17,21,25,30,37-58,62-64 
   Setting_menu.tsx                              |      50 |       50 |      50 |      40 | 14-18                   
   index.tsx                                     |       0 |      100 |     100 |       0 | 7-19                    
   reportWebVitals.ts                            |       0 |        0 |       0 |       0 | 3-10                    
- src/pages                                      |       0 |        0 |       0 |       0 |                         
-  FinalReport.tsx                               |       0 |        0 |       0 |       0 | 11-22                   
+ src/pages                                      |    12.5 |        0 |       0 |    12.5 |                         
+  FinalReport.tsx                               |    12.5 |        0 |       0 |    12.5 | 12-22                   
  src/pages/BasicQuestions                       |    1.66 |        0 |       0 |    1.68 |                         
   BasicQuestionOverlay.tsx                      |    0.98 |        0 |       0 |    0.99 | 49-241                  
   MainBasicQ.tsx                                |    5.55 |        0 |       0 |    5.55 | 16-54                   
@@ -230,10 +230,10 @@ All files                                       |   11.08 |     6.48 |    1.58 |
   Detailed5.tsx                                 |       0 |      100 |       0 |       0 | 4                       
   Detailed6.tsx                                 |       0 |      100 |       0 |       0 | 4                       
   Detailed7.tsx                                 |       0 |      100 |       0 |       0 | 4                       
-  DetailedQuestion.tsx                          |    9.09 |        0 |       0 |    9.09 | 19-77                   
+  DetailedQuestion.tsx                          |    9.09 |        0 |       0 |    9.09 | 20-80                   
 ------------------------------------------------|---------|----------|---------|---------|-------------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        4.291 s
+Time:        4.167 s
 Ran all test suites.
