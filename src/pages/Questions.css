@@ -126,6 +126,16 @@
   margin: 10px;
 }
 
+/* Final Report Summary Traits */
+.finalReportSummary{
+  font-size: 12;
+}
+
+.finalReportSubheader{
+  font-size: 100;
+}
+
+
 .disabled{
   color: grey;
 }
