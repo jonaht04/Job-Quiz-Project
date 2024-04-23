@@ -1,13 +1,13 @@
 import React, { useState} from 'react';
 import "./Questions.css";
-import SettingsMenu from '../Setting_menu';
-import Detailed1 from './DetailedQuestions/Detailed1';
-import Detailed2 from './DetailedQuestions/Detailed2';
-import Detailed3 from './DetailedQuestions/Detailed3';
-import Detailed4 from './DetailedQuestions/Detailed4';
-import Detailed5 from './DetailedQuestions/Detailed5';
-import Detailed6 from './DetailedQuestions/Detailed6';
-import Detailed7 from './DetailedQuestions/Detailed7';
+import SettingsMenu from '../../Setting_menu';
+import Detailed1 from './Detailed1';
+import Detailed2 from './Detailed2';
+import Detailed3 from './Detailed3';
+import Detailed4 from './Detailed4';
+import Detailed5 from './Detailed5';
+import Detailed6 from './Detailed6';
+import Detailed7 from './Detailed7';
 
 interface Props {
   goToHomePage: () => void;
