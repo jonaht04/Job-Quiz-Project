@@ -8,6 +8,7 @@ import Detailed4 from './Detailed4';
 import Detailed5 from './Detailed5';
 import Detailed6 from './Detailed6';
 import Detailed7 from './Detailed7';
+import FinalReport from '../FinalReport';
 
 interface Props {
   goToHomePage: () => void;
@@ -66,14 +67,16 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
               <Detailed3/> : currentPage === 4 ?
                 <Detailed4/> : currentPage === 5 ?
                   <Detailed5/> : currentPage === 6 ?
-                    <Detailed6/> : <Detailed7/>}
+                    <Detailed6/> : currentPage === 7 ? 
+                      <Detailed7/> : <FinalReport goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>}
+
     </div>
 
     {/*Next and Previous Page Buttons*/}
     <div className='container'>
       <button className="changeProgressButton" disabled={currentPage===1} onClick={() => {
         setCurrentPage(currentPage - 1)}}>Previous Question</button>
-      <button className="changeProgressButton" disabled={currentPage===7} onClick={() => {
+      <button className="changeProgressButton" disabled={currentPage===8} onClick={() => {
         setCurrentPage(currentPage + 1);}}>Next Question</button>
     </div>
     </div>
