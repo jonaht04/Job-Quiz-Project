@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (45 ms)
+  ✕ renders learn react link (46 ms)
 
   ● renders learn react link
 
@@ -183,14 +183,14 @@ go away.[0m
 ------------------------------------------------|---------|----------|---------|---------|-------------------
 File                                            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------------------------------------|---------|----------|---------|---------|-------------------
-All files                                       |   11.17 |     7.95 |    1.65 |   10.98 |                   
+All files                                       |   10.93 |      7.6 |    1.63 |   10.75 |                   
  src                                            |   36.84 |    38.88 |      20 |   36.11 |                   
   App.tsx                                       |   52.38 |       50 |   18.18 |      55 | 15,19,24,31-51    
   Setting_menu.tsx                              |      50 |       50 |      50 |      40 | 14-18             
   index.tsx                                     |       0 |      100 |     100 |       0 | 7-19              
   reportWebVitals.ts                            |       0 |        0 |       0 |       0 | 3-10              
- src/pages                                      |    9.09 |        0 |       0 |    9.09 |                   
-  DetailedQuestion.tsx                          |    9.09 |        0 |       0 |    9.09 | 19-77             
+ src/pages                                      |       0 |        0 |       0 |       0 |                   
+  FinalReport.tsx                               |       0 |        0 |       0 |       0 | 11-22             
  src/pages/BasicQuestions                       |    1.86 |        0 |       0 |    1.88 |                   
   BasicQuestionOverlay.tsx                      |    1.12 |        0 |       0 |    1.13 | 49-218            
   MainBasicQ.tsx                                |    5.55 |        0 |       0 |    5.55 | 16-54             
@@ -222,7 +222,7 @@ All files                                       |   11.17 |     7.95 |    1.65 |
   TechQ4.tsx                                    |    12.5 |      100 |       0 |    12.5 | 9-23              
   TechQ5.tsx                                    |    12.5 |      100 |       0 |    12.5 | 9-23              
   TechQ6.tsx                                    |    9.09 |      100 |       0 |    9.09 | 9-24              
- src/pages/DetailedQuestions                    |       0 |      100 |       0 |       0 |                   
+ src/pages/DetailedQuestions                    |    5.55 |        0 |       0 |    5.55 |                   
   Detailed1.tsx                                 |       0 |      100 |       0 |       0 | 4                 
   Detailed2.tsx                                 |       0 |      100 |       0 |       0 | 4                 
   Detailed3.tsx                                 |       0 |      100 |       0 |       0 | 4                 
@@ -230,9 +230,10 @@ All files                                       |   11.17 |     7.95 |    1.65 |
   Detailed5.tsx                                 |       0 |      100 |       0 |       0 | 4                 
   Detailed6.tsx                                 |       0 |      100 |       0 |       0 | 4                 
   Detailed7.tsx                                 |       0 |      100 |       0 |       0 | 4                 
+  DetailedQuestion.tsx                          |    9.09 |        0 |       0 |    9.09 | 19-77             
 ------------------------------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.878 s
+Time:        4.142 s
 Ran all test suites.
