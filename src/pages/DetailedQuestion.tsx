@@ -32,7 +32,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
     <div>
       {/*Header for Questions*/}
       <header className="questionHeader">
-          <p className="questionCounter">Question 1/7</p>
+      <p className="questionCounter">Question {currentPage}/7</p>
         <div className="buttonContainer">
           <button className="homeButton" onClick={goToHomePage}>Home</button>
           <button className="saveButton">Save</button>
