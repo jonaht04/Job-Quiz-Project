@@ -1,5 +1,5 @@
 import React, { useState} from 'react';
-import "../Questions.css";
+import "./Questions.css";
 import SettingsMenu from '../../Setting_menu';
 import Detailed1 from './Detailed1';
 import Detailed2 from './Detailed2';
