@@ -135,9 +135,23 @@
 }
 
 .progressBar {
+  -webkit-appearance: none;
+   appearance: none;
+
+  margin: 5px;
   width: 100%;
-  padding: 10px;
-  color: #292626;
+  height: 20px;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: gray;
+  border-radius: 2px;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: #cba6f7;
+    border-radius: 2px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
 }
 /* Dark mode styles */
 
