@@ -1,7 +1,7 @@
 import React, { useState, useEffect  } from 'react';
 import './App.css';
 import BasicQuestion1 from './pages/BasicQuestions/BasicQuestionOverlay';
-import DetailedQuestion from './pages/DetailedQuestions/DetailedQuestion';
+import DetailedQuestion from './pages/DetailedQuestion';
 import SettingsMenu from './Setting_menu';
 
 function App() {
