@@ -1,6 +1,7 @@
 import OpenAI from "openai";
-const apiKey: string = "";
-const openai = new OpenAI({apiKey: ""});
+import key from '../App'
+const Key: string = key.toString();
+const openai = new OpenAI({apiKey: Key});
 //this is a fairly barebones implementation but it doesn't need to be much more than that.
 
 const genReport = (responses: string) => {
@@ -9,6 +10,8 @@ const genReport = (responses: string) => {
                 {"role": "user", "content": "Based on these answers, what career would you recommend for this person? \n" + responses},],
             model: "gpt-4",
   })
+  console.log(completion);
   return(completion)
 };
 
+export default genReport;
