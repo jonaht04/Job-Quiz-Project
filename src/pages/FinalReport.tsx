@@ -11,7 +11,6 @@ interface Props {
   const FinalReport: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDarkMode }) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-    const [currentPage, setCurrentPage] = useState(1);
   
       const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
