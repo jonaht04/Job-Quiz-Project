@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react';
 import "../Questions.css";
 import SettingsMenu from '../../Setting_menu';
 import MainBasicQ from './MainBasicQ';
+import fanfare from '../../assets/final-fantasy-vii-victory-fanfare-1.mp3'
 
 //#region Tech Questions
 import TechQ1 from './Techonology Questions/TechQ1';
@@ -50,6 +51,21 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [isAnswerSelected, setIsAnswerSelected] = useState(false);
+  
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = React.createRef<HTMLAudioElement>();
+
+  const togglePlay = () => {
+    const audio = audioRef.current;
+    if (audio) {
+      if (isPlaying) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
 
   //#region Question Answers
   const [Q1Answer, setQ1Answer] = useState("");
@@ -230,9 +246,12 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
         )}
 
         {currentPage === 7 && (
-          <button className='changeProgressButton'> Submit </button>
+          <button className='changeProgressButton' onClick={togglePlay}> Submit </button>
         )}
       </div>
+      <audio ref={audioRef}>
+        <source src={fanfare} type="audio/mpeg" />
+      </audio>
     </div>
   );
 };
