@@ -120,7 +120,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
 
   //#region report generation functions
   const generateBasicQuestionReport = () => {
-    var reportPrompt;
+    var reportPrompt = "";
     if(Q1Answer === "Technology"){
       reportPrompt = "Which aspect of technology interests you the most? Answer: "  + Q2Answer + 
       " Are you interested in working with hardware or software development? Answer: " + Q3Answer + 
@@ -153,8 +153,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
       " Which type of role are you interested in? Answer: " + Q6Answer + 
       " Are you open to further education or obtaining certifications? Answer: " + Q7Answer;
     }
-    genReport(reportPrompt);
-  }
+    genReport(reportPrompt)}
   //end region
 
   useEffect(() => {
