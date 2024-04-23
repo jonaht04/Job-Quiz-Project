@@ -119,6 +119,11 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
     setIsAnswerSelected(false);
   }, [currentPage]);
 
+  const progressCounter = () => {
+    if (isAnswerSelected) return currentPage;
+    else return currentPage - 1;
+  }
+
   const renderCurrentPage = () => {
     switch(currentPage) {
       case 1:
@@ -201,6 +206,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
         </div>
       </header>
       <div className='container'>
+      <progress className='progressBar' value={progressCounter() / 7}></progress>
         {renderCurrentPage()}
       </div>
 
