@@ -2,7 +2,6 @@ import React, { useState, useEffect} from 'react';
 import "../Questions.css";
 import SettingsMenu from '../../Setting_menu';
 import MainBasicQ from './MainBasicQ';
-import { Modal } from 'react-bootstrap';
 
 //#region Tech Questions
 import TechQ1 from './Techonology Questions/TechQ1';
