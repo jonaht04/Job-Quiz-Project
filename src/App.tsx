@@ -1,8 +1,9 @@
-import React, { useState, useEffect  } from 'react';
+import React, { useState, useEffect} from 'react';
 import './App.css';
 import BasicQuestion1 from './pages/BasicQuestions/BasicQuestionOverlay';
 import DetailedQuestion from './pages/DetailedQuestions/DetailedQuestion';
 import SettingsMenu from './Setting_menu';
+import { Modal } from 'react-bootstrap';
 
 function App() {
   const [key, setKey] = useState<string>('');
@@ -10,6 +11,7 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false); 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [isStartNewShortQuiz, setIsStartNewShortQuiz] = useState(false);
 
   const toggleDropdown = () => {
       setIsDropdownOpen(!isDropdownOpen);
@@ -17,6 +19,10 @@ function App() {
 
   const toggleSettings = () => {
       setIsSettingsOpen(!isSettingsOpen);
+  };
+
+  const toggleShortQuiz = () => {
+    setIsStartNewShortQuiz(!isStartNewShortQuiz);
   };
 
   useEffect(() => {
@@ -44,14 +50,20 @@ function App() {
   }
 
   function goToBasicQuestionPage() {
-    setCurrentPage('BasicQuestion1'); // Navigate to the first new page
+    setCurrentPage('BasicQuestion1');
+    toggleShortQuiz();
   }
 
   function goToDetailedQuestionPage() {
     setCurrentPage('DetailedQuesiton')
   }
 
-  
+  const startNewShortQuiz = () => {
+    localStorage.removeItem('savedData');
+    goToBasicQuestionPage();
+    toggleShortQuiz();
+  }
+
   return (
     <div className='App'>
       <div>
@@ -60,7 +72,7 @@ function App() {
           <header className="homePgHeader">
             <div className="buttonContainer">
                 <button className="homePgHeaderButtons" onClick={goToHomePage}>Home</button>
-                <button className="homePgHeaderButtons" onClick={goToBasicQuestionPage}>Short Quiz</button>
+                <button className="homePgHeaderButtons" onClick={toggleShortQuiz}>Short Quiz</button>
                 <button className="homePgHeaderButtons" onClick={goToDetailedQuestionPage}>Long Quiz</button>
               <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
                 <button className="dropdownButton" onClick={toggleDropdown}>
@@ -81,7 +93,7 @@ function App() {
           </header>
         </div>
     ) : currentPage === 'BasicQuestion1' ? (
-      <BasicQuestion1 goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
+      <BasicQuestion1 goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
     ) : (
       <DetailedQuestion goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
     )}
@@ -117,6 +129,27 @@ function App() {
       </div>
     )}
     <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode}/>
+
+
+    <Modal show={isStartNewShortQuiz} onHide={toggleShortQuiz}>
+      <Modal.Header closeButton>
+        <Modal.Title>Short Quiz</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+      <ul className="list-unstyled">
+          <li className="mb-3">
+            <div>
+              <button className="ShortQuiz" onClick={goToBasicQuestionPage}>Continue Quiz</button>
+            </div>
+          </li>
+          <li className="mb-3">
+            <div className="shortQuiz">
+            <button className="ShortQuiz" onClick={startNewShortQuiz}>Start New Quiz</button>
+            </div>
+          </li>
+        </ul>
+      </Modal.Body>
+    </Modal>
       </div> 
     </div>
   );

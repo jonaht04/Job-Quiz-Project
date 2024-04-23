@@ -45,7 +45,7 @@ interface Props {
   toggleDarkMode: () => void;
 }
 
-const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDarkMode }) => {
+const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDarkMode}) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
@@ -53,12 +53,12 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
 
   //#region Question Answers
   const [Q1Answer, setQ1Answer] = useState("");
-  const [/*Q2Answer*/, setQ2Answer] = useState("");
-  const [/*Q3Answer*/, setQ3Answer] = useState("");
-  const [/*Q4Answer*/, setQ4Answer] = useState("");
-  const [/*Q5Answer*/, setQ5Answer] = useState("");
-  const [/*Q6Answer*/, setQ6Answer] = useState("");
-  const [/*Q7Answer*/, setQ7Answer] = useState("");
+  const [Q2Answer, setQ2Answer] = useState("");
+  const [Q3Answer, setQ3Answer] = useState("");
+  const [Q4Answer, setQ4Answer] = useState("");
+  const [Q5Answer, setQ5Answer] = useState("");
+  const [Q6Answer, setQ6Answer] = useState("");
+  const [Q7Answer, setQ7Answer] = useState("");
   //#endregion
 
   //#region Question Answer functions
@@ -124,6 +124,29 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
     else return currentPage - 1;
   }
 
+  //#region Save System
+  useEffect(() => {
+    const savedData = JSON.parse(localStorage.getItem('savedData') || '{"answers":[],"page":1}');
+    setQ1Answer(savedData.answers[0] || "");
+    setQ2Answer(savedData.answers[1] || "");
+    setQ3Answer(savedData.answers[2] || "");
+    setQ4Answer(savedData.answers[3] || "");
+    setQ5Answer(savedData.answers[4] || "");
+    setQ6Answer(savedData.answers[5] || "");
+    setQ7Answer(savedData.answers[6] || "");
+    setCurrentPage(savedData.page);
+  }, []);
+  
+  const saveData = () => {
+    const dataToSave = {
+      answers: [Q1Answer, Q2Answer, Q3Answer, Q4Answer, Q5Answer, Q6Answer, Q7Answer],
+      page: currentPage
+    };
+    localStorage.setItem('savedData', JSON.stringify(dataToSave));
+  };
+  //#endregion
+
+
   const renderCurrentPage = () => {
     switch(currentPage) {
       case 1:
@@ -188,7 +211,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
           <p className="questionCounter">Question {currentPage}/7</p>
         <div className="buttonContainer">
           <button className="homeButton" onClick={goToHomePage}>Home</button>
-          <button className="saveButton">Save</button>
+          <button className="saveButton" onClick={saveData}>Save</button>
           <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
           <button className="dropdownButton" onClick={toggleDropdown}>
             <div className="bar"></div>
