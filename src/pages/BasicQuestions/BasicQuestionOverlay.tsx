@@ -46,9 +46,10 @@ interface Props {
   goToHomePage: () => void;
   isDarkMode: boolean;
   toggleDarkMode: () => void;
+  key: string;
 }
 
-const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDarkMode }) => {
+const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDarkMode, key }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
@@ -153,7 +154,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
       " Which type of role are you interested in? Answer: " + Q6Answer + 
       " Are you open to further education or obtaining certifications? Answer: " + Q7Answer;
     }
-    genReport(reportPrompt)}
+    genReport(reportPrompt,key)}
   //end region
 
   useEffect(() => {
@@ -265,7 +266,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
         )}
 
         {currentPage === 7 && (
-          <button className='changeProgressButton'> Submit </button>
+          <button className='changeProgressButton' onClick={generateBasicQuestionReport}> Submit </button>
         )}
       </div>
     </div>
