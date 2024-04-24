@@ -112,6 +112,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
     if (isAnswerSelected) {
       setCurrentPage(currentPage + 1)
       setIsAnswerSelected(false);
+      saveData();
     }
   };
 
