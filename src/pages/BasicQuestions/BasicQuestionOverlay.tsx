@@ -154,7 +154,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
       " Which type of role are you interested in? Answer: " + Q6Answer + 
       " Are you open to further education or obtaining certifications? Answer: " + Q7Answer;
     }
-    genReport(reportPrompt,key)}
+    genReport(reportPrompt)}
   //end region
 
   useEffect(() => {
