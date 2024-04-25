@@ -46,7 +46,6 @@ interface Props {
   goToHomePage: () => void;
   isDarkMode: boolean;
   toggleDarkMode: () => void;
-  key: string;
 }
 
 const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDarkMode, key }) => {
