@@ -86,6 +86,30 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
     else return currentPage - 1;
   }
 
+  /*Switch Case from Basic question overlay, adjuseted for detailed question*/
+  const renderCurrentPage = () => {
+    switch(currentPage) {
+      case 1:
+        return <Detailed1/>
+      case 2:
+        return <Detailed2/>
+      case 3:
+        return <Detailed3/>
+      case 4:
+        return <Detailed4/>
+      case 5:
+        return <Detailed5/>
+      case 6:
+        return <Detailed6/>
+      case 7:
+        return <Detailed7/>
+      case 8:
+        return <FinalReport goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
+      default:
+        return <Detailed1/>;
+    }
+  };
+
   return (
     <div>
       {/*Header for Questions*/}
@@ -118,15 +142,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
           
       {/*Page Counter && Logic*/}
       <div className='container'>
-        {currentPage === 1 ?
-          <Detailed1/> : currentPage === 2 ?
-            <Detailed2/> : currentPage === 3 ?
-              <Detailed3/> : currentPage === 4 ?
-                <Detailed4/> : currentPage === 5 ?
-                  <Detailed5/> : currentPage === 6 ?
-                    <Detailed6/> : currentPage === 7 ? 
-                      <Detailed7/> : <FinalReport goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>}
-
+        {renderCurrentPage()}
     </div>
 
     {/*Next and Previous Page Buttons*/}
