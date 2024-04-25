@@ -68,6 +68,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
       }
       setIsPlaying(!isPlaying);
     }
+    generateBasicQuestionReport();
   };
 
   //#region Question Answers
