@@ -128,35 +128,14 @@
 
 /* Final Report Summary Traits */
 .finalReportSummary{
-  display: inline-block;
-  float: none;
   font-size: 18px;
-}
-
-.finalReportListContainer{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 }
 
 .finalReportSubheader{
-  display: inline-block;
   font-size: 24px;
-  float: none;
-  width: 100%;
 }
 
-.finalReportList{
-  float: center;
-  font-size: 18px;
-  width:20%;
-}
 
-.finalReportImage{
-  max-width:20%;
-  height: auto;
-}
-
-/* Progress Bar */
 .disabled{
   color: grey;
 }
