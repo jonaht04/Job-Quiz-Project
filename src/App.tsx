@@ -81,7 +81,7 @@ function App() {
           </header>
         </div>
     ) : currentPage === 'BasicQuestion1' ? (
-      <BasicQuestion1 goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} key={key}/>
+      <BasicQuestion1 goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
     ) : (
       <DetailedQuestion goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
     )}
