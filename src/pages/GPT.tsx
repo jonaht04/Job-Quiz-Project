@@ -12,7 +12,9 @@ async function genReport(responses: string){
     const openai = new OpenAI({apiKey: stringKey, dangerouslyAllowBrowser: true});
         const completion = await openai.chat.completions.create({
             messages: [{"role": "system", "content": "You are a helpful assistant, aiming to help high-school and college students find a career that fits their interests."},
-                {"role": "user", "content": "Based on these answers, what career would you recommend for this person? \n" + responses},],
+                {"role": "user", "content": "Based on these answers, what career would you recommend for this person? \n" 
+                + responses 
+                + "\n Additionally, what companies would you recommend?"},],
             model: "gpt-4",
   })
   console.log(completion.choices[0].message.content);
