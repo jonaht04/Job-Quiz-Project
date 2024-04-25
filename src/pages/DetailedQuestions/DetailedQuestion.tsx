@@ -20,6 +20,54 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+  const [isAnswerSelected, setIsAnswerSelected] = useState(false);
+
+  //#region Question Answers
+  const [Q1Answer, setQ1Answer] = useState("");
+  const [Q2Answer, setQ2Answer] = useState("");
+  const [Q3Answer, setQ3Answer] = useState("");
+  const [Q4Answer, setQ4Answer] = useState("");
+  const [Q5Answer, setQ5Answer] = useState("");
+  const [Q6Answer, setQ6Answer] = useState("");
+  const [Q7Answer, setQ7Answer] = useState("");
+  //#endregion
+
+  //#region Question Answer functions
+  const MainQuestion1Answer = (selectedString: string) => {
+    setQ1Answer(selectedString);
+    setIsAnswerSelected(true);
+  };
+
+  const SubQuestion1Answer = (selectedString: string) => {
+    setQ2Answer(selectedString);
+    setIsAnswerSelected(true);
+  };
+
+  const SubQuestion2Answer = (selectedString: string) => {
+    setQ3Answer(selectedString);
+    setIsAnswerSelected(true);
+  };
+
+  const SubQuestion3Answer = (selectedString: string) => {
+    setQ4Answer(selectedString);
+    setIsAnswerSelected(true);
+  };
+
+  const SubQuestion4Answer = (selectedString: string) => {
+    setQ5Answer(selectedString);
+    setIsAnswerSelected(true);
+  };
+
+  const SubQuestion5Answer = (selectedString: string) => {
+    setQ6Answer(selectedString);
+    setIsAnswerSelected(true);
+  };
+
+  const SubQuestion6Answer = (selectedString: string) => {
+    setQ7Answer(selectedString);
+    setIsAnswerSelected(true);
+  };
+  //#endregion
 
     const toggleDropdown = () => {
       setIsDropdownOpen(!isDropdownOpen);
@@ -28,6 +76,15 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
     const toggleSettings = () => {
       setIsSettingsOpen(!isSettingsOpen);
     };
+
+    /* Handles the counter for progress bar
+  Ensures that the progress bar does not go up
+  until an answer is selectef
+  */
+  const progressCounter = () => {
+    if (isAnswerSelected) return currentPage;
+    else return currentPage - 1;
+  }
 
   return (
     <div>
