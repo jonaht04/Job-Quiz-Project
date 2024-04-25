@@ -112,7 +112,7 @@ function App() {
         <p className="spacer"> </p>
         <h2>There are two types of quizzes that you can take:</h2>
         <div className="promptContainer">
-            <div><button className="quizButton" onClick={goToBasicQuestionPage}>Multiple Choice</button>
+            <div><button className="quizButton" onClick={toggleShortQuiz}>Multiple Choice</button>
             <p className ="textContainer">This exam is the shorter quiz. Its questions are all multiple choice and shouldn’t take too long to complete. Choose the answer that best matches your own preferences, beliefs, and opinions. This test is powered by ChatGPT’s Large Language Model.</p></div>
             <div><button className="quizButton" onClick={goToDetailedQuestionPage}>Short Answer</button>
             <p className ="textContainer">This exam has more complex questions that require more thought with fill-in-the-blank answers being required. Expect this to take longer than the multiple choice. This test is powered by ChatGPT’s Large Language Model.</p></div>
@@ -131,7 +131,7 @@ function App() {
     <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode}/>
 
 
-    <Modal show={isStartNewShortQuiz} onHide={toggleShortQuiz}>
+    <Modal show={isStartNewShortQuiz} onHide={toggleShortQuiz} className="ShortQuizModal">
       <Modal.Header closeButton>
         <Modal.Title>Short Quiz</Modal.Title>
       </Modal.Header>
