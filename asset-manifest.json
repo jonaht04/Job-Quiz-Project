@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Job-Quiz-Project/static/css/main.5c4c7366.css",
-    "main.js": "/Job-Quiz-Project/static/js/main.8c6d00f5.js",
+    "main.css": "/Job-Quiz-Project/static/css/main.ae208bf0.css",
+    "main.js": "/Job-Quiz-Project/static/js/main.a85d790e.js",
     "static/js/453.bad6c33a.chunk.js": "/Job-Quiz-Project/static/js/453.bad6c33a.chunk.js",
     "static/media/MII_Theme.mp3": "/Job-Quiz-Project/static/media/MII_Theme.28ab71b36305fb034e0f.mp3",
     "static/media/Technology.gif": "/Job-Quiz-Project/static/media/Technology.2603ef7b10dae726bf49.gif",
@@ -10,12 +10,12 @@
     "static/media/giphy.gif": "/Job-Quiz-Project/static/media/giphy.0ffe18477ca4de1f4759.gif",
     "static/media/Healthcare.gif": "/Job-Quiz-Project/static/media/Healthcare.c02a92ff09f6b420b259.gif",
     "index.html": "/Job-Quiz-Project/index.html",
-    "main.5c4c7366.css.map": "/Job-Quiz-Project/static/css/main.5c4c7366.css.map",
-    "main.8c6d00f5.js.map": "/Job-Quiz-Project/static/js/main.8c6d00f5.js.map",
+    "main.ae208bf0.css.map": "/Job-Quiz-Project/static/css/main.ae208bf0.css.map",
+    "main.a85d790e.js.map": "/Job-Quiz-Project/static/js/main.a85d790e.js.map",
     "453.bad6c33a.chunk.js.map": "/Job-Quiz-Project/static/js/453.bad6c33a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5c4c7366.css",
-    "static/js/main.8c6d00f5.js"
+    "static/css/main.ae208bf0.css",
+    "static/js/main.a85d790e.js"
   ]
 }
