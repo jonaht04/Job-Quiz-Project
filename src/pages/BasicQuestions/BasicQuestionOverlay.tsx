@@ -135,6 +135,36 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
     }
   };
 
+  useEffect(() => {
+    setIsAnswerSelected(false);
+  }, [currentPage]);
+
+  const progressCounter = () => {
+    if (isAnswerSelected) return currentPage;
+    else return currentPage - 1;
+  }
+
+  //#region Save System
+  useEffect(() => {
+    const savedData = JSON.parse(localStorage.getItem('savedData') || '{"answers":[],"page":1}');
+    setQ1Answer(savedData.answers[0] || "");
+    setQ2Answer(savedData.answers[1] || "");
+    setQ3Answer(savedData.answers[2] || "");
+    setQ4Answer(savedData.answers[3] || "");
+    setQ5Answer(savedData.answers[4] || "");
+    setQ6Answer(savedData.answers[5] || "");
+    setQ7Answer(savedData.answers[6] || "");
+    setCurrentPage(savedData.page);
+  }, []);
+  
+  const saveData = () => {
+    const dataToSave = {
+      answers: [Q1Answer, Q2Answer, Q3Answer, Q4Answer, Q5Answer, Q6Answer, Q7Answer],
+      page: currentPage
+    };
+    localStorage.setItem('savedData', JSON.stringify(dataToSave));
+  };
+  //#endregion
   //#region report generation functions
   const generateBasicQuestionReport = () => {
     var reportPrompt = "";
@@ -172,37 +202,6 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
     }
     genReport(reportPrompt)}
   //end region
-
-  useEffect(() => {
-    setIsAnswerSelected(false);
-  }, [currentPage]);
-
-  const progressCounter = () => {
-    if (isAnswerSelected) return currentPage;
-    else return currentPage - 1;
-  }
-
-  //#region Save System
-  useEffect(() => {
-    const savedData = JSON.parse(localStorage.getItem('savedData') || '{"answers":[],"page":1}');
-    setQ1Answer(savedData.answers[0] || "");
-    setQ2Answer(savedData.answers[1] || "");
-    setQ3Answer(savedData.answers[2] || "");
-    setQ4Answer(savedData.answers[3] || "");
-    setQ5Answer(savedData.answers[4] || "");
-    setQ6Answer(savedData.answers[5] || "");
-    setQ7Answer(savedData.answers[6] || "");
-    setCurrentPage(savedData.page);
-  }, []);
-  
-  const saveData = () => {
-    const dataToSave = {
-      answers: [Q1Answer, Q2Answer, Q3Answer, Q4Answer, Q5Answer, Q6Answer, Q7Answer],
-      page: currentPage
-    };
-    localStorage.setItem('savedData', JSON.stringify(dataToSave));
-  };
-  //#endregion
 
 
   const renderCurrentPage = () => {
@@ -311,7 +310,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
         )}
 
         {currentPage === 7 && (
-          <button className='changeProgressButton'> Submit </button>
+          <button className='changeProgressButton' onClick={togglePlay}> Submit </button>
         )}
       </div>
       <audio ref={audioRef}>
