@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react';
 import "../Questions.css";
 import SettingsMenu from '../../Setting_menu';
 import MainBasicQ from './MainBasicQ';
+import fanfare from '../../assets/final-fantasy-vii-victory-fanfare-1.mp3'
 
 //#region Tech Questions
 import TechQ1 from './Techonology Questions/TechQ1';
@@ -53,6 +54,21 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [isAnswerSelected, setIsAnswerSelected] = useState(false);
+  
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = React.createRef<HTMLAudioElement>();
+
+  const togglePlay = () => {
+    const audio = audioRef.current;
+    if (audio) {
+      if (isPlaying) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
 
   //#region Question Answers
   const [Q1Answer, setQ1Answer] = useState("");
@@ -115,6 +131,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
     if (isAnswerSelected) {
       setCurrentPage(currentPage + 1)
       setIsAnswerSelected(false);
+      saveData();
     }
   };
 
@@ -159,6 +176,34 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
   useEffect(() => {
     setIsAnswerSelected(false);
   }, [currentPage]);
+
+  const progressCounter = () => {
+    if (isAnswerSelected) return currentPage;
+    else return currentPage - 1;
+  }
+
+  //#region Save System
+  useEffect(() => {
+    const savedData = JSON.parse(localStorage.getItem('savedData') || '{"answers":[],"page":1}');
+    setQ1Answer(savedData.answers[0] || "");
+    setQ2Answer(savedData.answers[1] || "");
+    setQ3Answer(savedData.answers[2] || "");
+    setQ4Answer(savedData.answers[3] || "");
+    setQ5Answer(savedData.answers[4] || "");
+    setQ6Answer(savedData.answers[5] || "");
+    setQ7Answer(savedData.answers[6] || "");
+    setCurrentPage(savedData.page);
+  }, []);
+  
+  const saveData = () => {
+    const dataToSave = {
+      answers: [Q1Answer, Q2Answer, Q3Answer, Q4Answer, Q5Answer, Q6Answer, Q7Answer],
+      page: currentPage
+    };
+    localStorage.setItem('savedData', JSON.stringify(dataToSave));
+  };
+  //#endregion
+
 
   const renderCurrentPage = () => {
     switch(currentPage) {
@@ -224,7 +269,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
           <p className="questionCounter">Question {currentPage}/7</p>
         <div className="buttonContainer">
           <button className="homeButton" onClick={goToHomePage}>Home</button>
-          <button className="saveButton">Save</button>
+          <button className="saveButton" onClick={saveData}>Save</button>
           <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
           <button className="dropdownButton" onClick={toggleDropdown}>
             <div className="bar"></div>
@@ -242,6 +287,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
         </div>
       </header>
       <div className='container'>
+      <progress className='progressBar' value={progressCounter() / 7}></progress>
         {renderCurrentPage()}
       </div>
 
@@ -265,9 +311,12 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
         )}
 
         {currentPage === 7 && (
-          <button className='changeProgressButton' onClick={generateBasicQuestionReport}> Submit </button>
+          <button className='changeProgressButton'> Submit </button>
         )}
       </div>
+      <audio ref={audioRef}>
+        <source src={fanfare} type="audio/mpeg" />
+      </audio>
     </div>
   );
 };

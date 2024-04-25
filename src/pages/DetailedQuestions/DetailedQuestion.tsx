@@ -1,13 +1,14 @@
 import React, { useState} from 'react';
-import "./Questions.css";
-import SettingsMenu from '../Setting_menu';
-import Detailed1 from './DetailedQuestions/Detailed1';
-import Detailed2 from './DetailedQuestions/Detailed2';
-import Detailed3 from './DetailedQuestions/Detailed3';
-import Detailed4 from './DetailedQuestions/Detailed4';
-import Detailed5 from './DetailedQuestions/Detailed5';
-import Detailed6 from './DetailedQuestions/Detailed6';
-import Detailed7 from './DetailedQuestions/Detailed7';
+import "../Questions.css";
+import SettingsMenu from '../../Setting_menu';
+import Detailed1 from './Detailed1';
+import Detailed2 from './Detailed2';
+import Detailed3 from './Detailed3';
+import Detailed4 from './Detailed4';
+import Detailed5 from './Detailed5';
+import Detailed6 from './Detailed6';
+import Detailed7 from './Detailed7';
+import FinalReport from '../FinalReport';
 
 interface Props {
   goToHomePage: () => void;
@@ -32,7 +33,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
     <div>
       {/*Header for Questions*/}
       <header className="questionHeader">
-          <p className="questionCounter">Question 1/7</p>
+      <p className="questionCounter">Question {currentPage}/7</p>
         <div className="buttonContainer">
           <button className="homeButton" onClick={goToHomePage}>Home</button>
           <button className="saveButton">Save</button>
@@ -66,14 +67,16 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
               <Detailed3/> : currentPage === 4 ?
                 <Detailed4/> : currentPage === 5 ?
                   <Detailed5/> : currentPage === 6 ?
-                    <Detailed6/> : <Detailed7/>}
+                    <Detailed6/> : currentPage === 7 ? 
+                      <Detailed7/> : <FinalReport goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>}
+
     </div>
 
     {/*Next and Previous Page Buttons*/}
     <div className='container'>
       <button className="changeProgressButton" disabled={currentPage===1} onClick={() => {
         setCurrentPage(currentPage - 1)}}>Previous Question</button>
-      <button className="changeProgressButton" disabled={currentPage===7} onClick={() => {
+      <button className="changeProgressButton" disabled={currentPage===8} onClick={() => {
         setCurrentPage(currentPage + 1);}}>Next Question</button>
     </div>
     </div>
