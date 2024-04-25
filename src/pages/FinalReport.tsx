@@ -36,7 +36,7 @@ interface Props {
             <ul className="finalReportSummary"></ul>
 
             {/*Settings Menu*/}
-              <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode}/>
+              <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode} toggleDropdown={toggleDropdown}/>
               <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
               <button className="dropdownButton" onClick={toggleDropdown}>
                 <div className="bar"></div>

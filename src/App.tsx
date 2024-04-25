@@ -128,7 +128,7 @@ function App() {
         </form>
       </div>
     )}
-    <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode}/>
+    <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode} toggleDropdown={toggleDropdown}/>
 
 
     <Modal show={isStartNewShortQuiz} onHide={toggleShortQuiz} className="ShortQuizModal">

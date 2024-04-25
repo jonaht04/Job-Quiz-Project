@@ -264,7 +264,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
   
   return (
     <div>
-      <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode}/>
+      <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode} toggleDropdown={toggleDropdown}/>
       <header className="questionHeader">
           <p className="questionCounter">Question {currentPage}/7</p>
         <div className="buttonContainer">
