@@ -1,6 +1,6 @@
-import React, { useState} from 'react';
+//import React, { useState} from 'react';
 import "./Questions.css";
-import Congrats from '../assets/GoodJob.gif'
+//import Congrats from '../assets/GoodJob.gif'
 
 interface Props {
     goToHomePage: () => void;
@@ -9,16 +9,18 @@ interface Props {
   }
     
   const FinalReport: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDarkMode }) => {
+    /*
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   
       const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
       };
-  
+
       const toggleSettings = () => {
         setIsSettingsOpen(!isSettingsOpen);
       };
+      */
       return (
         <div>
             {/*Header Text*/}
