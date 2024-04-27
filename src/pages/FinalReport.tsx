@@ -1,6 +1,6 @@
 //import React, { useState} from 'react';
 import "./Questions.css";
-//import Congrats from '../assets/GoodJob.gif'
+import Congrats from '../assets/GoodJob.gif'
 
 interface Props {
     goToHomePage: () => void;
@@ -36,6 +36,7 @@ interface Props {
               <li>Trait Two</li>
               <li>Trai Three</li>
             </ul>
+            <img className="finalReportImage" src={Congrats} alt="logo"></img>
             </div>
  
             <div className="finalReportSubheader">Possible Jobs:</div>

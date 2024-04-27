@@ -135,7 +135,9 @@
 
 .finalReportListContainer{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 5px;
 }
 
 .finalReportSubheader{
@@ -152,7 +154,7 @@
 }
 
 .finalReportImage{
-  max-width:20%;
+  max-width:50%;
   height: auto;
 }
 
