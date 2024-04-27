@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useEffect, useState} from 'react';
 import "../Questions.css";
 import SettingsMenu from '../../Setting_menu';
 import Detailed1 from './Detailed1';
@@ -69,6 +69,40 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
   };
   //#endregion
 
+  const handleNextButtonClick = () => {
+    if (isAnswerSelected) {
+      setCurrentPage(currentPage + 1)
+      setIsAnswerSelected(false);
+      //saveData();
+    }
+  };
+
+  useEffect(() => {
+    setIsAnswerSelected(false);
+  }, [currentPage]);
+
+  /*//#region Save System
+  useEffect(() => {
+    const savedData = JSON.parse(localStorage.getItem('savedData') || '{"answers":[],"page":1}');
+    setQ1Answer(savedData.answers[0] || "");
+    setQ2Answer(savedData.answers[1] || "");
+    setQ3Answer(savedData.answers[2] || "");
+    setQ4Answer(savedData.answers[3] || "");
+    setQ5Answer(savedData.answers[4] || "");
+    setQ6Answer(savedData.answers[5] || "");
+    setQ7Answer(savedData.answers[6] || "");
+    setCurrentPage(savedData.page);
+  }, []);
+  
+  const saveData = () => {
+    const dataToSave = {
+      answers: [Q1Answer, Q2Answer, Q3Answer, Q4Answer, Q5Answer, Q6Answer, Q7Answer],
+      page: currentPage
+    };
+    localStorage.setItem('savedData', JSON.stringify(dataToSave));
+  };
+  //#endregion
+  */
     const toggleDropdown = () => {
       setIsDropdownOpen(!isDropdownOpen);
     };
@@ -90,7 +124,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
   const renderCurrentPage = () => {
     switch(currentPage) {
       case 1:
-        return <Detailed1/>
+        return <Detailed1 setSelectedString={setQ1Answer} handleAnswerSelect={MainQuestion1Answer}/>
       case 2:
         return <Detailed2/>
       case 3:
@@ -106,7 +140,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
       case 8:
         return <FinalReport goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
       default:
-        return <Detailed1/>;
+        return <Detailed1 setSelectedString={setQ1Answer} handleAnswerSelect={MainQuestion1Answer}/>;
     }
   };
 
@@ -147,11 +181,29 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
 
     {/*Next and Previous Page Buttons*/}
     <div className='container'>
-      <button className="changeProgressButton" disabled={currentPage===1} onClick={() => {
-        setCurrentPage(currentPage - 1)}}>Previous Question</button>
-      <button className="changeProgressButton" disabled={currentPage===8} onClick={() => {
-        setCurrentPage(currentPage + 1);}}>Next Question</button>
-    </div>
+        {currentPage > 1 && (
+          <button 
+            className={`changeProgressButton ${currentPage === 1 ? 'disabled' : ''}`} 
+            disabled={currentPage === 1}
+            onClick={() => setCurrentPage(currentPage - 1)}>
+            Previous Question
+          </button>
+        )}
+        
+        {currentPage < 7 && (
+          <button 
+            className={`changeProgressButton ${currentPage === 7 ? 'disabled' : ''}`} 
+            disabled={!isAnswerSelected}
+            onClick={handleNextButtonClick}>
+            Next Question
+          </button>
+        )}
+
+        {currentPage === 7 && (
+          <button className='changeProgressButton'> Submit </button>
+        )}
+      </div>
+      <button onClick={() => console.log(Q1Answer)}>log</button>
     </div>
   );
 };  
