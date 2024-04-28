@@ -82,6 +82,8 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
     setIsAnswerSelected(false);
   }, [currentPage]);
 
+  //TODO: Implement storage system that makes sense for detialed quiz.
+  // Try to make textarea persistent when going back to previous pages
   /*//#region Save System
   useEffect(() => {
     const savedData = JSON.parse(localStorage.getItem('savedData') || '{"answers":[],"page":1}');
@@ -116,7 +118,6 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
   Ensures that the progress bar does not go up
   until an answer is selectef
   */
-
   /* TODO: To be implemented in progress counter branch
   const progressCounter = () => {
     if (isAnswerSelected) return currentPage;
