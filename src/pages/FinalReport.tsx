@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+//import React, { useState} from 'react';
 import "./Questions.css";
 import SettingsMenu from '../Setting_menu';
 
@@ -9,16 +9,18 @@ interface Props {
   }
     
   const FinalReport: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDarkMode }) => {
+    /*
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   
       const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
       };
-  
+
       const toggleSettings = () => {
         setIsSettingsOpen(!isSettingsOpen);
       };
+      */
       return (
         <div>
             {/*Header Text*/}
@@ -31,6 +33,9 @@ interface Props {
                 <li>Job Number Two</li>
                 <li>Job Number Three</li>
             </ul>
+
+            <img className="finalReportImage" src={Congrats} alt="logo"></img>
+            </div>
 
             <div className="finalReportSubheader">Possible Jobs:</div>
             <ul className="finalReportSummary"></ul>
