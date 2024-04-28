@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (56 ms)
+  ✕ renders learn react link (59 ms)
 
   ● renders learn react link
 
@@ -183,7 +183,7 @@ go away.[0m
 ------------------------------------------------|---------|----------|---------|---------|-------------------------
 File                                            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s       
 ------------------------------------------------|---------|----------|---------|---------|-------------------------
-All files                                       |   10.46 |     5.64 |    1.55 |    10.3 |                         
+All files                                       |   10.33 |     5.34 |    1.43 |    10.2 |                         
  src                                            |   34.69 |    38.88 |   16.66 |   34.04 |                         
   App.tsx                                       |   48.27 |       50 |   15.38 |      50 | 17,21,25,30,37-58,62-64 
   Setting_menu.tsx                              |   33.33 |       50 |   33.33 |      25 | 15-25                   
@@ -193,7 +193,7 @@ All files                                       |   10.46 |     5.64 |    1.55 |
   FinalReport.tsx                               |    12.5 |        0 |       0 |    12.5 | 12-22                   
   GPT.tsx                                       |       0 |        0 |       0 |       0 | 7-31                    
  src/pages/BasicQuestions                       |     1.4 |        0 |       0 |    1.41 |                         
-  BasicQuestionOverlay.tsx                      |     0.8 |        0 |       0 |    0.81 | 53-299                  
+  BasicQuestionOverlay.tsx                      |     0.8 |        0 |       0 |    0.81 | 53-303                  
   MainBasicQ.tsx                                |    5.55 |        0 |       0 |    5.55 | 16-54                   
  src/pages/BasicQuestions/Business Questions    |   11.53 |      100 |       0 |   11.53 |                         
   BusinessQ1.tsx                                |      10 |      100 |       0 |      10 | 9-25                    
@@ -223,18 +223,18 @@ All files                                       |   10.46 |     5.64 |    1.55 |
   TechQ4.tsx                                    |    12.5 |      100 |       0 |    12.5 | 9-23                    
   TechQ5.tsx                                    |    12.5 |      100 |       0 |    12.5 | 9-23                    
   TechQ6.tsx                                    |    9.09 |      100 |       0 |    9.09 | 9-24                    
- src/pages/DetailedQuestions                    |    5.55 |        0 |       0 |    5.55 |                         
-  Detailed1.tsx                                 |       0 |      100 |       0 |       0 | 4                       
-  Detailed2.tsx                                 |       0 |      100 |       0 |       0 | 4                       
-  Detailed3.tsx                                 |       0 |      100 |       0 |       0 | 4                       
-  Detailed4.tsx                                 |       0 |      100 |       0 |       0 | 4                       
-  Detailed5.tsx                                 |       0 |      100 |       0 |       0 | 4                       
-  Detailed6.tsx                                 |       0 |      100 |       0 |       0 | 4                       
-  Detailed7.tsx                                 |       0 |      100 |       0 |       0 | 4                       
-  DetailedQuestion.tsx                          |    9.09 |        0 |       0 |    9.09 | 20-80                   
+ src/pages/DetailedQuestions                    |    8.79 |        0 |       0 |    8.79 |                         
+  Detailed1.tsx                                 |      20 |      100 |       0 |      20 | 25-37                   
+  Detailed2.tsx                                 |      20 |      100 |       0 |      20 | 15-21                   
+  Detailed3.tsx                                 |      20 |      100 |       0 |      20 | 15-20                   
+  Detailed4.tsx                                 |      20 |      100 |       0 |      20 | 15-20                   
+  Detailed5.tsx                                 |      20 |      100 |       0 |      20 | 15-20                   
+  Detailed6.tsx                                 |      20 |      100 |       0 |      20 | 15-20                   
+  Detailed7.tsx                                 |      20 |      100 |       0 |      20 | 15-20                   
+  DetailedQuestion.tsx                          |    1.78 |        0 |       0 |    1.78 | 20-193                  
 ------------------------------------------------|---------|----------|---------|---------|-------------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        4.159 s
+Time:        4.035 s
 Ran all test suites.
