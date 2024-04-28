@@ -114,16 +114,15 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
       setIsSettingsOpen(!isSettingsOpen);
     };
 
-    /* Handles the counter for progress bar
+    /** Handles the counter for progress bar
   Ensures that the progress bar does not go up
   until an answer is selectef
   */
-  /* TODO: To be implemented in progress counter branch
   const progressCounter = () => {
     if (isAnswerSelected) return currentPage;
     else return currentPage - 1;
   }
-  */
+  
 
   /*Switch Case from Basic question overlay, adjuseted for detailed question*/
   const renderCurrentPage = () => {
@@ -178,9 +177,9 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
         </div>
         </div>
       </header>
-          
       {/*Page Counter && Logic*/}
       <div className='container'>
+      <progress className='progressBar' value={progressCounter() / 7}></progress>
         {renderCurrentPage()}
     </div>
 
