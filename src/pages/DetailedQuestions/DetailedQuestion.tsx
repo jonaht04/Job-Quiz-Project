@@ -203,7 +203,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
           <button className='changeProgressButton'> Submit </button>
         )}
       </div>
-      <button onClick={() => console.log(Q1Answer)}>log</button>
+      <button onClick={() => console.log(Q1Answer)}>log</button> {/* temp log button for testing */}
     </div>
   );
 };  

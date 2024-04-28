@@ -13,13 +13,15 @@ export const Detailed1: React.FC<Props> = ({ setSelectedString, handleAnswerSele
   /** Handles changes in the text box */
   const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setInputText(event.target.value);
-    handleAnswer();
   };
 
   const handleAnswer = () => {
     setSelectedString(inputText);
     handleAnswerSelect(inputText);
   };
+  
+  handleAnswer();
+
     return (<div className='container'>
     <h1>Question 1</h1>
     <h2>What was your favorite subject in highschool and why?</h2>
