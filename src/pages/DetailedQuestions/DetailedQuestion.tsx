@@ -126,7 +126,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
       case 1:
         return <Detailed1 setSelectedString={setQ1Answer} handleAnswerSelect={MainQuestion1Answer}/>
       case 2:
-        return <Detailed2/>
+        return <Detailed2 setSelectedString={setQ2Answer} handleAnswerSelect={SubQuestion1Answer}/>
       case 3:
         return <Detailed3/>
       case 4:
