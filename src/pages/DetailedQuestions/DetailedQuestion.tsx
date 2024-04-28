@@ -39,7 +39,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
           <button className="saveButton">Save</button>
 
         {/*Settings Menu*/}
-          <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode}/>
+          <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode} toggleDropdown={toggleDropdown}/>
           <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
           <button className="dropdownButton" onClick={toggleDropdown}>
             <div className="bar"></div>

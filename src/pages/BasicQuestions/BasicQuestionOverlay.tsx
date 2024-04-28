@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react';
 import "../Questions.css";
 import SettingsMenu from '../../Setting_menu';
 import MainBasicQ from './MainBasicQ';
+import fanfare from '../../assets/final-fantasy-vii-victory-fanfare-1.mp3'
 
 //#region Tech Questions
 import TechQ1 from './Techonology Questions/TechQ1';
@@ -39,26 +40,45 @@ import MathQ5 from './Math Questions/MathQ5';
 import MathQ6 from './Math Questions/MathQ6';
 //#endregion
 
+//#region GPT imports
+import genReport from '../GPT';
+
 interface Props {
   goToHomePage: () => void;
   isDarkMode: boolean;
   toggleDarkMode: () => void;
 }
 
-const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDarkMode }) => {
+const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDarkMode}) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [isAnswerSelected, setIsAnswerSelected] = useState(false);
+  
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = React.createRef<HTMLAudioElement>();
+
+  const togglePlay = () => {
+    const audio = audioRef.current;
+    if (audio) {
+      if (isPlaying) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+    generateBasicQuestionReport();
+  };
 
   //#region Question Answers
   const [Q1Answer, setQ1Answer] = useState("");
-  const [/*Q2Answer*/, setQ2Answer] = useState("");
-  const [/*Q3Answer*/, setQ3Answer] = useState("");
-  const [/*Q4Answer*/, setQ4Answer] = useState("");
-  const [/*Q5Answer*/, setQ5Answer] = useState("");
-  const [/*Q6Answer*/, setQ6Answer] = useState("");
-  const [/*Q7Answer*/, setQ7Answer] = useState("");
+  const [Q2Answer, setQ2Answer] = useState("");
+  const [Q3Answer, setQ3Answer] = useState("");
+  const [Q4Answer, setQ4Answer] = useState("");
+  const [Q5Answer, setQ5Answer] = useState("");
+  const [Q6Answer, setQ6Answer] = useState("");
+  const [Q7Answer, setQ7Answer] = useState("");
   //#endregion
 
   //#region Question Answer functions
@@ -112,6 +132,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
     if (isAnswerSelected) {
       setCurrentPage(currentPage + 1)
       setIsAnswerSelected(false);
+      saveData();
     }
   };
 
@@ -123,6 +144,66 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
     if (isAnswerSelected) return currentPage;
     else return currentPage - 1;
   }
+
+  //#region Save System
+  useEffect(() => {
+    const savedData = JSON.parse(localStorage.getItem('savedData') || '{"answers":[],"page":1}');
+    setQ1Answer(savedData.answers[0] || "");
+    setQ2Answer(savedData.answers[1] || "");
+    setQ3Answer(savedData.answers[2] || "");
+    setQ4Answer(savedData.answers[3] || "");
+    setQ5Answer(savedData.answers[4] || "");
+    setQ6Answer(savedData.answers[5] || "");
+    setQ7Answer(savedData.answers[6] || "");
+    setCurrentPage(savedData.page);
+  }, []);
+  
+  const saveData = () => {
+    const dataToSave = {
+      answers: [Q1Answer, Q2Answer, Q3Answer, Q4Answer, Q5Answer, Q6Answer, Q7Answer],
+      page: currentPage
+    };
+    localStorage.setItem('savedData', JSON.stringify(dataToSave));
+  };
+  //#endregion
+  //#region report generation functions
+  const generateBasicQuestionReport = () => {
+    var reportPrompt = "";
+    if(Q1Answer === "Technology"){
+      reportPrompt = "Which aspect of technology interests you the most? Answer: "  + Q2Answer + 
+      " Are you interested in working with hardware or software development? Answer: " + Q3Answer + 
+      " What programming languages or technical skills are you most proficient in?  Answer: " + Q4Answer + 
+      " Do you prefer in a large corporate environment or a startup culture? Answer: " + Q5Answer + 
+      " Are you interested in pursuing further education or certifications in your field? Answer: " + Q6Answer + 
+      " What industries are you interested in applying your technology skills to? Answer: " + Q7Answer;
+    }
+    if(Q1Answer === "Healthcare"){
+      reportPrompt = "Which type of healthcare role interests you the most? Answer: "  + Q2Answer + 
+      " What area of medicine or healthcare are you passionate about? Answer: " + Q3Answer + 
+      " Are you interested in patient care or research-oriented roles?  Answer: " + Q4Answer + 
+      " Do you have any specific medical conditions or areas of interest you'd like to focus on? Answer: " + Q5Answer + 
+      " Are you comfortable working in high-stress environments such as hospitals or clinics? Answer: " + Q6Answer + 
+      " Are you interested in always being “On-call”? Answer: " + Q7Answer;
+    }
+    if(Q1Answer === "Business"){
+      reportPrompt = "Which area of business are you most interested in? Answer: "  + Q2Answer + 
+      " What specific aspect of finance or business management intrigues you? Answer: " + Q3Answer + 
+      " Do you have a preference for working in corporate settings or startups?  Answer: " + Q4Answer + 
+      " Are you interested in pursuing an MBA or other advanced business degree? Answer: " + Q5Answer + 
+      " Do you enjoy working with numbers and analyzing data? Answer: " + Q6Answer + 
+      " Are you interested in international business opportunities or global markets? Answer: " + Q7Answer;
+    }
+    if(Q1Answer === "Math"){
+      reportPrompt = "What specific area of mathematics are you most passionate about? Answer: "  + Q2Answer + 
+      " In which sector are you interested in pursuing a career? Answer: " + Q3Answer + 
+      " Do you have experience or interest in using mathematical modeling and simulation techniques?  Answer: " + Q4Answer + 
+      " Are you comfortable working with large datasets and applying mathematical algorithms for analysis? Answer: " + Q5Answer + 
+      " Which type of role are you interested in? Answer: " + Q6Answer + 
+      " Are you open to further education or obtaining certifications? Answer: " + Q7Answer;
+    }
+    genReport(reportPrompt)}
+  //end region
+
 
   const renderCurrentPage = () => {
     switch(currentPage) {
@@ -183,12 +264,12 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
   
   return (
     <div>
-      <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode}/>
+      <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode} toggleDropdown={toggleDropdown}/>
       <header className="questionHeader">
           <p className="questionCounter">Question {currentPage}/7</p>
         <div className="buttonContainer">
           <button className="homeButton" onClick={goToHomePage}>Home</button>
-          <button className="saveButton">Save</button>
+          <button className="saveButton" onClick={saveData}>Save</button>
           <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
           <button className="dropdownButton" onClick={toggleDropdown}>
             <div className="bar"></div>
@@ -230,9 +311,12 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
         )}
 
         {currentPage === 7 && (
-          <button className='changeProgressButton'> Submit </button>
+          <button className='changeProgressButton' onClick={togglePlay}> Submit </button>
         )}
       </div>
+      <audio ref={audioRef}>
+        <source src={fanfare} type="audio/mpeg" />
+      </audio>
     </div>
   );
 };

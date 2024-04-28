@@ -24,7 +24,7 @@ export const TechQ1: React.FC<Props> = ({ setSelectedString, handleAnswerSelect 
         <button className="answerButton" onClick={() => handleButtonClick("Artificial Intelligence and Machine Learning")}>Artificial Intelligence and Machine Learning</button>
       </div>
       <div className="spacer"></div>
-      <button className="answerButton">IT Management</button>
+      <button className="answerButton" onClick={() => handleButtonClick("IT Management")}>IT Management</button>
     </div>
   )
 }

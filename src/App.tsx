@@ -1,8 +1,9 @@
-import React, { useState, useEffect  } from 'react';
+import React, { useState, useEffect} from 'react';
 import './App.css';
 import BasicQuestion1 from './pages/BasicQuestions/BasicQuestionOverlay';
 import DetailedQuestion from './pages/DetailedQuestions/DetailedQuestion';
 import SettingsMenu from './Setting_menu';
+import { Modal } from 'react-bootstrap';
 
 function App() {
   const [key, setKey] = useState<string>('');
@@ -10,6 +11,7 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false); 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [isStartNewShortQuiz, setIsStartNewShortQuiz] = useState(false);
 
   const toggleDropdown = () => {
       setIsDropdownOpen(!isDropdownOpen);
@@ -17,6 +19,10 @@ function App() {
 
   const toggleSettings = () => {
       setIsSettingsOpen(!isSettingsOpen);
+  };
+
+  const toggleShortQuiz = () => {
+    setIsStartNewShortQuiz(!isStartNewShortQuiz);
   };
 
   useEffect(() => {
@@ -44,14 +50,20 @@ function App() {
   }
 
   function goToBasicQuestionPage() {
-    setCurrentPage('BasicQuestion1'); // Navigate to the first new page
+    setCurrentPage('BasicQuestion1');
+    toggleShortQuiz();
   }
 
   function goToDetailedQuestionPage() {
     setCurrentPage('DetailedQuesiton')
   }
 
-  
+  const startNewShortQuiz = () => {
+    localStorage.removeItem('savedData');
+    goToBasicQuestionPage();
+    toggleShortQuiz();
+  }
+
   return (
     <div className='App'>
       <div>
@@ -60,7 +72,7 @@ function App() {
           <header className="homePgHeader">
             <div className="buttonContainer">
                 <button className="homePgHeaderButtons" onClick={goToHomePage}>Home</button>
-                <button className="homePgHeaderButtons" onClick={goToBasicQuestionPage}>Short Quiz</button>
+                <button className="homePgHeaderButtons" onClick={toggleShortQuiz}>Short Quiz</button>
                 <button className="homePgHeaderButtons" onClick={goToDetailedQuestionPage}>Long Quiz</button>
               <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
                 <button className="dropdownButton" onClick={toggleDropdown}>
@@ -81,7 +93,7 @@ function App() {
           </header>
         </div>
     ) : currentPage === 'BasicQuestion1' ? (
-      <BasicQuestion1 goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
+      <BasicQuestion1 goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
     ) : (
       <DetailedQuestion goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
     )}
@@ -100,7 +112,7 @@ function App() {
         <p className="spacer"> </p>
         <h2>There are two types of quizzes that you can take:</h2>
         <div className="promptContainer">
-            <div><button className="quizButton" onClick={goToBasicQuestionPage}>Multiple Choice</button>
+            <div><button className="quizButton" onClick={toggleShortQuiz}>Multiple Choice</button>
             <p className ="textContainer">This exam is the shorter quiz. Its questions are all multiple choice and shouldn’t take too long to complete. Choose the answer that best matches your own preferences, beliefs, and opinions. This test is powered by ChatGPT’s Large Language Model.</p></div>
             <div><button className="quizButton" onClick={goToDetailedQuestionPage}>Short Answer</button>
             <p className ="textContainer">This exam has more complex questions that require more thought with fill-in-the-blank answers being required. Expect this to take longer than the multiple choice. This test is powered by ChatGPT’s Large Language Model.</p></div>
@@ -116,7 +128,28 @@ function App() {
         </form>
       </div>
     )}
-    <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode}/>
+    <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode} toggleDropdown={toggleDropdown}/>
+
+
+    <Modal show={isStartNewShortQuiz} onHide={toggleShortQuiz} className="ShortQuizModal">
+      <Modal.Header closeButton>
+        <Modal.Title>Short Quiz</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+      <ul className="list-unstyled">
+          <li className="mb-3">
+            <div>
+              <button className="ShortQuiz" onClick={goToBasicQuestionPage}>Continue Quiz</button>
+            </div>
+          </li>
+          <li className="mb-3">
+            <div className="shortQuiz">
+            <button className="ShortQuiz" onClick={startNewShortQuiz}>Start New Quiz</button>
+            </div>
+          </li>
+        </ul>
+      </Modal.Body>
+    </Modal>
       </div> 
     </div>
   );

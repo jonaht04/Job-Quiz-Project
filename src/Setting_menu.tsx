@@ -6,17 +6,24 @@ interface Props {
   onClose: () => void;
   onDarkModeToggle: (isChecked: boolean) => void;
   isDarkMode: boolean;
+  toggleDropdown: () => void;
 }
 
-const SettingsMenu: React.FC<Props> = ({ isOpen, onClose, onDarkModeToggle, isDarkMode }) => {
+const SettingsMenu: React.FC<Props> = ({ isOpen, onClose, onDarkModeToggle, isDarkMode, toggleDropdown }) => {
   if (!isOpen) return null;
 
   const handleDarkModeToggle = (event: React.ChangeEvent<HTMLInputElement>) => {
     onDarkModeToggle(event.target.checked);
   };
 
+  const CloseSettings = () =>
+    {
+      onClose();
+      toggleDropdown();
+    }
+
   return (
-    <Modal show={isOpen} onHide={onClose}>
+    <Modal show={isOpen} onHide={CloseSettings}>
       <Modal.Header closeButton>
         <Modal.Title>Settings</Modal.Title>
       </Modal.Header>
