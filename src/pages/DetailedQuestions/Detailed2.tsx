@@ -7,12 +7,16 @@ interface Props {
 
 
 export const Detailed2: React.FC<Props> = ({ setSelectedString, handleAnswerSelect }) => {
-  const handleAnswer = (string: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setSelectedString(string.target.value);
-    handleAnswerSelect(string.target.value);
+  /**
+   * Handles the change in the textarea, and stores it in the main DetailedQuestion page
+   * @param event : handles the event from the TextArea
+   */
+  // grabs the string from the event
+  const handleAnswer = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setSelectedString(event.target.value);
+    handleAnswerSelect(event.target.value);
   };
   
-  ;
 
   return (<div className='container'>
     <h1>Question 2</h1>

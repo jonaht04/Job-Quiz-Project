@@ -22,14 +22,15 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
   const [currentPage, setCurrentPage] = useState(1);
   const [isAnswerSelected, setIsAnswerSelected] = useState(false);
 
+  //TODO: Uncomment states to handle GPT implementation
   //#region Question Answers
-  const [Q1Answer, setQ1Answer] = useState("");
-  const [Q2Answer, setQ2Answer] = useState("");
-  const [Q3Answer, setQ3Answer] = useState("");
-  const [Q4Answer, setQ4Answer] = useState("");
-  const [Q5Answer, setQ5Answer] = useState("");
-  const [Q6Answer, setQ6Answer] = useState("");
-  const [Q7Answer, setQ7Answer] = useState("");
+  const [/*Q1Answer*/, setQ1Answer] = useState("");
+  const [/*Q2Answer*/, setQ2Answer] = useState("");
+  const [/*Q3Answer*/, setQ3Answer] = useState("");
+  const [/*Q4Answer*/, setQ4Answer] = useState("");
+  const [/*Q5Answer*/, setQ5Answer] = useState("");
+  const [/*Q6Answer*/, setQ6Answer] = useState("");
+  const [/*Q7Answer*/, setQ7Answer] = useState("");
   //#endregion
 
   //#region Question Answer functions
@@ -115,10 +116,13 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
   Ensures that the progress bar does not go up
   until an answer is selectef
   */
+
+  /* TODO: To be implemented in progress counter branch
   const progressCounter = () => {
     if (isAnswerSelected) return currentPage;
     else return currentPage - 1;
   }
+  */
 
   /*Switch Case from Basic question overlay, adjuseted for detailed question*/
   const renderCurrentPage = () => {
@@ -128,15 +132,15 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
       case 2:
         return <Detailed2 setSelectedString={setQ2Answer} handleAnswerSelect={SubQuestion1Answer}/>
       case 3:
-        return <Detailed3/>
+        return <Detailed3 setSelectedString={setQ3Answer} handleAnswerSelect={SubQuestion2Answer}/>
       case 4:
-        return <Detailed4/>
+        return <Detailed4 setSelectedString={setQ4Answer} handleAnswerSelect={SubQuestion3Answer}/>
       case 5:
-        return <Detailed5/>
+        return <Detailed5 setSelectedString={setQ5Answer} handleAnswerSelect={SubQuestion4Answer}/>
       case 6:
-        return <Detailed6/>
+        return <Detailed6 setSelectedString={setQ6Answer} handleAnswerSelect={SubQuestion5Answer}/>
       case 7:
-        return <Detailed7/>
+        return <Detailed7 setSelectedString={setQ7Answer} handleAnswerSelect={SubQuestion6Answer}/>
       case 8:
         return <FinalReport goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
       default:
@@ -200,10 +204,9 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
         )}
 
         {currentPage === 7 && (
-          <button className='changeProgressButton'> Submit </button>
+          <button className='changeProgressButton' onClick={handleNextButtonClick}> Submit </button>
         )}
       </div>
-      <button onClick={() => console.log(Q1Answer)}>log</button> {/* temp log button for testing */}
     </div>
   );
 };  
