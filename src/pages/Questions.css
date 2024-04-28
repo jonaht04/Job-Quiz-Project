@@ -131,28 +131,10 @@
   font-size: 18px;
 }
 
-.finalReportListContainer{
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 5px;
-}
-
 .finalReportSubheader{
   font-size: 24px;
 }
 
-
-.finalReportList{
-  float: center;
-  font-size: 18px;
-  width:20%;
-}
-
-.finalReportImage{
-  max-width:50%;
-  height: auto;
-}
 
 .disabled{
   color: grey;
