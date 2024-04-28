@@ -140,6 +140,10 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
     setIsAnswerSelected(false);
   }, [currentPage]);
 
+  /* Handles the counter for progress bar
+  Ensures that the progress bar does not go up
+  until an answer is selectef
+  */
   const progressCounter = () => {
     if (isAnswerSelected) return currentPage;
     else return currentPage - 1;
