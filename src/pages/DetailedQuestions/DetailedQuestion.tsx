@@ -9,6 +9,7 @@ import Detailed5 from './Detailed5';
 import Detailed6 from './Detailed6';
 import Detailed7 from './Detailed7';
 import FinalReport from '../FinalReport';
+import fanfare from '../../assets/final-fantasy-vii-victory-fanfare-1.mp3'
 
 interface Props {
   goToHomePage: () => void;
@@ -21,6 +22,20 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [isAnswerSelected, setIsAnswerSelected] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = React.createRef<HTMLAudioElement>();
+
+  const togglePlay = () => {
+    const audio = audioRef.current;
+    if (audio) {
+      if (isPlaying) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
 
   //TODO: Uncomment states to handle GPT implementation
   //#region Question Answers
@@ -204,9 +219,12 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
         )}
 
         {currentPage === 7 && (
-          <button className='changeProgressButton' onClick={handleNextButtonClick}> Submit </button>
+          <button className='changeProgressButton' onClick={() => {handleNextButtonClick(); togglePlay() }}> Submit </button>
         )}
       </div>
+      <audio ref={audioRef}>
+        <source src={fanfare} type="audio/mpeg" />
+      </audio>
     </div>
   );
 };  
