@@ -42,6 +42,7 @@ import MathQ6 from './Math Questions/MathQ6';
 
 //#region GPT imports
 import genReport from '../GPT';
+import FinalReport from '../FinalReport';
 
 interface Props {
   goToHomePage: () => void;
@@ -261,6 +262,8 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
           case "Math": return <MathQ6 setSelectedString={setQ7Answer} handleAnswerSelect={SubQuestion6Answer}/>;
         }
         break;
+      case 8:
+        return <FinalReport goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}></FinalReport>
       default:
         return <MainBasicQ setSelectedString={setQ1Answer} handleAnswerSelect={MainQuestion1Answer}/>;
     }
@@ -315,7 +318,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
         )}
 
         {currentPage === 7 && (
-          <button className='changeProgressButton' onClick={togglePlay}> Submit </button>
+          <button className='changeProgressButton' onClick={() => {togglePlay(); handleNextButtonClick()}}> Submit </button>
         )}
       </div>
       <audio ref={audioRef}>
