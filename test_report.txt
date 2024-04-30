@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (58 ms)
+  ✕ renders learn react link (55 ms)
 
   ● renders learn react link
 
@@ -183,17 +183,17 @@ go away.[0m
 ------------------------------------------------|---------|----------|---------|---------|-------------------------
 File                                            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s       
 ------------------------------------------------|---------|----------|---------|---------|-------------------------
-All files                                       |   10.03 |      5.1 |    1.41 |    9.94 |                         
+All files                                       |    9.92 |        5 |     1.4 |    9.86 |                         
  src                                            |   34.69 |    38.88 |   16.66 |   34.04 |                         
   App.tsx                                       |   48.27 |       50 |   15.38 |      50 | 17,21,25,30,37-58,62-64 
   Setting_menu.tsx                              |   33.33 |       50 |   33.33 |      25 | 15-25                   
   index.tsx                                     |       0 |      100 |     100 |       0 | 7-19                    
   reportWebVitals.ts                            |       0 |        0 |       0 |       0 | 3-10                    
- src/pages                                      |    6.25 |        0 |       0 |    6.25 |                         
-  FinalReport.tsx                               |    12.5 |        0 |       0 |    12.5 | 12-22                   
-  GPT.tsx                                       |       0 |        0 |       0 |       0 | 7-31                    
- src/pages/BasicQuestions                       |     1.4 |        0 |       0 |    1.41 |                         
-  BasicQuestionOverlay.tsx                      |     0.8 |        0 |       0 |    0.81 | 53-303                  
+ src/pages                                      |    5.88 |        0 |       0 |    5.88 |                         
+  FinalReport.tsx                               |    12.5 |        0 |       0 |    12.5 | 13-23                   
+  GPT.tsx                                       |       0 |        0 |       0 |       0 | 7-32                    
+ src/pages/BasicQuestions                       |    1.36 |        0 |       0 |    1.38 |                         
+  BasicQuestionOverlay.tsx                      |    0.77 |        0 |       0 |    0.79 | 54-322                  
   MainBasicQ.tsx                                |    5.55 |        0 |       0 |    5.55 | 16-54                   
  src/pages/BasicQuestions/Business Questions    |   11.53 |      100 |       0 |   11.53 |                         
   BusinessQ1.tsx                                |      10 |      100 |       0 |      10 | 9-25                    
@@ -236,5 +236,5 @@ All files                                       |   10.03 |      5.1 |    1.41 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        4.215 s
+Time:        4.236 s
 Ran all test suites.
