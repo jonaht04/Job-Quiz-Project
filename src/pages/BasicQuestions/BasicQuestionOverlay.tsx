@@ -55,6 +55,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [isAnswerSelected, setIsAnswerSelected] = useState(false);
+  const [report, setReport] = useState("");
   
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = React.createRef<HTMLAudioElement>();
@@ -69,7 +70,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
       }
       setIsPlaying(!isPlaying);
     }
-    generateBasicQuestionReport();
+    generateBasicQuestionReport().then(response => {setReport(response)});
   };
 
   //#region Question Answers
@@ -206,7 +207,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
       " Which type of role are you interested in? Answer: " + Q6Answer + 
       " Are you open to further education or obtaining certifications? Answer: " + Q7Answer;
     }
-    genReport(reportPrompt)}
+    return genReport(reportPrompt);}
   //end region
 
 
@@ -263,7 +264,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
         }
         break;
       case 8:
-        return <FinalReport goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}></FinalReport>
+        return <FinalReport goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} gptResponse={report}></FinalReport>
       default:
         return <MainBasicQ setSelectedString={setQ1Answer} handleAnswerSelect={MainQuestion1Answer}/>;
     }

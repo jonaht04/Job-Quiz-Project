@@ -6,9 +6,10 @@ interface Props {
     goToHomePage: () => void;
     isDarkMode: boolean;
     toggleDarkMode: () => void;
+    gptResponse: string;
   }
     
-  const FinalReport: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDarkMode }) => {
+  const FinalReport: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDarkMode, gptResponse }) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   
@@ -33,7 +34,7 @@ interface Props {
             </ul>
 
             <div className="finalReportSubheader">Possible Jobs:</div>
-            <ul className="finalReportSummary"></ul>
+            <ul className="finalReportSummary"> {gptResponse} </ul>
 
             {/*Settings Menu*/}
               <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode} toggleDropdown={toggleDropdown}/>
