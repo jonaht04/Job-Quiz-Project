@@ -2,7 +2,7 @@ import OpenAI from "openai";
 
 //this is a fairly barebones implementation but it doesn't need to be much more than that.
 
-async function genReport(responses: string){
+async function genReport(responses: string) {
     //get key from local storage
     const APIKey = localStorage.getItem("MYKEY");
     //check if key was entered; return error message if not
@@ -28,7 +28,8 @@ async function genReport(responses: string){
   //send the AI's response to the console log for error checking
   console.log(completion.choices[0].message.content);
   //return the AI's response as a string
-  return((completion.choices[0].message.content))
+  const response: string = completion.choices[0].message.content ||  "";
+  return(response)
 };
 //export genReport function for use in question pages
 export default genReport;

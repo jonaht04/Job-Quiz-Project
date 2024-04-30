@@ -42,6 +42,7 @@ import MathQ6 from './Math Questions/MathQ6';
 
 //#region GPT imports
 import genReport from '../GPT';
+import FinalReport from '../FinalReport';
 
 interface Props {
   goToHomePage: () => void;
@@ -54,6 +55,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [isAnswerSelected, setIsAnswerSelected] = useState(false);
+  const [report, setReport] = useState("");
   
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = React.createRef<HTMLAudioElement>();
@@ -68,7 +70,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
       }
       setIsPlaying(!isPlaying);
     }
-    generateBasicQuestionReport();
+    generateBasicQuestionReport().then(response => {setReport(response)});
   };
 
   //#region Question Answers
@@ -205,7 +207,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
       " Which type of role are you interested in? Answer: " + Q6Answer + 
       " Are you open to further education or obtaining certifications? Answer: " + Q7Answer;
     }
-    genReport(reportPrompt)}
+    return genReport(reportPrompt);}
   //end region
 
 
@@ -261,6 +263,8 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
           case "Math": return <MathQ6 setSelectedString={setQ7Answer} handleAnswerSelect={SubQuestion6Answer}/>;
         }
         break;
+      case 8:
+        return <FinalReport goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} gptResponse={report}></FinalReport>
       default:
         return <MainBasicQ setSelectedString={setQ1Answer} handleAnswerSelect={MainQuestion1Answer}/>;
     }
@@ -315,7 +319,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
         )}
 
         {currentPage === 7 && (
-          <button className='changeProgressButton' onClick={togglePlay}> Submit </button>
+          <button className='changeProgressButton' onClick={() => {togglePlay(); handleNextButtonClick()}}> Submit </button>
         )}
       </div>
       <audio ref={audioRef}>
