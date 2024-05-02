@@ -19,7 +19,7 @@ export const Detailed6: React.FC<Props> = ({ setSelectedString, handleAnswerSele
 
     return (<div className='container'>
     <h1>Question 6</h1>
-    <h2>Choose your favorite and explain why you chose it.</h2> {/**TODO: Chose what? */}
+    <h2>Choose your favorite career and explain why you chose it.</h2> {/**TODO: Chose what? */}
     <div>
             <textarea id="input-text" className="detailedAnswerText" placeholder="Enter Answer Here..." onChange={handleAnswer}></textarea>
         </div>
