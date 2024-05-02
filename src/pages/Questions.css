@@ -182,8 +182,8 @@ progress[value]::-webkit-progress-value {
 }
 
 .dark-mode .container {
-  background-color: #232323;
-  color: #ffffff;
+  background-color: #1e1e2e;
+  color: #cdd6f4;
 }
 
 .dark-mode .questionHeader {

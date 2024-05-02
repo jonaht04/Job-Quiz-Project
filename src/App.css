@@ -75,6 +75,11 @@
     border: none;
 }
 
+.dark-mode .App{
+    background-color: #1e1e2e;
+    color: #cdd6f4
+}
+
 .dark-mode .quizButton{
     background-color: #151515;
     color: white;
@@ -82,11 +87,11 @@
 }
 
 .dark-mode .container {
-    background-color: black;
+    background-color: #1e1e2e;
 }
 
 .dark-mode .homePgHeader {
-    background-color: #323232;
+    background-color: #313244;
 }
 
 .dark-mode .homePgHeaderButtons {
@@ -95,5 +100,5 @@
 }
 
 .dark-mode {
-  background-color: #232323;
+  background-color: #1e1e2e;
 }
