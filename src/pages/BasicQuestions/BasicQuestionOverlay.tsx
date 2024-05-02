@@ -286,8 +286,6 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
           </button>
           {isDropdownOpen && (
             <div className="dropdownContent">
-              <button className="dropdownItem">Help</button>
-              <button className="dropdownItem">Account</button>
               <button className="dropdownItem" onClick={toggleSettings}>Settings</button>
             </div>
           )}
