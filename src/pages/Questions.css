@@ -192,11 +192,11 @@ progress[value]::-webkit-progress-value {
 }
 
 .dark-mode .bar {
-  background-color: white;
+  background-color: #9399b2;
 }
 
 .dark-mode .dropdownContent {
-  background-color: #151515;
+  background-color: #181825;
   box-shadow: 0px 8px 16px 0px rgba(255,255,255,0.2);
   border-radius: 2.5%;
 }

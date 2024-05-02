@@ -1,5 +1,6 @@
 import React from 'react';
 import { Modal } from 'react-bootstrap';
+import "./Setting_Menu.css"
 
 interface Props {
   isOpen: boolean;

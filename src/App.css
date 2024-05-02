@@ -99,6 +99,18 @@
     color: white;
 }
 
+.dark-mode .ShortQuiz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #313244;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    margin: 0 auto;
+    border: none;
+}
+
 .dark-mode {
   background-color: #1e1e2e;
 }
