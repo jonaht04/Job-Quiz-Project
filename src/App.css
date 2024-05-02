@@ -1,10 +1,12 @@
 .App {
   text-align: center;
+  background-color: #eff1f5;
 }
 
 .container
 {
-    background-color: #ffffff;
+    background-color: #eff1f5;
+    color: #4c4f69
 }
 
 .homePgHeader{
