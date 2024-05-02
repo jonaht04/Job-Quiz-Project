@@ -1,6 +1,4 @@
-import React, { useState} from 'react';
 import "./Questions.css";
-import SettingsMenu from '../Setting_menu';
 
 interface Props {
     goToHomePage: () => void;
@@ -10,16 +8,6 @@ interface Props {
   }
     
   const FinalReport: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDarkMode, gptResponse }) => {
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  
-      const toggleDropdown = () => {
-        setIsDropdownOpen(!isDropdownOpen);
-      };
-  
-      const toggleSettings = () => {
-        setIsSettingsOpen(!isSettingsOpen);
-      };
       return (
         <div>
             {/*Header Text*/}
@@ -36,24 +24,6 @@ interface Props {
             <div className="finalReportSubheader">Possible Jobs:</div>
             <ul className="finalReportSummary"> {gptResponse} </ul>
 
-            {/*Settings Menu*/}
-              <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode} toggleDropdown={toggleDropdown}/>
-              <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
-              <button className="dropdownButton" onClick={toggleDropdown}>
-                <div className="bar"></div>
-                <div className="bar"></div>
-                <div className="bar"></div>
-              </button>
-              {/*Settings Options*/}
-              {isDropdownOpen && (
-                <div className="dropdownContent">
-                  <button className="dropdownItem">Help</button>
-                  <button className="dropdownItem">Account</button>
-                  <button className="dropdownItem" onClick={toggleSettings}>Settings</button>
-                  <button className="dropdownItem">Logout</button>
-                </div>
-              )}
-            </div>
             </div>
       );
     };  
