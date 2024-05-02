@@ -168,7 +168,7 @@ progress[value]::-webkit-progress-value {
 /* Dark mode styles */
 
 .dark-mode .changeProgressButton{
-  background-color: #151515;
+  background-color: #313244;
   color: white;
 }
 
@@ -187,7 +187,7 @@ progress[value]::-webkit-progress-value {
 }
 
 .dark-mode .questionHeader {
-  background-color: #323232;
+  background-color: #313244;
   color: #ffffff;
 }
 
@@ -207,12 +207,12 @@ progress[value]::-webkit-progress-value {
 
 .dark-mode .homeButton,
 .dark-mode .saveButton {
-  background-color: #151515;
+  background-color: #181825;
   color: #ffffff;
 }
 
 .dark-mode .answerButton {
-  background-color: #151515;
+  background-color: #313244;
   color: #ffffff;
 }
 
