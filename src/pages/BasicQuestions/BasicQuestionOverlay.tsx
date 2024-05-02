@@ -206,7 +206,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
       " Are you open to further education or obtaining certifications? Answer: " + Q7Answer;
     }
     genReport(reportPrompt)}
-  //end region
+  //#endregion
 
 
   const renderCurrentPage = () => {
