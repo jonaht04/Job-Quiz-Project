@@ -2,8 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #cecece;
+  background-color: #dce0e8;
   margin: 0 auto;
+  color: #4c4f69
 }
 
 .MainImage {
@@ -75,7 +76,7 @@
 
 .homeButton,
 .saveButton{
-  background-color: #969696;
+  background-color: #bcc0cc;
   color: black;
   border: none;
   padding: 6px 16px;
@@ -118,7 +119,7 @@
 
 /* Detailed Answer Progress Buttons*/
 .changeProgressButton{
-  background-color: #cecece;
+  background-color: #ccd0da;
   border: 13px;
   border-color: #000000;
   padding: 6px 16px;
