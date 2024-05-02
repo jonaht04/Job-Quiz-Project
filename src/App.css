@@ -11,7 +11,7 @@
 
 .homePgHeader{
     justify-content: center;
-    background-color: #cecece;
+    background-color: #dce0e8;
     display: flex;
 }
 .homePgheaderBody{
@@ -34,7 +34,7 @@
     margin: auto;
 }
 .quizButton{
-    background-color: #cecece;
+    background-color: #ccd0da;
     color: black;
     padding: 6px 16px;
     border-radius: 5px;
@@ -42,7 +42,7 @@
     border: 15px;
 }
 .homePgHeaderButtons{
-    background-color: #969696;
+    background-color: #bcc0cc;
     color: Black;
     border: none;
     padding: 3px 16px;
@@ -67,7 +67,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #cecece;
+    background-color: #ccd0da;
     color: black;
     padding: 6px 10px;
     border-radius: 5px;
