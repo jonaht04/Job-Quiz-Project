@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (55 ms)
+  ✕ renders learn react link (57 ms)
 
   ● renders learn react link
 
@@ -186,14 +186,14 @@ File                                            | % Stmts | % Branch | % Funcs |
 All files                                       |   10.03 |     5.14 |    1.41 |    9.98 |                         
  src                                            |   34.69 |    38.88 |   16.66 |   34.04 |                         
   App.tsx                                       |   48.27 |       50 |   15.38 |      50 | 17,21,25,30,37-58,62-64 
-  Setting_menu.tsx                              |   33.33 |       50 |   33.33 |      25 | 15-25                   
+  Setting_menu.tsx                              |   33.33 |       50 |   33.33 |      25 | 16-26                   
   index.tsx                                     |       0 |      100 |     100 |       0 | 7-19                    
   reportWebVitals.ts                            |       0 |        0 |       0 |       0 | 3-10                    
  src/pages                                      |    9.09 |        0 |       0 |    9.09 |                         
   FinalReport.tsx                               |      50 |      100 |       0 |      50 | 11                      
   GPT.tsx                                       |       0 |        0 |       0 |       0 | 7-32                    
  src/pages/BasicQuestions                       |    1.36 |        0 |       0 |    1.38 |                         
-  BasicQuestionOverlay.tsx                      |    0.77 |        0 |       0 |    0.79 | 54-322                  
+  BasicQuestionOverlay.tsx                      |    0.77 |        0 |       0 |    0.79 | 54-320                  
   MainBasicQ.tsx                                |    5.55 |        0 |       0 |    5.55 | 16-54                   
  src/pages/BasicQuestions/Business Questions    |   11.53 |      100 |       0 |   11.53 |                         
   BusinessQ1.tsx                                |      10 |      100 |       0 |      10 | 9-25                    
@@ -231,10 +231,10 @@ All files                                       |   10.03 |     5.14 |    1.41 |
   Detailed5.tsx                                 |      20 |      100 |       0 |      20 | 15-20                   
   Detailed6.tsx                                 |      20 |      100 |       0 |      20 | 15-20                   
   Detailed7.tsx                                 |      20 |      100 |       0 |      20 | 15-20                   
-  DetailedQuestion.tsx                          |     1.4 |        0 |       0 |    1.44 | 21-222                  
+  DetailedQuestion.tsx                          |     1.4 |        0 |       0 |    1.44 | 21-219                  
 ------------------------------------------------|---------|----------|---------|---------|-------------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        4.193 s
+Time:        4.323 s
 Ran all test suites.
