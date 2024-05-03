@@ -1,5 +1,6 @@
 import React from 'react';
 import { Modal } from 'react-bootstrap';
+import "./Setting_Menu.css"
 
 interface Props {
   isOpen: boolean;
@@ -41,23 +42,6 @@ const SettingsMenu: React.FC<Props> = ({ isOpen, onClose, onDarkModeToggle, isDa
                   onChange={handleDarkModeToggle}
                 />
                 <label className="form-check-label" htmlFor="darkModeToggle"></label>
-              </div>
-            </div>
-          </li>
-          <li className="mb-3">
-            <div className="d-flex justify-content-between align-items-center">
-              <label className="form-label">Language</label>
-              <select className="form-select" id="languageSelect" style={{ width: '50%' }}>
-                <option value="en">English</option>
-                <option value="ja">Japanese</option>
-              </select>
-            </div>
-          </li>
-          <li className="mb-3">
-            <div className="d-flex justify-content-between align-items-center">
-              <label className="form-label">Music</label>
-              <div className="form-check">
-                <input className="form-check-input" type="checkbox" id="musicToggle" />
               </div>
             </div>
           </li>

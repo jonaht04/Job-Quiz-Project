@@ -82,10 +82,7 @@ function App() {
                 </button>
                 {isDropdownOpen && (
                     <div className="dropdownContent">
-                    <button className="dropdownItem">Help</button>
-                    <button className="dropdownItem">Account</button>
                     <button className="dropdownItem" onClick={toggleSettings}>Settings</button>
-                    <button className="dropdownItem">Logout</button>
                     </div>
                 )}
               </div>
