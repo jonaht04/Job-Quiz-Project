@@ -1,13 +1,17 @@
 import "./Questions.css";
 
+
 interface Props {
     goToHomePage: () => void;
     isDarkMode: boolean;
     toggleDarkMode: () => void;
     gptResponse: string;
+    isLoading: boolean;
   }
-    
-  const FinalReport: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDarkMode, gptResponse }) => {
+   
+
+
+  const FinalReport: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDarkMode, gptResponse, isLoading }) => {
       return (
         <div>
             {/*Header Text*/}
@@ -21,8 +25,10 @@ interface Props {
                 <li>Job Number Three</li>
             </ul>
 
-            <div className="finalReportSubheader">Possible Jobs:</div>
-            <ul className="finalReportSummary"> {gptResponse} </ul>
+            <div className="finalReportSubheader">Possible Jobs:</div> {/** loading screen included in bootstrap*/}
+            {isLoading ? <div className="spinner-border" role="status">
+                          <span className="sr-only"></span>
+                        </div> : <ul className="finalReportSummary"> {gptResponse} </ul>}
 
             </div>
       );
