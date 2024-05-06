@@ -2,8 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #cecece;
+  background-color: #dce0e8;
   margin: 0 auto;
+  color: #4c4f69
 }
 
 .MainImage {
@@ -75,7 +76,7 @@
 
 .homeButton,
 .saveButton{
-  background-color: #969696;
+  background-color: #bcc0cc;
   color: black;
   border: none;
   padding: 6px 16px;
@@ -101,6 +102,7 @@
   width: 100%;
   padding: 20px;
   font-size: 18px;
+  background-color: #dce0e8;
 }
 
 .answerButton img {
@@ -117,7 +119,7 @@
 
 /* Detailed Answer Progress Buttons*/
 .changeProgressButton{
-  background-color: #cecece;
+  background-color: #ccd0da;
   border: 13px;
   border-color: #000000;
   padding: 6px 16px;
@@ -159,14 +161,14 @@ progress[value]::-webkit-progress-bar {
 }
 
 progress[value]::-webkit-progress-value {
-  background-color: #cba6f7;
+  background-color: #7287fd;
     border-radius: 2px; 
     background-size: 35px 20px, 100% 100%, 100% 100%;
 }
 /* Dark mode styles */
 
 .dark-mode .changeProgressButton{
-  background-color: #151515;
+  background-color: #313244;
   color: white;
 }
 
@@ -180,21 +182,21 @@ progress[value]::-webkit-progress-value {
 }
 
 .dark-mode .container {
-  background-color: #232323;
-  color: #ffffff;
+  background-color: #1e1e2e;
+  color: #cdd6f4;
 }
 
 .dark-mode .questionHeader {
-  background-color: #323232;
+  background-color: #313244;
   color: #ffffff;
 }
 
 .dark-mode .bar {
-  background-color: white;
+  background-color: #9399b2;
 }
 
 .dark-mode .dropdownContent {
-  background-color: #151515;
+  background-color: #181825;
   box-shadow: 0px 8px 16px 0px rgba(255,255,255,0.2);
   border-radius: 2.5%;
 }
@@ -205,12 +207,12 @@ progress[value]::-webkit-progress-value {
 
 .dark-mode .homeButton,
 .dark-mode .saveButton {
-  background-color: #151515;
+  background-color: #181825;
   color: #ffffff;
 }
 
 .dark-mode .answerButton {
-  background-color: #151515;
+  background-color: #313244;
   color: #ffffff;
 }
 

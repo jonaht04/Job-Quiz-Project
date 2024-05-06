@@ -156,7 +156,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
       case 7:
         return <Detailed7 setSelectedString={setQ7Answer} handleAnswerSelect={SubQuestion6Answer}/>
       case 8:
-        return <FinalReport goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
+        return <FinalReport goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} gptResponse=''/> // gptResponse is currently as a placeholder
       default:
         return <Detailed1 setSelectedString={setQ1Answer} handleAnswerSelect={MainQuestion1Answer}/>;
     }
@@ -182,10 +182,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
           {/*Settings Options*/}
           {isDropdownOpen && (
             <div className="dropdownContent">
-              <button className="dropdownItem">Help</button>
-              <button className="dropdownItem">Account</button>
               <button className="dropdownItem" onClick={toggleSettings}>Settings</button>
-              <button className="dropdownItem">Logout</button>
             </div>
           )}
         </div>
