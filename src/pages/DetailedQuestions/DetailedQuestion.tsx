@@ -37,15 +37,14 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
     }
   };
 
-  //TODO: Uncomment states to handle GPT implementation
   //#region Question Answers
-  const [/*Q1Answer*/, setQ1Answer] = useState("");
-  const [/*Q2Answer*/, setQ2Answer] = useState("");
-  const [/*Q3Answer*/, setQ3Answer] = useState("");
-  const [/*Q4Answer*/, setQ4Answer] = useState("");
-  const [/*Q5Answer*/, setQ5Answer] = useState("");
-  const [/*Q6Answer*/, setQ6Answer] = useState("");
-  const [/*Q7Answer*/, setQ7Answer] = useState("");
+  const [Q1Answer, setQ1Answer] = useState("");
+  const [Q2Answer, setQ2Answer] = useState("");
+  const [Q3Answer, setQ3Answer] = useState("");
+  const [Q4Answer, setQ4Answer] = useState("");
+  const [Q5Answer, setQ5Answer] = useState("");
+  const [Q6Answer, setQ6Answer] = useState("");
+  const [Q7Answer, setQ7Answer] = useState("");
   //#endregion
 
   //#region Question Answer functions
@@ -89,7 +88,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
     if (isAnswerSelected) {
       setCurrentPage(currentPage + 1)
       setIsAnswerSelected(false);
-      //saveData();
+      saveData();
     }
   };
 
@@ -99,9 +98,10 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
 
   //TODO: Implement storage system that makes sense for detialed quiz.
   // Try to make textarea persistent when going back to previous pages
-  /*//#region Save System
+
+  //#region Save System
   useEffect(() => {
-    const savedData = JSON.parse(localStorage.getItem('savedData') || '{"answers":[],"page":1}');
+    const savedData = JSON.parse(localStorage.getItem('DetailedQuiz') || '{"answers":[],"page":1}');
     setQ1Answer(savedData.answers[0] || "");
     setQ2Answer(savedData.answers[1] || "");
     setQ3Answer(savedData.answers[2] || "");
@@ -120,7 +120,6 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
     localStorage.setItem('savedData', JSON.stringify(dataToSave));
   };
   //#endregion
-  */
     const toggleDropdown = () => {
       setIsDropdownOpen(!isDropdownOpen);
     };
