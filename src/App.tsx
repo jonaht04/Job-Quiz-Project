@@ -12,6 +12,7 @@ function App() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isStartNewShortQuiz, setIsStartNewShortQuiz] = useState(false);
+  const [isStartNewLongQuiz, setIsStartNewLongQuiz] = useState(false);
 
   const toggleDropdown = () => {
       setIsDropdownOpen(!isDropdownOpen);
@@ -23,6 +24,10 @@ function App() {
 
   const toggleShortQuiz = () => {
     setIsStartNewShortQuiz(!isStartNewShortQuiz);
+  };
+
+  const toggleLongQuiz = () => {
+    setIsStartNewLongQuiz(!isStartNewLongQuiz);
   };
 
   useEffect(() => {
@@ -56,12 +61,19 @@ function App() {
 
   function goToDetailedQuestionPage() {
     setCurrentPage('DetailedQuesiton')
+    toggleLongQuiz();
   }
 
   const startNewShortQuiz = () => {
     localStorage.removeItem('savedData');
     goToBasicQuestionPage();
     toggleShortQuiz();
+  }
+
+  const startNewLongQuiz = () => {
+    localStorage.removeItem('savedData');
+    goToDetailedQuestionPage();
+    toggleLongQuiz();
   }
 
   return (
@@ -73,7 +85,7 @@ function App() {
             <div className="buttonContainer">
                 <button className="homePgHeaderButtons" onClick={goToHomePage}>Home</button>
                 <button className="homePgHeaderButtons" onClick={toggleShortQuiz}>Short Quiz</button>
-                <button className="homePgHeaderButtons" onClick={goToDetailedQuestionPage}>Long Quiz</button>
+                <button className="homePgHeaderButtons" onClick={toggleLongQuiz}>Long Quiz</button>
               <div className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
                 <button className="dropdownButton" onClick={toggleDropdown}>
                     <div className="bar"></div>
@@ -114,7 +126,7 @@ function App() {
         <div className="promptContainer">
             <div><button className="quizButton" onClick={toggleShortQuiz}>Multiple Choice</button>
             <p className ="textContainer">This exam is the shorter quiz. Its questions are all multiple choice and shouldn’t take too long to complete. Choose the answer that best matches your own preferences, beliefs, and opinions. This test is powered by ChatGPT’s Large Language Model.</p></div>
-            <div><button className="quizButton" onClick={goToDetailedQuestionPage}>Short Answer</button>
+            <div><button className="quizButton" onClick={toggleLongQuiz}>Short Answer</button>
             <p className ="textContainer">This exam has more complex questions that require more thought with fill-in-the-blank answers being required. Expect this to take longer than the multiple choice. This test is powered by ChatGPT’s Large Language Model.</p></div>
         </div>
         <p></p>
@@ -145,6 +157,26 @@ function App() {
           <li className="mb-3">
             <div className="shortQuiz">
             <button className="ShortQuiz" onClick={startNewShortQuiz}>Start New Quiz</button>
+            </div>
+          </li>
+        </ul>
+      </Modal.Body>
+    </Modal>
+
+    <Modal show={isStartNewLongQuiz} onHide={toggleLongQuiz} className="ShortQuizModal">
+      <Modal.Header closeButton>
+        <Modal.Title>Long Quiz</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+      <ul className="list-unstyled">
+          <li className="mb-3">
+            <div>
+              <button className="ShortQuiz" onClick={goToDetailedQuestionPage}>Continue Quiz</button>
+            </div>
+          </li>
+          <li className="mb-3">
+            <div className="shortQuiz">
+            <button className="ShortQuiz" onClick={startNewLongQuiz}>Start New Quiz</button>
             </div>
           </li>
         </ul>

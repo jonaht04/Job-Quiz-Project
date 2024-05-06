@@ -37,7 +37,6 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
     }
   };
 
-  //TODO: Uncomment states to handle GPT implementation
   //#region Question Answers
   const [Q1Answer, setQ1Answer] = useState("");
   const [Q2Answer, setQ2Answer] = useState("");
