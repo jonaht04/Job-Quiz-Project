@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (57 ms)
+  ✕ renders learn react link (56 ms)
 
   ● renders learn react link
 
@@ -71,33 +71,42 @@ FAIL src/App.test.tsx
               [36m>[39m
                 [0m [0m
               [36m</p>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"imageLineupContainer"[39m
+              [36m>[39m
+                [36m<div>[39m
+                  [36m<p[39m
+                    [33mclass[39m=[32m"largeTextContainer"[39m
+                  [36m>[39m
+                    [0mWelcome to the Blessed job quiz.[0m
+                  [36m</p>[39m
+                  [36m<p[39m
+                    [33mclass[39m=[32m"descriptionTextContainer"[39m
+                  [36m>[39m
+                    [0mUnsure of what career is right for you? We have you covered. With our Blessed job quiz, you can discover careers perfect for you in just 10 minutes. By answering a few simple questions, we will get you on the path to success.[0m
+                  [36m</p>[39m
+                  [36m<p[39m
+                    [33mclass[39m=[32m"descriptionTextContainer"[39m
+                  [36m>[39m
+                    [0mUnderstand that we collect some information about you in order to suggest careers. This information is not used elsewhere for any purpose. An API key is needed for this test to function.[0m
+                  [36m</p>[39m
+                [36m</div>[39m
+                [36m<img[39m
+                  [33malt[39m=[32m"logo"[39m
+                  [33msrc[39m=[32m"jobImagePassive.png"[39m
+                [36m/>[39m
+              [36m</div>[39m
               [36m<p[39m
                 [33mclass[39m=[32m"largeTextContainer"[39m
               [36m>[39m
-                [0mWelcome to the Blessed job quiz.[0m
+                [0mTwo Quiz Types:[0m
               [36m</p>[39m
-              [36m<p[39m
-                [33mclass[39m=[32m"descriptionTextContainer"[39m
-              [36m>[39m
-                [0mUnsure of what career is right for you? We have you covered. With our Blessed job quiz, you can discover careers perfect for you in just 10 minutes. By answering a few simple questions, we will get you on the path to success.[0m
-              [36m</p>[39m
-              [36m<p[39m
-                [33mclass[39m=[32m"spacer"[39m
-              [36m>[39m
-                [0m [0m
-              [36m</p>[39m
-              [36m<p[39m
-                [33mclass[39m=[32m"spacer"[39m
-              [36m>[39m
-                [0m [0m
-              [36m</p>[39m
-              [36m<h2>[39m
-                [0mThere are two types of quizzes that you can take:[0m
-              [36m</h2>[39m
               [36m<div[39m
                 [33mclass[39m=[32m"promptContainer"[39m
               [36m>[39m
-                [36m<div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"buttonAndTextContainer"[39m
+                [36m>[39m
                   [36m<button[39m
                     [33mclass[39m=[32m"quizButton"[39m
                   [36m>[39m
@@ -109,7 +118,9 @@ FAIL src/App.test.tsx
                     [0mThis exam is the shorter quiz. Its questions are all multiple choice and shouldn’t take too long to complete. Choose the answer that best matches your own preferences, beliefs, and opinions. This test is powered by ChatGPT’s Large Language Model.[0m
                   [36m</p>[39m
                 [36m</div>[39m
-                [36m<div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"buttonAndTextContainer"[39m
+                [36m>[39m
                   [36m<button[39m
                     [33mclass[39m=[32m"quizButton"[39m
                   [36m>[39m
@@ -124,11 +135,6 @@ FAIL src/App.test.tsx
               [36m</div>[39m
               [36m<p />[39m
               [36m<p />[39m
-              [36m<p[39m
-                [33mclass[39m=[32m"wideTextContainer"[39m
-              [36m>[39m
-                [0mUnderstand that we collect some information about you in order to suggest careers. This information is not used elsewhere for any purpose.[0m
-              [36m</p>[39m
               [36m<form>[39m
                 [36m<label>[39m
                   [0mAPI Key:[0m
@@ -186,7 +192,7 @@ File                                            | % Stmts | % Branch | % Funcs |
 ------------------------------------------------|---------|----------|---------|---------|----------------------------------
 All files                                       |    8.91 |     3.53 |    1.31 |    8.95 |                                  
  src                                            |   35.08 |    38.88 |      15 |   34.54 |                                  
-  App.tsx                                       |   45.94 |       50 |   13.33 |   47.22 | 18,22,26,30,35,42-64,68-70,74-76 
+  App.tsx                                       |   45.94 |       50 |   13.33 |   47.22 | 19,23,27,31,36,43-65,69-71,75-77 
   Setting_menu.tsx                              |   33.33 |       50 |   33.33 |      25 | 16-26                            
   index.tsx                                     |       0 |      100 |     100 |       0 | 7-19                             
   reportWebVitals.ts                            |       0 |        0 |       0 |       0 | 3-10                             
@@ -237,5 +243,5 @@ All files                                       |    8.91 |     3.53 |    1.31 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        4.251 s
+Time:        4.196 s
 Ran all test suites.
