@@ -25,6 +25,8 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
   const [isAnswerSelected, setIsAnswerSelected] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = React.createRef<HTMLAudioElement>();
+  const [report, setReport] = useState("");
+  const [isLoading, setIsLoading] = useState(true); // will be passed into final report
 
   const togglePlay = () => {
     const audio = audioRef.current;
@@ -36,6 +38,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
       }
       setIsPlaying(!isPlaying);
     }
+    generateDetailedQuestionReport().then(response => {setReport(response); setIsLoading(false);});
   };
 
   //#region Question Answers
@@ -167,7 +170,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
       case 7:
         return <Detailed7 setSelectedString={setQ7Answer} handleAnswerSelect={SubQuestion6Answer}/>
       case 8:
-        return <FinalReport goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} gptResponse='' isLoading={false}/> // gptResponse and isLoading is currently as a placeholder
+        return <FinalReport goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} gptResponse={report} isLoading={isLoading}></FinalReport> // replaced placeholder
       default:
         return <Detailed1 setSelectedString={setQ1Answer} handleAnswerSelect={MainQuestion1Answer}/>;
     }
