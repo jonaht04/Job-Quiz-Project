@@ -71,7 +71,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
       }
       setIsPlaying(!isPlaying);
     }
-    generateBasicQuestionReport().then(response => {setReport(response); setIsLoading(false);});
+    generateBasicQuestionReport().then(response => {setReport(response); setIsLoading(false);}).catch(error => {setReport(error); setIsLoading(false);});
   };
 
   //#region Question Answers
@@ -265,7 +265,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
         }
         break;
       case 8:
-        return <FinalReport goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} gptResponse={report} isLoading={isLoading}></FinalReport>
+        return <FinalReport gptResponse={report} isLoading={isLoading}></FinalReport>
       default:
         return <MainBasicQ setSelectedString={setQ1Answer} handleAnswerSelect={MainQuestion1Answer}/>;
     }

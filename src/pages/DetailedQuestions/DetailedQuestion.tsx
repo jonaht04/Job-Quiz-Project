@@ -38,7 +38,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
       }
       setIsPlaying(!isPlaying);
     }
-    generateDetailedQuestionReport().then(response => {setReport(response); setIsLoading(false);});
+    generateDetailedQuestionReport().then(response => {setReport(response); setIsLoading(false);}).catch(error => {setReport(error); setIsLoading(false)});
   };
 
   //#region Question Answers
@@ -170,7 +170,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
       case 7:
         return <Detailed7 setSelectedString={setQ7Answer} handleAnswerSelect={SubQuestion6Answer}/>
       case 8:
-        return <FinalReport goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} gptResponse={report} isLoading={isLoading}></FinalReport> // replaced placeholder
+        return <FinalReport gptResponse={report} isLoading={isLoading}></FinalReport> // replaced placeholder
       default:
         return <Detailed1 setSelectedString={setQ1Answer} handleAnswerSelect={MainQuestion1Answer}/>;
     }
