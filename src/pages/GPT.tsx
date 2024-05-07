@@ -10,6 +10,7 @@ async function genReport(responses: string) {
         return("You did not submit your API Key.")
     }
     //if key was entered, convert it into a string and cut off excess characters
+    try {
     const stringKey = JSON.stringify(APIKey).slice(3,-3);
     //create the OpenAI environment, enabling browser access and adding in the APIKey
     const openai = new OpenAI({apiKey: stringKey, dangerouslyAllowBrowser: true});
@@ -30,6 +31,9 @@ async function genReport(responses: string) {
   //return the AI's response as a string
   const response: string = completion.choices[0].message.content ||  "";
   return(response)
+} catch (error){
+    throw new Error("Invalid API Key!")
+}
 };
 //export genReport function for use in question pages
 export default genReport;
