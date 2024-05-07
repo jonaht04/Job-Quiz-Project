@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (56 ms)
+  ✕ renders learn react link (60 ms)
 
   ● renders learn react link
 
@@ -183,7 +183,7 @@ go away.[0m
 ------------------------------------------------|---------|----------|---------|---------|----------------------------------
 File                                            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                
 ------------------------------------------------|---------|----------|---------|---------|----------------------------------
-All files                                       |    9.19 |     3.57 |    1.34 |    9.15 |                                  
+All files                                       |    9.06 |     3.57 |    1.33 |    9.04 |                                  
  src                                            |   35.08 |    38.88 |      15 |   34.54 |                                  
   App.tsx                                       |   45.94 |       50 |   13.33 |   47.22 | 18,22,26,30,35,42-64,68-70,74-76 
   Setting_menu.tsx                              |   33.33 |       50 |   33.33 |      25 | 16-26                            
@@ -223,7 +223,7 @@ All files                                       |    9.19 |     3.57 |    1.34 |
   TechQ4.tsx                                    |    12.5 |      100 |       0 |    12.5 | 9-23                             
   TechQ5.tsx                                    |    12.5 |      100 |       0 |    12.5 | 9-23                             
   TechQ6.tsx                                    |    9.09 |      100 |       0 |    9.09 | 9-24                             
- src/pages/DetailedQuestions                    |    4.54 |        0 |       0 |    4.59 |                                  
+ src/pages/DetailedQuestions                    |    4.32 |        0 |       0 |    4.41 |                                  
   Detailed1.tsx                                 |    7.69 |        0 |       0 |    7.69 | 15-38                            
   Detailed2.tsx                                 |    7.69 |        0 |       0 |    7.69 | 12-36                            
   Detailed3.tsx                                 |    7.69 |        0 |       0 |    7.69 | 12-36                            
@@ -231,10 +231,10 @@ All files                                       |    9.19 |     3.57 |    1.34 |
   Detailed5.tsx                                 |    7.69 |        0 |       0 |    7.69 | 12-36                            
   Detailed6.tsx                                 |    7.69 |        0 |       0 |    7.69 | 12-36                            
   Detailed7.tsx                                 |    7.69 |        0 |       0 |    7.69 | 12-36                            
-  DetailedQuestion.tsx                          |    1.17 |        0 |       0 |     1.2 | 21-218                           
+  DetailedQuestion.tsx                          |    1.06 |        0 |       0 |    1.11 | 22-232                           
 ------------------------------------------------|---------|----------|---------|---------|----------------------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        4.164 s
+Time:        4.214 s
 Ran all test suites.
