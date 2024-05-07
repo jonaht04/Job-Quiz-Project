@@ -6,7 +6,20 @@
 .container
 {
     background-color: #eff1f5;
-    color: #4c4f69
+    color: #4c4f69;
+    padding-right: var(--bs-gutter-x, .01rem);
+    padding-left:  var(--bs-gutter-x, .01rem);
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.buttonAndTextContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: auto;
+    justify-content: left;
 }
 
 .homePgHeader{
@@ -23,16 +36,18 @@
     font-size: calc(2.325rem + .9vw);
     font-weight: 500;
     line-height: 1.2;
-    color: black;
+    color: #4c4f69;
 }
 .descriptionTextContainer{
     text-align: left;
-    width: 75%;
+    width: 50%;
+    color: #4c4f69;
 }
 .textContainer{
-    width: 225px;
+    width: 75%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    text-align: left;
 }
 .spacer{
     height: 2px;
@@ -65,10 +80,10 @@
 /*Container class for the buttons and the blurbs below them, so that they are side by side*/
 .promptContainer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     padding: 10px;
-    gap: 10px;
+    gap: 30px;
     margin: auto;
     justify-content: center;
 }
@@ -83,6 +98,22 @@
     border-radius: 5px;
     margin: 0 auto;
     border: none;
+}
+
+/*Dark Mode Traits*/
+
+.dark-mode .descriptionTextContainer{
+    text-align: left;
+    width: 50%;
+    color: #cdd6f4;
+}
+
+.dark-mode .largeTextContainer{
+    text-align: left;
+    font-size: calc(2.325rem + .9vw);
+    font-weight: 500;
+    line-height: 1.2;
+    color: #cdd6f4;
 }
 
 .dark-mode .App{

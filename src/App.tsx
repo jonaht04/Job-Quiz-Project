@@ -115,19 +115,21 @@ function App() {
             job quiz, you can discover careers perfect for you in just 10 minutes. By answering a   
             few simple questions, we will get you on the path to success.
         </p>
-        
-        <p className="spacer"> </p>
-        <p className="spacer"> </p>
-        <h2>There are two types of quizzes that you can take:</h2>
+        <p></p>
+        <p className="descriptionTextContainer">Understand that we collect some information about you in order to suggest careers. This information is not used elsewhere for any purpose. An API key is needed for this test to function.</p>
+        <p className="largeTextContainer">Two Quiz Types:</p>
         <div className="promptContainer">
-            <div><button className="quizButton" onClick={toggleShortQuiz}>Short Quiz</button>
-            <p className ="textContainer">This exam is the shorter quiz. Its questions are all multiple choice and shouldn’t take too long to complete. Choose the answer that best matches your own preferences, beliefs, and opinions. This test is powered by ChatGPT’s Large Language Model.</p></div>
-            <div><button className="quizButton" onClick={goToDetailedQuestionPage}>Long Quiz</button>
-            <p className ="textContainer">This exam has more complex questions that require more thought with fill-in-the-blank answers being required. Expect this to take longer than the multiple choice. This test is powered by ChatGPT’s Large Language Model.</p></div>
+          <div className="buttonAndTextContainer">
+            <button className="quizButton" onClick={toggleShortQuiz}>Short Quiz</button>
+            <p className ="textContainer">This exam is the shorter quiz. Its questions are all multiple choice and shouldn’t take too long to complete. Choose the answer that best matches your own preferences, beliefs, and opinions. This test is powered by ChatGPT’s Large Language Model.</p>
+          </div>
+          <div className="buttonAndTextContainer">
+            <button className="quizButton" onClick={goToDetailedQuestionPage}>Long Quiz</button>
+            <p className ="textContainer">This exam has more complex questions that require more thought with fill-in-the-blank answers being required. Expect this to take longer than the multiple choice. This test is powered by ChatGPT’s Large Language Model.</p>
+          </div>
         </div>
         <p></p>
         <p></p>
-        <p className="wideTextContainer">Understand that we collect some information about you in order to suggest careers. This information is not used elsewhere for any purpose.</p>
         <form>
           <label>API Key:</label>
           <input type="password" placeholder="Insert API Key Here" onChange={changeKey} />
