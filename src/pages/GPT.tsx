@@ -7,7 +7,7 @@ async function genReport(responses: string) {
     const APIKey = localStorage.getItem("MYKEY");
     //check if key was entered; return error message if not
     if(APIKey == null){
-        return("You did not submit your API Key.")
+        return("Error: You did not submit your API Key.")
     }
     //if key was entered, convert it into a string and cut off excess characters
     try {
@@ -32,7 +32,7 @@ async function genReport(responses: string) {
   const response: string = completion.choices[0].message.content ||  "";
   return(response)
 } catch (error){
-    return "Invalid API Key. Refresh to enter a new API Key";
+    return "Error: Invalid API Key. Refresh to enter a new API Key";
 }
 };
 //export genReport function for use in question pages
