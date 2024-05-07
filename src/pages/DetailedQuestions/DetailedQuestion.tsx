@@ -9,6 +9,7 @@ import Detailed5 from './Detailed5';
 import Detailed6 from './Detailed6';
 import Detailed7 from './Detailed7';
 import FinalReport from '../FinalReport';
+import genReport from '../GPT';
 import fanfare from '../../assets/final-fantasy-vii-victory-fanfare-1.mp3'
 
 interface Props {
@@ -24,6 +25,8 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
   const [isAnswerSelected, setIsAnswerSelected] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = React.createRef<HTMLAudioElement>();
+  const [report, setReport] = useState("");
+  const [isLoading, setIsLoading] = useState(true); // will be passed into final report
 
   const togglePlay = () => {
     const audio = audioRef.current;
@@ -35,6 +38,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
       }
       setIsPlaying(!isPlaying);
     }
+    generateDetailedQuestionReport().then(response => {setReport(response); setIsLoading(false);});
   };
 
   //#region Question Answers
@@ -136,6 +140,16 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
     if (isAnswerSelected) return currentPage;
     else return currentPage - 1;
   }
+  const generateDetailedQuestionReport = () => {
+    var reportPrompt = "";
+    reportPrompt = "What was your favorite subject in highschool and why? " + Q1Answer + 
+    " What are your hobbies and why do you enjoy them? " + Q2Answer + 
+    " What is the best trait about yourself and why? " + Q3Answer + 
+    " Do you enjoy school and education, why or why not? " + Q4Answer + 
+    " What is one career that you would never want to work at and why? " + Q5Answer + 
+    " Choose your favorite career and explain why you chose it. " + Q6Answer + 
+    " List your values and explain why they are important to you. " + Q7Answer;
+    return genReport(reportPrompt);}
   
 
   /*Switch Case from Basic question overlay, adjuseted for detailed question*/
@@ -156,7 +170,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
       case 7:
         return <Detailed7 setSelectedString={setQ7Answer} handleAnswerSelect={SubQuestion6Answer}/>
       case 8:
-        return <FinalReport goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} gptResponse='' isLoading={false}/> // gptResponse and isLoading is currently as a placeholder
+        return <FinalReport goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} gptResponse={report} isLoading={isLoading}></FinalReport> // replaced placeholder
       default:
         return <Detailed1 setSelectedString={setQ1Answer} handleAnswerSelect={MainQuestion1Answer}/>;
     }
