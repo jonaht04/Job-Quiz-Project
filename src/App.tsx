@@ -4,6 +4,7 @@ import BasicQuestion1 from './pages/BasicQuestions/BasicQuestionOverlay';
 import DetailedQuestion from './pages/DetailedQuestions/DetailedQuestion';
 import SettingsMenu from './Setting_menu';
 import { Modal } from 'react-bootstrap';
+import jobImage from './assets/jobImagePassive.png';
 
 function App() {
   const [key, setKey] = useState<string>('');
@@ -110,24 +111,32 @@ function App() {
       <div className='container'>
         <p className="spacer"> </p>
         <p className="spacer"> </p>
-        <p className="largeTextContainer">Welcome to the Blessed job quiz.</p>
-        <p className="descriptionTextContainer">Unsure of what career is right for you? We have you covered. With our Blessed
-            job quiz, you can discover careers perfect for you in just 10 minutes. By answering a   
-            few simple questions, we will get you on the path to success.
-        </p>
-        
-        <p className="spacer"> </p>
-        <p className="spacer"> </p>
-        <h2>There are two types of quizzes that you can take:</h2>
+
+        <div className="imageLineupContainer">
+          <div>
+          <p className="largeTextContainer">Welcome to the Blessed job quiz.</p>
+          <p className="descriptionTextContainer">Unsure of what career is right for you? We have you covered. With our Blessed
+              job quiz, you can discover careers perfect for you in just 10 minutes. By answering a   
+              few simple questions, we will get you on the path to success.
+          </p>
+          <p className="descriptionTextContainer">Understand that we collect some information about you in order to suggest careers. This information is not used elsewhere for any purpose. An API key is needed for this test to function.</p>
+          </div>
+          <img src={jobImage} alt="logo"></img>
+        </div>
+
+        <p className="largeTextContainer">Two Quiz Types:</p>
         <div className="promptContainer">
-            <div><button className="quizButton" onClick={toggleShortQuiz}>Short Quiz</button>
-            <p className ="textContainer">This exam is the shorter quiz. Its questions are all multiple choice and shouldn’t take too long to complete. Choose the answer that best matches your own preferences, beliefs, and opinions. This test is powered by ChatGPT’s Large Language Model.</p></div>
-            <div><button className="quizButton" onClick={goToDetailedQuestionPage}>Long Quiz</button>
-            <p className ="textContainer">This exam has more complex questions that require more thought with fill-in-the-blank answers being required. Expect this to take longer than the multiple choice. This test is powered by ChatGPT’s Large Language Model.</p></div>
+          <div className="buttonAndTextContainer">
+            <button className="quizButton" onClick={toggleShortQuiz}>Short Quiz</button>
+            <p className ="textContainer">This exam is the shorter quiz. Its questions are all multiple choice and shouldn’t take too long to complete. Choose the answer that best matches your own preferences, beliefs, and opinions. This test is powered by ChatGPT’s Large Language Model.</p>
+          </div>
+          <div className="buttonAndTextContainer">
+            <button className="quizButton" onClick={goToDetailedQuestionPage}>Long Quiz</button>
+            <p className ="textContainer">This exam has more complex questions that require more thought with fill-in-the-blank answers being required. Expect this to take longer than the multiple choice. This test is powered by ChatGPT’s Large Language Model.</p>
+          </div>
         </div>
         <p></p>
         <p></p>
-        <p className="wideTextContainer">Understand that we collect some information about you in order to suggest careers. This information is not used elsewhere for any purpose.</p>
         <form>
           <label>API Key:</label>
           <input type="password" placeholder="Insert API Key Here" onChange={changeKey} />
