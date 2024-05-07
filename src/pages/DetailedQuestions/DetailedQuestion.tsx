@@ -9,6 +9,7 @@ import Detailed5 from './Detailed5';
 import Detailed6 from './Detailed6';
 import Detailed7 from './Detailed7';
 import FinalReport from '../FinalReport';
+import genReport from '../GPT';
 import fanfare from '../../assets/final-fantasy-vii-victory-fanfare-1.mp3'
 
 interface Props {
