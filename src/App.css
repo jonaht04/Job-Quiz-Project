@@ -18,11 +18,21 @@
     display: flex;
     justify-content: center;
 }
+.largeTextContainer{
+    text-align: left;
+    font-size: calc(2.325rem + .9vw);
+    font-weight: 500;
+    line-height: 1.2;
+    color: black;
+}
+.descriptionTextContainer{
+    text-align: left;
+    width: 75%;
+}
 .textContainer{
     width: 225px;
     display: flex;
     justify-content: center;
-    margin:auto;
 }
 .spacer{
     height: 2px;

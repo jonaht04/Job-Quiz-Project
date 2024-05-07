@@ -56,6 +56,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
   const [currentPage, setCurrentPage] = useState(1);
   const [isAnswerSelected, setIsAnswerSelected] = useState(false);
   const [report, setReport] = useState("");
+  const [isLoading, setIsLoading] = useState(true); // will be passed into final report
   
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = React.createRef<HTMLAudioElement>();
@@ -70,7 +71,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
       }
       setIsPlaying(!isPlaying);
     }
-    generateBasicQuestionReport().then(response => {setReport(response)});
+    generateBasicQuestionReport().then(response => {setReport(response); setIsLoading(false);});
   };
 
   //#region Question Answers
@@ -264,7 +265,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
         }
         break;
       case 8:
-        return <FinalReport goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} gptResponse={report}></FinalReport>
+        return <FinalReport goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} gptResponse={report} isLoading={isLoading}></FinalReport>
       default:
         return <MainBasicQ setSelectedString={setQ1Answer} handleAnswerSelect={MainQuestion1Answer}/>;
     }
