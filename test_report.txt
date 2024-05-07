@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (60 ms)
+  ✕ renders learn react link (57 ms)
 
   ● renders learn react link
 
@@ -61,24 +61,25 @@ FAIL src/App.test.tsx
             [36m<div[39m
               [33mclass[39m=[32m"container"[39m
             [36m>[39m
-              [36m<h1>[39m
-                [0mWelcome to the Blessed job quiz.[0m
-              [36m</h1>[39m
               [36m<p[39m
                 [33mclass[39m=[32m"spacer"[39m
               [36m>[39m
                 [0m [0m
               [36m</p>[39m
               [36m<p[39m
-                [33mclass[39m=[32m"textContainer"[39m
+                [33mclass[39m=[32m"spacer"[39m
               [36m>[39m
-                [0mUnsure of what career is right for you? We have you covered.[0m
+                [0m [0m
               [36m</p>[39m
-              [36m<p />[39m
               [36m<p[39m
-                [33mclass[39m=[32m"textContainer"[39m
+                [33mclass[39m=[32m"largeTextContainer"[39m
               [36m>[39m
-                [0mWith our Blessed job quiz, you can discover careers perfect for you in just 10 minutes. By answering a few simple questions, we will get you on the path to success.[0m
+                [0mWelcome to the Blessed job quiz.[0m
+              [36m</p>[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"descriptionTextContainer"[39m
+              [36m>[39m
+                [0mUnsure of what career is right for you? We have you covered. With our Blessed job quiz, you can discover careers perfect for you in just 10 minutes. By answering a few simple questions, we will get you on the path to success.[0m
               [36m</p>[39m
               [36m<p[39m
                 [33mclass[39m=[32m"spacer"[39m
@@ -236,5 +237,5 @@ All files                                       |    9.06 |     3.57 |    1.33 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        4.214 s
+Time:        4.425 s
 Ran all test suites.
