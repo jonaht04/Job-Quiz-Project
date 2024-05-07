@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Job-Quiz-Project/static/css/main.84be3688.css",
-    "main.js": "/Job-Quiz-Project/static/js/main.5ab8bbc3.js",
+    "main.js": "/Job-Quiz-Project/static/js/main.0381808c.js",
     "static/js/453.bad6c33a.chunk.js": "/Job-Quiz-Project/static/js/453.bad6c33a.chunk.js",
     "static/media/MII_Theme.mp3": "/Job-Quiz-Project/static/media/MII_Theme.28ab71b36305fb034e0f.mp3",
     "static/media/Technology.gif": "/Job-Quiz-Project/static/media/Technology.2603ef7b10dae726bf49.gif",
@@ -12,11 +12,11 @@
     "static/media/final-fantasy-vii-victory-fanfare-1.mp3": "/Job-Quiz-Project/static/media/final-fantasy-vii-victory-fanfare-1.3fc24d98accf3fa502ec.mp3",
     "index.html": "/Job-Quiz-Project/index.html",
     "main.84be3688.css.map": "/Job-Quiz-Project/static/css/main.84be3688.css.map",
-    "main.5ab8bbc3.js.map": "/Job-Quiz-Project/static/js/main.5ab8bbc3.js.map",
+    "main.0381808c.js.map": "/Job-Quiz-Project/static/js/main.0381808c.js.map",
     "453.bad6c33a.chunk.js.map": "/Job-Quiz-Project/static/js/453.bad6c33a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.84be3688.css",
-    "static/js/main.5ab8bbc3.js"
+    "static/js/main.0381808c.js"
   ]
 }
