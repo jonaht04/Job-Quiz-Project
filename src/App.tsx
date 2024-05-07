@@ -108,11 +108,10 @@ function App() {
     )}
     {currentPage === '' && (
       <div className='container'>
-        <h1>Welcome to the Blessed job quiz.</h1>
         <p className="spacer"> </p>
-        <p className="textContainer">Unsure of what career is right for you? We have you covered.</p>
-        <p></p>
-        <p className="textContainer">With our Blessed
+        <p className="spacer"> </p>
+        <p className="largeTextContainer">Welcome to the Blessed job quiz.</p>
+        <p className="descriptionTextContainer">Unsure of what career is right for you? We have you covered. With our Blessed
             job quiz, you can discover careers perfect for you in just 10 minutes. By answering a   
             few simple questions, we will get you on the path to success.
         </p>
