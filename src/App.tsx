@@ -4,6 +4,7 @@ import BasicQuestion1 from './pages/BasicQuestions/BasicQuestionOverlay';
 import DetailedQuestion from './pages/DetailedQuestions/DetailedQuestion';
 import SettingsMenu from './Setting_menu';
 import { Modal } from 'react-bootstrap';
+import jobImage from './assets/jobImagePassive.png';
 
 function App() {
   const [key, setKey] = useState<string>('');
@@ -110,13 +111,19 @@ function App() {
       <div className='container'>
         <p className="spacer"> </p>
         <p className="spacer"> </p>
-        <p className="largeTextContainer">Welcome to the Blessed job quiz.</p>
-        <p className="descriptionTextContainer">Unsure of what career is right for you? We have you covered. With our Blessed
-            job quiz, you can discover careers perfect for you in just 10 minutes. By answering a   
-            few simple questions, we will get you on the path to success.
-        </p>
-        <p></p>
-        <p className="descriptionTextContainer">Understand that we collect some information about you in order to suggest careers. This information is not used elsewhere for any purpose. An API key is needed for this test to function.</p>
+
+        <div className="imageLineupContainer">
+          <div>
+          <p className="largeTextContainer">Welcome to the Blessed job quiz.</p>
+          <p className="descriptionTextContainer">Unsure of what career is right for you? We have you covered. With our Blessed
+              job quiz, you can discover careers perfect for you in just 10 minutes. By answering a   
+              few simple questions, we will get you on the path to success.
+          </p>
+          <p className="descriptionTextContainer">Understand that we collect some information about you in order to suggest careers. This information is not used elsewhere for any purpose. An API key is needed for this test to function.</p>
+          </div>
+          <img src={jobImage} alt="logo"></img>
+        </div>
+
         <p className="largeTextContainer">Two Quiz Types:</p>
         <div className="promptContainer">
           <div className="buttonAndTextContainer">

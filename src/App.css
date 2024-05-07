@@ -31,16 +31,25 @@
     display: flex;
     justify-content: center;
 }
+.imageLineupContainer img{
+    width: 100%;
+}
+.imageLineupContainer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:10%;
+}
 .largeTextContainer{
     text-align: left;
     font-size: calc(2.325rem + .9vw);
     font-weight: 500;
     line-height: 1.2;
     color: #4c4f69;
+    width: 75%;
 }
 .descriptionTextContainer{
     text-align: left;
-    width: 50%;
+    width: 100%;
     color: #4c4f69;
 }
 .textContainer{
