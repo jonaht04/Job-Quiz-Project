@@ -137,10 +137,11 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
     if (isAnswerSelected) return currentPage;
     else return currentPage - 1;
   }
-  const generateBasicQuestionReport = () => {
+  const generateDetailedQuestionReport = () => {
     var reportPrompt = "";
     reportPrompt = "What was your favorite subject in highschool and why? " + Q1Answer + " What are your hobbies and why do you enjoy them? " + Q2Answer + " What is the best trait about yourself and why? " + Q3Answer + " Do you enjoy school and education, why or why not? " + Q4Answer + " What is one career that you would never want to work at and why? " + Q5Answer + " Choose your favorite career and explain why you chose it. " + Q6Answer + " List your values and explain why they are important to you. " + Q7Answer;
-  }
+    return genReport(reportPrompt);}
+  v}
 
   /*Switch Case from Basic question overlay, adjuseted for detailed question*/
   const renderCurrentPage = () => {
