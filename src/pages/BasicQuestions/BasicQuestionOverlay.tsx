@@ -71,7 +71,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
       }
       setIsPlaying(!isPlaying);
     }
-    generateBasicQuestionReport().then(response => {setReport(response); setIsLoading(false);});
+    generateBasicQuestionReport().then(response => {setReport(response); setIsLoading(false);}).catch(error => {setReport(error); setIsLoading(false);});
   };
 
   //#region Question Answers

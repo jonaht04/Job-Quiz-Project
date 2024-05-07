@@ -32,7 +32,7 @@ async function genReport(responses: string) {
   const response: string = completion.choices[0].message.content ||  "";
   return(response)
 } catch (error){
-    throw new Error("Invalid API Key!")
+    return "Invalid API Key. Refresh to enter a new API Key";
 }
 };
 //export genReport function for use in question pages

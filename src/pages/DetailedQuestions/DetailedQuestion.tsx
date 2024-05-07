@@ -38,7 +38,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
       }
       setIsPlaying(!isPlaying);
     }
-    generateDetailedQuestionReport().then(response => {setReport(response); setIsLoading(false);});
+    generateDetailedQuestionReport().then(response => {setReport(response); setIsLoading(false);}).catch(error => {setReport(error); setIsLoading(false)});
   };
 
   //#region Question Answers
