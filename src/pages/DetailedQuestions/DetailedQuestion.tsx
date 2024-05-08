@@ -86,7 +86,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
 
   const SubQuestion6Answer = (selectedString: string) => {
     setQ7Answer(selectedString);
-    setIsAnswerSelected(selectedString != '' ? true : false);
+    setIsAnswerSelected(selectedString !== '' ? true : false);
   };
   //#endregion
 
