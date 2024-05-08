@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (56 ms)
+  ✕ renders learn react link (61 ms)
 
   ● renders learn react link
 
@@ -190,7 +190,7 @@ go away.[0m
 ------------------------------------------------|---------|----------|---------|---------|----------------------------------
 File                                            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                
 ------------------------------------------------|---------|----------|---------|---------|----------------------------------
-All files                                       |    8.91 |     3.53 |    1.31 |    8.95 |                                  
+All files                                       |    8.97 |     3.53 |    1.31 |    9.01 |                                  
  src                                            |   35.08 |    38.88 |      15 |   34.54 |                                  
   App.tsx                                       |   45.94 |       50 |   13.33 |   47.22 | 19,23,27,31,36,43-65,69-71,75-77 
   Setting_menu.tsx                              |   33.33 |       50 |   33.33 |      25 | 16-26                            
@@ -230,18 +230,18 @@ All files                                       |    8.91 |     3.53 |    1.31 |
   TechQ4.tsx                                    |    12.5 |      100 |       0 |    12.5 | 9-23                             
   TechQ5.tsx                                    |    12.5 |      100 |       0 |    12.5 | 9-23                             
   TechQ6.tsx                                    |    9.09 |      100 |       0 |    9.09 | 9-24                             
- src/pages/DetailedQuestions                    |    4.27 |        0 |       0 |    4.41 |                                  
-  Detailed1.tsx                                 |    7.69 |        0 |       0 |    7.69 | 15-38                            
-  Detailed2.tsx                                 |    7.69 |        0 |       0 |    7.69 | 12-36                            
-  Detailed3.tsx                                 |    7.69 |        0 |       0 |    7.69 | 12-36                            
-  Detailed4.tsx                                 |    7.69 |        0 |       0 |    7.69 | 12-36                            
-  Detailed5.tsx                                 |    7.69 |        0 |       0 |    7.69 | 12-36                            
-  Detailed6.tsx                                 |    7.69 |        0 |       0 |    7.69 | 12-36                            
-  Detailed7.tsx                                 |    7.69 |        0 |       0 |    7.69 | 12-36                            
-  DetailedQuestion.tsx                          |    1.04 |        0 |       0 |    1.11 | 22-232                           
+ src/pages/DetailedQuestions                    |    4.37 |        0 |       0 |    4.51 |                                  
+  Detailed1.tsx                                 |    8.33 |        0 |       0 |    8.33 | 16-37                            
+  Detailed2.tsx                                 |    8.33 |        0 |       0 |    8.33 | 12-34                            
+  Detailed3.tsx                                 |    8.33 |        0 |       0 |    8.33 | 12-34                            
+  Detailed4.tsx                                 |    8.33 |        0 |       0 |    8.33 | 12-34                            
+  Detailed5.tsx                                 |    8.33 |        0 |       0 |    8.33 | 12-34                            
+  Detailed6.tsx                                 |    8.33 |        0 |       0 |    8.33 | 12-34                            
+  Detailed7.tsx                                 |    8.33 |        0 |       0 |    8.33 | 12-34                            
+  DetailedQuestion.tsx                          |    1.01 |        0 |       0 |    1.07 | 22-235                           
 ------------------------------------------------|---------|----------|---------|---------|----------------------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        4.196 s
+Time:        4.107 s
 Ran all test suites.
