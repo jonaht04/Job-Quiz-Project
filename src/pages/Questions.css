@@ -176,6 +176,10 @@ progress[value]::-webkit-progress-value {
   color: grey;
 }
 
+.dark-mode .image{
+  filter: invert(1);
+}
+
 .dark-mode .detailedAnswerText{
   background-color: #121212;
   color:#ffffff

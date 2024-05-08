@@ -5,10 +5,11 @@ import "../Questions.css";
 interface Props {
   setSelectedString: (selectedString: string) => void;
   handleAnswerSelect: (selectedString: string) => void;
+  setIsEmpty: () => void;
 }
 
 
-export const Detailed1: React.FC<Props> = ({ setSelectedString, handleAnswerSelect }) => {
+export const Detailed1: React.FC<Props> = ({ setSelectedString, handleAnswerSelect, setIsEmpty }) => {
   /** Traditonal method of handling text change. If I did it this way, a bug would occurced
    * where the last character would get cut off when calling handleAnswer
    */
@@ -28,11 +29,9 @@ export const Detailed1: React.FC<Props> = ({ setSelectedString, handleAnswerSele
    * @param event : handles the event from the TextArea
    */
   const handleAnswer = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    if (event.target.value){ //holdover from doing the old method
-      setInputText(event.target.value);
-      handleAnswerSelect(event.target.value);
-      setSelectedString(event.target.value);
-    }
+    setInputText(event.target.value);
+    handleAnswerSelect(event.target.value);
+    setSelectedString(event.target.value);
   };
 
     return (<div className='container'>
