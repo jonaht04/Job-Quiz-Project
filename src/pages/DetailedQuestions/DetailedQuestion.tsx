@@ -23,6 +23,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [isAnswerSelected, setIsAnswerSelected] = useState(false);
+  const [isEmpty, setIsEmpty] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = React.createRef<HTMLAudioElement>();
   const [report, setReport] = useState("");
@@ -53,38 +54,39 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
 
   //#region Question Answer functions
   const MainQuestion1Answer = (selectedString: string) => {
+
     setQ1Answer(selectedString);
-    setIsAnswerSelected(true);
+    setIsAnswerSelected(selectedString !== '' ? true : false);
   };
 
   const SubQuestion1Answer = (selectedString: string) => {
     setQ2Answer(selectedString);
-    setIsAnswerSelected(true);
+    setIsAnswerSelected(selectedString !== '' ? true : false);
   };
 
   const SubQuestion2Answer = (selectedString: string) => {
     setQ3Answer(selectedString);
-    setIsAnswerSelected(true);
+    setIsAnswerSelected(selectedString !== '' ? true : false);
   };
 
   const SubQuestion3Answer = (selectedString: string) => {
     setQ4Answer(selectedString);
-    setIsAnswerSelected(true);
+    setIsAnswerSelected(selectedString !== '' ? true : false);
   };
 
   const SubQuestion4Answer = (selectedString: string) => {
     setQ5Answer(selectedString);
-    setIsAnswerSelected(true);
+    setIsAnswerSelected(selectedString !== '' ? true : false);
   };
 
   const SubQuestion5Answer = (selectedString: string) => {
     setQ6Answer(selectedString);
-    setIsAnswerSelected(true);
+    setIsAnswerSelected(selectedString !== '' ? true : false);
   };
 
   const SubQuestion6Answer = (selectedString: string) => {
     setQ7Answer(selectedString);
-    setIsAnswerSelected(true);
+    setIsAnswerSelected(selectedString != '' ? true : false);
   };
   //#endregion
 
@@ -99,9 +101,6 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
   useEffect(() => {
     setIsAnswerSelected(false);
   }, [currentPage]);
-
-  //TODO: Implement storage system that makes sense for detialed quiz.
-  // Try to make textarea persistent when going back to previous pages
 
   //#region Save System
   useEffect(() => {
@@ -132,6 +131,10 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
       setIsSettingsOpen(!isSettingsOpen);
     };
 
+    const toggleIsEmpty = () => {
+      setIsEmpty(!isEmpty);
+    }
+
     /** Handles the counter for progress bar
   Ensures that the progress bar does not go up
   until an answer is selectef
@@ -156,7 +159,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
   const renderCurrentPage = () => {
     switch(currentPage) {
       case 1:
-        return <Detailed1 setSelectedString={setQ1Answer} handleAnswerSelect={MainQuestion1Answer}/>
+        return <Detailed1 setSelectedString={setQ1Answer} handleAnswerSelect={MainQuestion1Answer} setIsEmpty={toggleIsEmpty}/>
       case 2:
         return <Detailed2 setSelectedString={setQ2Answer} handleAnswerSelect={SubQuestion1Answer}/>
       case 3:
@@ -172,7 +175,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
       case 8:
         return <FinalReport goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} gptResponse={report} isLoading={isLoading}></FinalReport> // replaced placeholder
       default:
-        return <Detailed1 setSelectedString={setQ1Answer} handleAnswerSelect={MainQuestion1Answer}/>;
+        return <Detailed1 setSelectedString={setQ1Answer} handleAnswerSelect={MainQuestion1Answer} setIsEmpty={toggleIsEmpty}/>;
     }
   };
 

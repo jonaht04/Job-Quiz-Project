@@ -26,11 +26,9 @@ export const Detailed3: React.FC<Props> = ({ setSelectedString, handleAnswerSele
    */
   // grabs the string from the event
   const handleAnswer = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    if (event.target.value){ //holdover from doing the old method
-      setInputText(event.target.value);
-      handleAnswerSelect(event.target.value);
-      setSelectedString(event.target.value);
-    }
+    setInputText(event.target.value);
+    handleAnswerSelect(event.target.value);
+    setSelectedString(event.target.value);
   };
 
     return (<div className='container'>
