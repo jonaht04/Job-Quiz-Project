@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Job-Quiz-Project/static/css/main.a02589c8.css",
-    "main.js": "/Job-Quiz-Project/static/js/main.15f97193.js",
+    "main.css": "/Job-Quiz-Project/static/css/main.6b6f393d.css",
+    "main.js": "/Job-Quiz-Project/static/js/main.58ee7e3c.js",
     "static/js/453.bad6c33a.chunk.js": "/Job-Quiz-Project/static/js/453.bad6c33a.chunk.js",
     "static/media/MII_Theme.mp3": "/Job-Quiz-Project/static/media/MII_Theme.28ab71b36305fb034e0f.mp3",
     "static/media/Technology.gif": "/Job-Quiz-Project/static/media/Technology.2603ef7b10dae726bf49.gif",
@@ -12,12 +12,12 @@
     "static/media/jobImagePassive.png": "/Job-Quiz-Project/static/media/jobImagePassive.756bde99bdd9c48e8c42.png",
     "static/media/final-fantasy-vii-victory-fanfare-1.mp3": "/Job-Quiz-Project/static/media/final-fantasy-vii-victory-fanfare-1.3fc24d98accf3fa502ec.mp3",
     "index.html": "/Job-Quiz-Project/index.html",
-    "main.a02589c8.css.map": "/Job-Quiz-Project/static/css/main.a02589c8.css.map",
-    "main.15f97193.js.map": "/Job-Quiz-Project/static/js/main.15f97193.js.map",
+    "main.6b6f393d.css.map": "/Job-Quiz-Project/static/css/main.6b6f393d.css.map",
+    "main.58ee7e3c.js.map": "/Job-Quiz-Project/static/js/main.58ee7e3c.js.map",
     "453.bad6c33a.chunk.js.map": "/Job-Quiz-Project/static/js/453.bad6c33a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a02589c8.css",
-    "static/js/main.15f97193.js"
+    "static/css/main.6b6f393d.css",
+    "static/js/main.58ee7e3c.js"
   ]
 }
