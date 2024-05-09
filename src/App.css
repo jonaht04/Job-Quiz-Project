@@ -3,6 +3,15 @@
   background-color: #eff1f5;
 }
 
+.Submit-Button{
+    background-color: #ccd0da;
+    color: black;
+    padding: 6px 16px;
+    border-radius: 5px;
+    margin-left: 5px;
+    border: 15px;
+}
+
 .container
 {
     background-color: #eff1f5;
@@ -117,7 +126,7 @@
 
 .dark-mode .descriptionTextContainer{
     text-align: left;
-    width: 50%;
+    width: 100%;
     color: #cdd6f4;
 }
 
@@ -163,6 +172,15 @@
     border-radius: 5px;
     margin: 0 auto;
     border: none;
+}
+
+.Submit-Button{
+    background-color: #313244;;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 5px;
+    margin-left: 5px;
+    border: 15px;
 }
 
 .dark-mode {
