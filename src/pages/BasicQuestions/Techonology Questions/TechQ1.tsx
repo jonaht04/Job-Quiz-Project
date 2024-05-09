@@ -2,14 +2,12 @@ import "../../Questions.css";
 import React from 'react';
 
 interface Props {
-  setSelectedString: (selectedString: string) => void;
   handleAnswerSelect: (selectedString: string) => void;
 }
 
-export const TechQ1: React.FC<Props> = ({ setSelectedString, handleAnswerSelect }) => {
+export const TechQ1: React.FC<Props> = ({handleAnswerSelect }) => {
 
   const handleButtonClick = (selectedString: string) => {
-    setSelectedString(selectedString);
     handleAnswerSelect(selectedString);
   };
 

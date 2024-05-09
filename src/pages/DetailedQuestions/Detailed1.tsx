@@ -3,13 +3,11 @@ import "../Questions.css";
 
 /** Props, for handling variable storage */
 interface Props {
-  setSelectedString: (selectedString: string) => void;
   handleAnswerSelect: (selectedString: string) => void;
-  setIsEmpty: () => void;
 }
 
 
-export const Detailed1: React.FC<Props> = ({ setSelectedString, handleAnswerSelect, setIsEmpty }) => {
+export const Detailed1: React.FC<Props> = ({handleAnswerSelect}) => {
   /** Traditonal method of handling text change. If I did it this way, a bug would occurced
    * where the last character would get cut off when calling handleAnswer
    */
@@ -31,7 +29,6 @@ export const Detailed1: React.FC<Props> = ({ setSelectedString, handleAnswerSele
   const handleAnswer = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setInputText(event.target.value);
     handleAnswerSelect(event.target.value);
-    setSelectedString(event.target.value);
   };
 
     return (<div className='container'>
