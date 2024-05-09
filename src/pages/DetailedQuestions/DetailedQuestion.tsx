@@ -178,12 +178,11 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
         return <Detailed1 setSelectedString={setQ1Answer} handleAnswerSelect={MainQuestion1Answer} setIsEmpty={toggleIsEmpty}/>;
     }
   };
-
   return (
     <div>
       {/*Header for Questions*/}
       <header className="questionHeader">
-      <p className="questionCounter">Question {currentPage}/7</p>
+      {currentPage === 8 ? (<p className="questionCounter">Final Report</p>) : (<p className="questionCounter">Question {currentPage}/7</p>) }
         <div className="buttonContainer">
           <button className="homeButton" onClick={goToHomePage}>Home</button>
           <button className="saveButton">Save</button>

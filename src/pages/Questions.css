@@ -131,6 +131,7 @@
 /* Final Report Summary Traits */
 .finalReportSummary{
   font-size: 18px;
+  white-space: pre-wrap;
 }
 
 .finalReportSubheader{
