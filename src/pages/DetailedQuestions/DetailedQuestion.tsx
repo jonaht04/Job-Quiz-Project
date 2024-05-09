@@ -23,7 +23,6 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [isAnswerSelected, setIsAnswerSelected] = useState(false);
-  const [isEmpty, setIsEmpty] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = React.createRef<HTMLAudioElement>();
   const [report, setReport] = useState("");
