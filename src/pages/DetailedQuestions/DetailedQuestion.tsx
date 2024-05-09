@@ -131,10 +131,6 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
       setIsSettingsOpen(!isSettingsOpen);
     };
 
-    const toggleIsEmpty = () => {
-      setIsEmpty(!isEmpty);
-    }
-
     /** Handles the counter for progress bar
   Ensures that the progress bar does not go up
   until an answer is selectef
