@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (61 ms)
+  ✕ renders learn react link (57 ms)
 
   ● renders learn react link
 
@@ -190,7 +190,7 @@ go away.[0m
 ------------------------------------------------|---------|----------|---------|---------|----------------------------------
 File                                            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                
 ------------------------------------------------|---------|----------|---------|---------|----------------------------------
-All files                                       |    8.97 |      3.5 |    1.31 |    9.01 |                                  
+All files                                       |    9.51 |     3.46 |    1.31 |    9.57 |                                  
  src                                            |   35.08 |    38.88 |      15 |   34.54 |                                  
   App.tsx                                       |   45.94 |       50 |   13.33 |   47.22 | 19,23,27,31,36,43-65,69-71,75-77 
   Setting_menu.tsx                              |   33.33 |       50 |   33.33 |      25 | 16-26                            
@@ -199,49 +199,49 @@ All files                                       |    8.97 |      3.5 |    1.31 |
  src/pages                                      |    5.88 |        0 |       0 |    5.88 |                                  
   FinalReport.tsx                               |   16.66 |        0 |       0 |   16.66 | 14-23                            
   GPT.tsx                                       |       0 |        0 |       0 |       0 | 7-35                             
- src/pages/BasicQuestions                       |    1.32 |        0 |       0 |    1.37 |                                  
+ src/pages/BasicQuestions                       |    1.33 |        0 |       0 |    1.38 |                                  
   BasicQuestionOverlay.tsx                      |    0.75 |        0 |       0 |    0.78 | 54-321                           
-  MainBasicQ.tsx                                |    5.55 |        0 |       0 |    5.55 | 16-54                            
- src/pages/BasicQuestions/Business Questions    |   11.53 |      100 |       0 |   11.53 |                                  
-  BusinessQ1.tsx                                |      10 |      100 |       0 |      10 | 9-25                             
-  BusinessQ2.tsx                                |      10 |      100 |       0 |      10 | 9-25                             
-  BusinessQ3.tsx                                |    12.5 |      100 |       0 |    12.5 | 9-23                             
-  BusinessQ4.tsx                                |    12.5 |      100 |       0 |    12.5 | 9-23                             
-  BusinessQ5.tsx                                |    12.5 |      100 |       0 |    12.5 | 9-23                             
-  BusinessQ6.tsx                                |    12.5 |      100 |       0 |    12.5 | 9-23                             
- src/pages/BasicQuestions/Healthcare Questions  |   11.76 |      100 |       0 |   11.76 |                                  
-  HealthcareQ1.tsx                              |      10 |      100 |       0 |      10 | 9-25                             
-  HealthcareQ2.tsx                              |   11.11 |      100 |       0 |   11.11 | 9-22                             
-  HealthcareQ3.tsx                              |    12.5 |      100 |       0 |    12.5 | 9-23                             
-  HealthcareQ4.tsx                              |    12.5 |      100 |       0 |    12.5 | 9-23                             
-  HealthcareQ5.tsx                              |    12.5 |      100 |       0 |    12.5 | 9-23                             
-  HealthcareQ6.tsx                              |    12.5 |      100 |       0 |    12.5 | 9-24                             
- src/pages/BasicQuestions/Math Questions        |   12.76 |      100 |       0 |   12.76 |                                  
-  MathQ1.tsx                                    |    12.5 |      100 |       0 |    12.5 | 9-23                             
-  MathQ2.tsx                                    |    12.5 |      100 |       0 |    12.5 | 9-23                             
-  MathQ3.tsx                                    |    12.5 |      100 |       0 |    12.5 | 9-23                             
-  MathQ4.tsx                                    |    12.5 |      100 |       0 |    12.5 | 9-23                             
-  MathQ5.tsx                                    |   14.28 |      100 |       0 |   14.28 | 9-20                             
-  MathQ6.tsx                                    |    12.5 |      100 |       0 |    12.5 | 9-23                             
- src/pages/BasicQuestions/Techonology Questions |    10.9 |      100 |       0 |    10.9 |                                  
-  TechQ1.tsx                                    |      10 |      100 |       0 |      10 | 11-27                            
-  TechQ2.tsx                                    |    12.5 |      100 |       0 |    12.5 | 9-23                             
-  TechQ3.tsx                                    |      10 |      100 |       0 |      10 | 9-25                             
-  TechQ4.tsx                                    |    12.5 |      100 |       0 |    12.5 | 9-23                             
-  TechQ5.tsx                                    |    12.5 |      100 |       0 |    12.5 | 9-23                             
-  TechQ6.tsx                                    |    9.09 |      100 |       0 |    9.09 | 9-24                             
- src/pages/DetailedQuestions                    |    4.37 |        0 |       0 |    4.51 |                                  
-  Detailed1.tsx                                 |    8.33 |        0 |       0 |    8.33 | 16-37                            
-  Detailed2.tsx                                 |    8.33 |        0 |       0 |    8.33 | 12-34                            
-  Detailed3.tsx                                 |    8.33 |        0 |       0 |    8.33 | 12-34                            
-  Detailed4.tsx                                 |    8.33 |        0 |       0 |    8.33 | 12-34                            
-  Detailed5.tsx                                 |    8.33 |        0 |       0 |    8.33 | 12-34                            
-  Detailed6.tsx                                 |    8.33 |        0 |       0 |    8.33 | 12-34                            
-  Detailed7.tsx                                 |    8.33 |        0 |       0 |    8.33 | 12-34                            
-  DetailedQuestion.tsx                          |    1.01 |        0 |       0 |    1.07 | 22-234                           
+  MainBasicQ.tsx                                |    5.88 |        0 |       0 |    5.88 | 15-52                            
+ src/pages/BasicQuestions/Business Questions    |   13.04 |      100 |       0 |   13.04 |                                  
+  BusinessQ1.tsx                                |   11.11 |      100 |       0 |   11.11 | 8-23                             
+  BusinessQ2.tsx                                |   11.11 |      100 |       0 |   11.11 | 8-23                             
+  BusinessQ3.tsx                                |   14.28 |      100 |       0 |   14.28 | 8-21                             
+  BusinessQ4.tsx                                |   14.28 |      100 |       0 |   14.28 | 8-21                             
+  BusinessQ5.tsx                                |   14.28 |      100 |       0 |   14.28 | 8-21                             
+  BusinessQ6.tsx                                |   14.28 |      100 |       0 |   14.28 | 8-21                             
+ src/pages/BasicQuestions/Healthcare Questions  |   13.33 |      100 |       0 |   13.33 |                                  
+  HealthcareQ1.tsx                              |   11.11 |      100 |       0 |   11.11 | 8-23                             
+  HealthcareQ2.tsx                              |    12.5 |      100 |       0 |    12.5 | 8-20                             
+  HealthcareQ3.tsx                              |   14.28 |      100 |       0 |   14.28 | 8-21                             
+  HealthcareQ4.tsx                              |   14.28 |      100 |       0 |   14.28 | 8-21                             
+  HealthcareQ5.tsx                              |   14.28 |      100 |       0 |   14.28 | 8-21                             
+  HealthcareQ6.tsx                              |   14.28 |      100 |       0 |   14.28 | 8-22                             
+ src/pages/BasicQuestions/Math Questions        |   14.63 |      100 |       0 |   14.63 |                                  
+  MathQ1.tsx                                    |   14.28 |      100 |       0 |   14.28 | 8-21                             
+  MathQ2.tsx                                    |   14.28 |      100 |       0 |   14.28 | 8-21                             
+  MathQ3.tsx                                    |   14.28 |      100 |       0 |   14.28 | 8-21                             
+  MathQ4.tsx                                    |   14.28 |      100 |       0 |   14.28 | 8-21                             
+  MathQ5.tsx                                    |   16.66 |      100 |       0 |   16.66 | 8-18                             
+  MathQ6.tsx                                    |   14.28 |      100 |       0 |   14.28 | 8-21                             
+ src/pages/BasicQuestions/Techonology Questions |   12.24 |      100 |       0 |   12.24 |                                  
+  TechQ1.tsx                                    |   11.11 |      100 |       0 |   11.11 | 10-25                            
+  TechQ2.tsx                                    |   14.28 |      100 |       0 |   14.28 | 8-21                             
+  TechQ3.tsx                                    |   11.11 |      100 |       0 |   11.11 | 8-23                             
+  TechQ4.tsx                                    |   14.28 |      100 |       0 |   14.28 | 8-21                             
+  TechQ5.tsx                                    |   14.28 |      100 |       0 |   14.28 | 8-21                             
+  TechQ6.tsx                                    |      10 |      100 |       0 |      10 | 8-22                             
+ src/pages/DetailedQuestions                    |    4.62 |        0 |       0 |    4.79 |                                  
+  Detailed1.tsx                                 |    9.09 |        0 |       0 |    9.09 | 14-34                            
+  Detailed2.tsx                                 |    9.09 |        0 |       0 |    9.09 | 11-32                            
+  Detailed3.tsx                                 |    9.09 |        0 |       0 |    9.09 | 11-32                            
+  Detailed4.tsx                                 |    9.09 |        0 |       0 |    9.09 | 11-32                            
+  Detailed5.tsx                                 |    9.09 |        0 |       0 |    9.09 | 11-32                            
+  Detailed6.tsx                                 |    9.09 |        0 |       0 |    9.09 | 11-32                            
+  Detailed7.tsx                                 |    9.09 |        0 |       0 |    9.09 | 11-32                            
+  DetailedQuestion.tsx                          |    1.04 |        0 |       0 |    1.11 | 22-229                           
 ------------------------------------------------|---------|----------|---------|---------|----------------------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        4.166 s
+Time:        4.22 s
 Ran all test suites.
