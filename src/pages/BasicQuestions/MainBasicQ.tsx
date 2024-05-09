@@ -8,13 +8,11 @@ import FilmMaking from '../../assets/Math.gif'
 import MIITheme from '../../assets/MII_Theme.mp3'
 
 interface Props {
-  setSelectedString: (selectedString: string) => void;
   handleAnswerSelect: (selectedString: string) => void;
 }
 
-const Question1: React.FC<Props> = ({ setSelectedString, handleAnswerSelect }) => {
+const Question1: React.FC<Props> = ({handleAnswerSelect }) => {
   const handleButtonClick = (selectedString: string) => {
-    setSelectedString(selectedString);
     handleAnswerSelect(selectedString);
   };
 

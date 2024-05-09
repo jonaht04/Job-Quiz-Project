@@ -1,13 +1,11 @@
 import "../../Questions.css";
 
 interface Props {
-  setSelectedString: (selectedString: string) => void;
   handleAnswerSelect: (selectedString: string) => void;
 }
 
-export const MathQ5: React.FC<Props> = ({ setSelectedString, handleAnswerSelect }) => {
+export const MathQ5: React.FC<Props> = ({handleAnswerSelect }) => {
   const handleButtonClick = (selectedString: string) => {
-    setSelectedString(selectedString);
     handleAnswerSelect(selectedString);
   };
 
