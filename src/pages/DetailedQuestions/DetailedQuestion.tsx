@@ -159,23 +159,23 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
   const renderCurrentPage = () => {
     switch(currentPage) {
       case 1:
-        return <Detailed1 setSelectedString={setQ1Answer} handleAnswerSelect={MainQuestion1Answer} setIsEmpty={toggleIsEmpty}/>
+        return <Detailed1 handleAnswerSelect={MainQuestion1Answer}/>
       case 2:
-        return <Detailed2 setSelectedString={setQ2Answer} handleAnswerSelect={SubQuestion1Answer}/>
+        return <Detailed2 handleAnswerSelect={SubQuestion1Answer}/>
       case 3:
-        return <Detailed3 setSelectedString={setQ3Answer} handleAnswerSelect={SubQuestion2Answer}/>
+        return <Detailed3 handleAnswerSelect={SubQuestion2Answer}/>
       case 4:
-        return <Detailed4 setSelectedString={setQ4Answer} handleAnswerSelect={SubQuestion3Answer}/>
+        return <Detailed4 handleAnswerSelect={SubQuestion3Answer}/>
       case 5:
-        return <Detailed5 setSelectedString={setQ5Answer} handleAnswerSelect={SubQuestion4Answer}/>
+        return <Detailed5 handleAnswerSelect={SubQuestion4Answer}/>
       case 6:
-        return <Detailed6 setSelectedString={setQ6Answer} handleAnswerSelect={SubQuestion5Answer}/>
+        return <Detailed6 handleAnswerSelect={SubQuestion5Answer}/>
       case 7:
-        return <Detailed7 setSelectedString={setQ7Answer} handleAnswerSelect={SubQuestion6Answer}/>
+        return <Detailed7 handleAnswerSelect={SubQuestion6Answer}/>
       case 8:
         return <FinalReport gptResponse={report} isLoading={isLoading}></FinalReport> // replaced placeholder
       default:
-        return <Detailed1 setSelectedString={setQ1Answer} handleAnswerSelect={MainQuestion1Answer} setIsEmpty={toggleIsEmpty}/>;
+        return <Detailed1 handleAnswerSelect={MainQuestion1Answer}/>;
     }
   };
 

@@ -2,12 +2,11 @@ import "../Questions.css";
 import { useState, useEffect } from "react"; 
 
 interface Props {
-  setSelectedString: (selectedString: string) => void;
   handleAnswerSelect: (selectedString: string) => void;
 }
 
 
-export const Detailed7: React.FC<Props> = ({ setSelectedString, handleAnswerSelect }) => {
+export const Detailed7: React.FC<Props> = ({handleAnswerSelect }) => {
 
   const [inputText, setInputText] = useState<string>('');
 
@@ -28,7 +27,6 @@ export const Detailed7: React.FC<Props> = ({ setSelectedString, handleAnswerSele
   const handleAnswer = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setInputText(event.target.value);
     handleAnswerSelect(event.target.value);
-    setSelectedString(event.target.value);
   };
 
     return (<div className='container'>
