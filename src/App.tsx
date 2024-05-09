@@ -131,7 +131,7 @@ function App() {
             <p className ="textContainer">This exam is the shorter quiz. Its questions are all multiple choice and shouldn’t take too long to complete. Choose the answer that best matches your own preferences, beliefs, and opinions. This test is powered by ChatGPT’s Large Language Model.</p>
           </div>
           <div className="buttonAndTextContainer">
-            <button className="quizButton" onClick={goToDetailedQuestionPage}>Long Quiz</button>
+            <button className="quizButton" onClick={toggleLongQuiz}>Long Quiz</button>
             <p className ="textContainer">This exam has more complex questions that require more thought with fill-in-the-blank answers being required. Expect this to take longer than the multiple choice. This test is powered by ChatGPT’s Large Language Model.</p>
           </div>
         </div>
