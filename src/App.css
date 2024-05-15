@@ -85,7 +85,7 @@
     margin: auto;
 }
 .quizButton{
-    background-color: #ccd0da;
+    background-color: #dc8a78;
     color: black;
     padding: 6px 16px;
     border-radius: 5px;
@@ -93,7 +93,7 @@
     border: 15px;
 }
 .homePgHeaderButtons{
-    background-color: #bcc0cc;
+    background-color: #dd7878;
     color: Black;
     border: none;
     padding: 3px 16px;
@@ -118,7 +118,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ccd0da;
+    background-color: #dc8a78;
     color: black;
     padding: 6px 10px;
     border-radius: 5px;
