@@ -85,7 +85,7 @@
     margin: auto;
 }
 .quizButton{
-    background-color: #dc8a78;
+    background-color: #ccd0da;
     color: black;
     padding: 6px 16px;
     border-radius: 5px;
@@ -93,7 +93,7 @@
     border: 15px;
 }
 .homePgHeaderButtons{
-    background-color: #dd7878;
+    background-color: #bcc0cc;
     color: Black;
     border: none;
     padding: 3px 16px;
@@ -118,7 +118,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #dc8a78;
+    background-color: #ccd0da;
     color: black;
     padding: 6px 10px;
     border-radius: 5px;
@@ -148,8 +148,8 @@
 }
 
 .dark-mode .quizButton{
-    background-color: #f5e0dc;
-    color: black;
+    background-color: #313244;
+    color: white;
     border-color: #000000;
 }
 
@@ -162,16 +162,16 @@
 }
 
 .dark-mode .homePgHeaderButtons {
-    background-color: #f2cdcd;
-    color: black;
+    background-color: #181825;
+    color: white;
 }
 
 .dark-mode .ShortQuiz {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f5e0dc;
-    color: black;
+    background-color: #313244;
+    color: white;
     padding: 6px 10px;
     border-radius: 5px;
     margin: 0 auto;

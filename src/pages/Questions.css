@@ -76,7 +76,7 @@
 
 .homeButton,
 .saveButton{
-  background-color: #dd7878;
+  background-color: #bcc0cc;
   color: black;
   border: none;
   padding: 6px 16px;
@@ -162,7 +162,7 @@ progress[value]::-webkit-progress-bar {
 }
 
 progress[value]::-webkit-progress-value {
-  background-color: #7287fd;
+  background-color: #cba6f7;
     border-radius: 2px; 
     background-size: 35px 20px, 100% 100%, 100% 100%;
 }
@@ -218,7 +218,7 @@ progress[value]::-webkit-progress-value {
 
 .dark-mode .answerButton {
   background-color: #313244;
-  color: #ffffff;
+  color: black;
 }
 
 .dark-mode .disabled {

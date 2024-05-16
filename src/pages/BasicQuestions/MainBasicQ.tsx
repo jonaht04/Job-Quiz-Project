@@ -37,19 +37,19 @@ const Question1: React.FC<Props> = ({handleAnswerSelect }) => {
       <h2>Which of the following areas interests you the most?</h2>
       <img className="MainImage" src={MainImage} alt="logo" onClick={togglePlay}/>
       <div className="answerGrid">
-        <button className="answerButton" style={{backgroundColor: "#179299"}} onClick={() => handleButtonClick("Technology")}>Technology
+        <button className="answerButton" style={{backgroundColor: "#a6e3a1"}} onClick={() => handleButtonClick("Technology")}>Technology
           <img src={Technology} alt="logo"></img>
         </button>
 
-        <button className="answerButton" style={{backgroundColor: "#7287fd"}} onClick={() => handleButtonClick("Healthcare")}>Healthcare
+        <button className="answerButton" style={{backgroundColor: "#cba6f7"}} onClick={() => handleButtonClick("Healthcare")}>Healthcare
           <img src={Medical} alt="logo"></img>
         </button>
 
-        <button className="answerButton" style={{backgroundColor: "#04a5e5"}} onClick={() => handleButtonClick("Business")}>Business
+        <button className="answerButton" style={{backgroundColor: "#74c7ec"}} onClick={() => handleButtonClick("Business")}>Business
           <img src={Business} alt="logo"></img>
         </button>
         
-        <button className="answerButton" style={{backgroundColor: "#e64553"}} onClick={() => handleButtonClick("Math")}>Mathematics
+        <button className="answerButton" style={{backgroundColor: "#f38ba8"}} onClick={() => handleButtonClick("Math")}>Mathematics
           <img src={FilmMaking} alt="logo"></img>
         </button>
       </div>
