@@ -148,8 +148,8 @@
 }
 
 .dark-mode .quizButton{
-    background-color: #313244;
-    color: white;
+    background-color: #f5e0dc;
+    color: black;
     border-color: #000000;
 }
 
@@ -162,16 +162,16 @@
 }
 
 .dark-mode .homePgHeaderButtons {
-    background-color: #181825;
-    color: white;
+    background-color: #f2cdcd;
+    color: black;
 }
 
 .dark-mode .ShortQuiz {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #313244;
-    color: white;
+    background-color: #f5e0dc;
+    color: black;
     padding: 6px 10px;
     border-radius: 5px;
     margin: 0 auto;
