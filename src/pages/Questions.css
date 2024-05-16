@@ -105,6 +105,10 @@
   background-color: #dce0e8;
 }
 
+.answerButton:disabled {
+  opacity: 85%;
+}
+
 .answerButton img {
   width: 280px;
   margin-bottom: 10px;
@@ -147,6 +151,7 @@
   height: 5px;
 }
 
+/* Overrides the default progress bar to blank*/
 .progressBar {
   -webkit-appearance: none;
    appearance: none;
@@ -156,6 +161,7 @@
   height: 20px;
 }
 
+/* Overrides the default progress bar*/
 progress[value]::-webkit-progress-bar {
   background-color: gray;
   border-radius: 2px;
@@ -218,7 +224,7 @@ progress[value]::-webkit-progress-value {
 
 .dark-mode .answerButton {
   background-color: #313244;
-  color: #ffffff;
+  color: black;
 }
 
 .dark-mode .disabled {
