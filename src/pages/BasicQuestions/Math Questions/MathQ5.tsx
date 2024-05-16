@@ -14,8 +14,8 @@ export const MathQ5: React.FC<Props> = ({handleAnswerSelect }) => {
       <h1><strong>Mathematics Branch: Question 5</strong></h1>
       <h2>Which type of role are you interested in?</h2>
       <div className="answerGrid">
-      <button className="answerButton" onClick={() => handleButtonClick("Data analysis")}>Data analysis</button>
-        <button className="answerButton" onClick={() => handleButtonClick("Financial analysis")}>Financial analysis</button>
+      <button className="answerButton" style={{backgroundColor: "#179299"}} onClick={() => handleButtonClick("Data analysis")}>Data analysis</button>
+        <button className="answerButton" style={{backgroundColor: "#7287fd"}} onClick={() => handleButtonClick("Financial analysis")}>Financial analysis</button>
       </div>
     </div>
   )

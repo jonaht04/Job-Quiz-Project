@@ -14,11 +14,11 @@ export const MathQ4: React.FC<Props> = ({handleAnswerSelect }) => {
       <h1><strong>Mathematics Branch: Question 4</strong></h1>
       <h2>Are you comfortable working with large datasets and applying mathematical algorithms for analysis?</h2>
       <div className="answerGrid">
-        <button className="answerButton" onClick={() => handleButtonClick("Yes")}>Yes</button>
-        <button className="answerButton" onClick={() => handleButtonClick("No")}>No</button>
+        <button className="answerButton" style={{backgroundColor: "#179299"}} onClick={() => handleButtonClick("Yes")}>Yes</button>
+        <button className="answerButton" style={{backgroundColor: "#7287fd"}} onClick={() => handleButtonClick("No")}>No</button>
       </div>
       <div className="spacer"></div>
-      <button className="answerButton" onClick={() => handleButtonClick("Somewhat")}>Somewhat</button>
+      <button className="answerButton" style={{backgroundColor: "#04a5e5"}} onClick={() => handleButtonClick("Somewhat")}>Somewhat</button>
     </div>
   )
 }
