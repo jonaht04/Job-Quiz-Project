@@ -14,8 +14,13 @@ interface Props {
 const Question1: React.FC<Props> = ({handleAnswerSelect }) => {
   const handleButtonClick = (selectedString: string) => {
     handleAnswerSelect(selectedString);
+    if (selectedString === "Technology") setButtonSelected(1);
+    else if (selectedString === "Healthcare") setButtonSelected(2);
+    else if (selectedString === "Business") setButtonSelected(3);
+    else if (selectedString === "Math") setButtonSelected(4);
   };
 
+  const [buttonSelected, setButtonSelected] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = React.createRef<HTMLAudioElement>();
 
@@ -37,19 +42,19 @@ const Question1: React.FC<Props> = ({handleAnswerSelect }) => {
       <h2>Which of the following areas interests you the most?</h2>
       <img className="MainImage" src={MainImage} alt="logo" onClick={togglePlay}/>
       <div className="answerGrid">
-        <button className="answerButton" style={{backgroundColor: "#a6e3a1"}} onClick={() => handleButtonClick("Technology")}>Technology
+        <button className="answerButton" disabled={buttonSelected===1} style={{backgroundColor: "#a6e3a1"}} onClick={() => handleButtonClick("Technology")}>Technology
           <img src={Technology} alt="logo"></img>
         </button>
 
-        <button className="answerButton" style={{backgroundColor: "#cba6f7"}} onClick={() => handleButtonClick("Healthcare")}>Healthcare
+        <button className="answerButton" disabled={buttonSelected===2} style={{backgroundColor: "#cba6f7"}} onClick={() => handleButtonClick("Healthcare")}>Healthcare
           <img src={Medical} alt="logo"></img>
         </button>
 
-        <button className="answerButton" style={{backgroundColor: "#74c7ec"}} onClick={() => handleButtonClick("Business")}>Business
+        <button className="answerButton" disabled={buttonSelected===3} style={{backgroundColor: "#74c7ec"}} onClick={() => handleButtonClick("Business")}>Business
           <img src={Business} alt="logo"></img>
         </button>
         
-        <button className="answerButton" style={{backgroundColor: "#f38ba8"}} onClick={() => handleButtonClick("Math")}>Mathematics
+        <button className="answerButton" disabled={buttonSelected===4} style={{backgroundColor: "#f38ba8"}} onClick={() => handleButtonClick("Math")}>Mathematics
           <img src={FilmMaking} alt="logo"></img>
         </button>
       </div>

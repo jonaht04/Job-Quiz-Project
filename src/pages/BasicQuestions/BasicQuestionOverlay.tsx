@@ -318,7 +318,12 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
         )}
 
         {currentPage === 7 && (
-          <button className='changeProgressButton' onClick={() => {togglePlay(); handleNextButtonClick()}}> Submit </button>
+          <button 
+          className='changeProgressButton'
+          disabled={!isAnswerSelected} 
+          onClick={() => {togglePlay(); handleNextButtonClick()}}>
+             Submit 
+          </button>
         )}
       </div>
       <audio ref={audioRef}>
