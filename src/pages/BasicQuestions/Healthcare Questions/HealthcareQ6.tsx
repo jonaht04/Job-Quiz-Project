@@ -15,11 +15,11 @@ export const HealthcareQ6: React.FC<Props> = ({handleAnswerSelect }) => {
       <h2>Are you interested in always being “On-call”?</h2>
       <h2>(you get called in for work whenever you are needed, can be at any time)</h2>
       <div className="answerGrid">
-        <button className="answerButton" onClick={() => handleButtonClick("Yes")}>Yes</button>
-        <button className="answerButton" onClick={() => handleButtonClick("No")}>No</button>
+        <button className="answerButton" style={{backgroundColor: "#179299"}} onClick={() => handleButtonClick("Yes")}>Yes</button>
+        <button className="answerButton" style={{backgroundColor: "#7287fd"}} onClick={() => handleButtonClick("No")}>No</button>
       </div>
       <div className="spacer"></div>
-      <button className="answerButton" onClick={() => handleButtonClick("Maybe")}>Maybe</button>
+      <button className="answerButton" style={{backgroundColor: "#04a5e5"}} onClick={() => handleButtonClick("Maybe")}>Maybe</button>
     </div>
   )
 }
