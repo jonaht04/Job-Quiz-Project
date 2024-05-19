@@ -309,10 +309,12 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
         </div>
       </header>
       <div className='container'>
+        {/*Render progress bar*/}
       <progress className='progressBar' value={progressCounter() / 7}></progress>
+      {/*Renders current line-up of questions*/}
         {renderCurrentPage()}
       </div>
-
+          {/*Previous Question Button*/}
       <div className='container'>
         {currentPage > 1 && (
           <button 
@@ -322,7 +324,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
             Previous Question
           </button>
         )}
-        
+        {/*Next Question Button*/}
         {currentPage < 7 && (
           <button 
             className={`changeProgressButton ${currentPage === 7 ? 'disabled' : ''}`} 
@@ -331,7 +333,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
             Next Question
           </button>
         )}
-
+        {/*Submit button*/}
         {currentPage === 7 && (
           <button 
           className='changeProgressButton'
