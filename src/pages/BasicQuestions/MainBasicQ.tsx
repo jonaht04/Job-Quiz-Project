@@ -10,7 +10,7 @@ import MIITheme from '../../assets/MII_Theme.mp3'
 interface Props {
   handleAnswerSelect: (selectedString: string) => void;
 }
-
+//Function for handling the selection of answers
 const Question1: React.FC<Props> = ({handleAnswerSelect }) => {
   const handleButtonClick = (selectedString: string) => {
     handleAnswerSelect(selectedString);
@@ -23,7 +23,7 @@ const Question1: React.FC<Props> = ({handleAnswerSelect }) => {
   const [buttonSelected, setButtonSelected] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = React.createRef<HTMLAudioElement>();
-
+//Toggles whether the currently playing audo is playing or not
   const togglePlay = () => {
     const audio = audioRef.current;
     if (audio) {
@@ -35,7 +35,7 @@ const Question1: React.FC<Props> = ({handleAnswerSelect }) => {
       setIsPlaying(!isPlaying);
     }
   };
-
+  //Generates the initial page of actual questions
   return (
     <div className='container'>
       <h1><strong>Question 1</strong></h1>

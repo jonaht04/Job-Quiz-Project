@@ -131,7 +131,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
     setIsSettingsOpen(!isSettingsOpen);
   };
   //#endregion
-
+//Function to handle the button click for \next page
   const handleNextButtonClick = () => {
     if (isAnswerSelected) {
       setCurrentPage(currentPage + 1)
@@ -146,7 +146,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
 
   /* Handles the counter for progress bar
   Ensures that the progress bar does not go up
-  until an answer is selectef
+  until an answer is selected
   */
   const progressCounter = () => {
     if (isAnswerSelected) return currentPage;
@@ -286,6 +286,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
   };
   //Basic Question display
   return (
+    //Header of Overlay
     <div>
       <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode} toggleDropdown={toggleDropdown}/>
       <header className="questionHeader">
