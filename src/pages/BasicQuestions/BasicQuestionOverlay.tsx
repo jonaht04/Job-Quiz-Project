@@ -2,8 +2,9 @@ import React, { useState, useEffect} from 'react';
 import "../Questions.css";
 import SettingsMenu from '../../Setting_menu';
 import MainBasicQ from './MainBasicQ';
+//Import music used upon finishing the quiz
 import fanfare from '../../assets/final-fantasy-vii-victory-fanfare-1.mp3'
-
+//Importing all of the quiz questions from storage files
 //#region Tech Questions
 import TechQ1 from './Techonology Questions/TechQ1';
 import TechQ2 from './Techonology Questions/TechQ2';
@@ -52,13 +53,13 @@ interface Props {
 
 const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDarkMode}) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [isAnswerSelected, setIsAnswerSelected] = useState(false);
-  const [report, setReport] = useState("");
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false); //State variable representing whether the settings menu is currently open
+  const [currentPage, setCurrentPage] = useState(1); //State variable representing the current page of the quiz that the user is on
+  const [isAnswerSelected, setIsAnswerSelected] = useState(false); //State variable representing whether there is an answer selected on page
+  const [report, setReport] = useState(""); //Variable used to store report message from ChatGPT
   const [isLoading, setIsLoading] = useState(true); // will be passed into final report
   
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false); //State variable representing whether the victory music is playing
   const audioRef = React.createRef<HTMLAudioElement>();
 
   const togglePlay = () => {
@@ -130,7 +131,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
     setIsSettingsOpen(!isSettingsOpen);
   };
   //#endregion
-
+//Function to handle the button click for \next page
   const handleNextButtonClick = () => {
     if (isAnswerSelected) {
       setCurrentPage(currentPage + 1)
@@ -145,7 +146,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
 
   /* Handles the counter for progress bar
   Ensures that the progress bar does not go up
-  until an answer is selectef
+  until an answer is selected
   */
   const progressCounter = () => {
     if (isAnswerSelected) return currentPage;
@@ -154,6 +155,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
 
   //#region Save System
   useEffect(() => {
+    //interpret save data from JSON file
     const savedData = JSON.parse(localStorage.getItem('savedData') || '{"answers":[],"page":1}');
     setQ1Answer(savedData.answers[0] || "");
     setQ2Answer(savedData.answers[1] || "");
@@ -170,10 +172,13 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
       answers: [Q1Answer, Q2Answer, Q3Answer, Q4Answer, Q5Answer, Q6Answer, Q7Answer],
       page: currentPage
     };
+    //save current answers to local storage, including answers and current page of quiz
     localStorage.setItem('savedData', JSON.stringify(dataToSave));
   };
   //#endregion
   //#region report generation functions
+  //Generates a report to feed to ChatGPT, based on the answer the user has provided to each of the questions + the questions themselves.
+  //Branching system tracks which kind of quiz the user opted into from the first question of the BasicQuestionsQuiz
   const generateBasicQuestionReport = () => {
     var reportPrompt = "";
     if(Q1Answer === "Technology"){
@@ -211,11 +216,14 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
     return genReport(reportPrompt);}
   //end region
 
-
+//Function to render the Basic Questions Page.
+//switch command will change the questions shown to the user based on the interest indicated in the first question (IE: Tech, Healthcare, Business or Math).
   const renderCurrentPage = () => {
+    //swap to next page of quiz
     switch(currentPage) {
       case 1:
         return <MainBasicQ   handleAnswerSelect={MainQuestion1Answer}/>;
+      //second question
       case 2:
         switch(Q1Answer) {
           case "Technology": return <TechQ1 handleAnswerSelect={SubQuestion1Answer}/>;
@@ -224,6 +232,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
           case "Math": return <MathQ1 handleAnswerSelect={SubQuestion1Answer}/>;
         }
         break;
+      //third question
       case 3:
         switch(Q1Answer) {
           case "Technology": return <TechQ2   handleAnswerSelect={SubQuestion2Answer}/>;
@@ -232,6 +241,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
           case "Math":return <MathQ2   handleAnswerSelect={SubQuestion2Answer}/>
         }
         break;
+      //fourth question
       case 4:
         switch(Q1Answer) {
           case "Technology": return <TechQ3   handleAnswerSelect={SubQuestion3Answer}/>;
@@ -240,6 +250,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
           case "Math": return <MathQ3   handleAnswerSelect={SubQuestion3Answer}/>;
         }
         break;
+      //fifth question
       case 5:
         switch(Q1Answer) {
           case "Technology": return <TechQ4   handleAnswerSelect={SubQuestion4Answer}/>;
@@ -248,6 +259,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
           case "Math": return <MathQ4   handleAnswerSelect={SubQuestion4Answer}/>;
         }
         break;
+      //sixth question
       case 6:
         switch(Q1Answer) {
           case "Technology": return <TechQ5   handleAnswerSelect={SubQuestion5Answer}/>;
@@ -256,6 +268,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
           case "Math": return <MathQ5   handleAnswerSelect={SubQuestion5Answer}/>;
         }
         break;
+      //seventh question
       case 7:
         switch(Q1Answer) {
           case "Technology": return <TechQ6   handleAnswerSelect={SubQuestion6Answer}/>;
@@ -265,13 +278,15 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
         }
         break;
       case 8:
+      //Show the final report page once all questions have been completed
         return <FinalReport gptResponse={report} isLoading={isLoading}></FinalReport>
       default:
         return <MainBasicQ   handleAnswerSelect={MainQuestion1Answer}/>;
     }
   };
-  
+  //Basic Question display
   return (
+    //Header of Overlay
     <div>
       <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode} toggleDropdown={toggleDropdown}/>
       <header className="questionHeader">
@@ -294,10 +309,12 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
         </div>
       </header>
       <div className='container'>
+        {/*Render progress bar*/}
       <progress className='progressBar' value={progressCounter() / 7}></progress>
+      {/*Renders current line-up of questions*/}
         {renderCurrentPage()}
       </div>
-
+          {/*Previous Question Button*/}
       <div className='container'>
         {currentPage > 1 && (
           <button 
@@ -307,7 +324,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
             Previous Question
           </button>
         )}
-        
+        {/*Next Question Button*/}
         {currentPage < 7 && (
           <button 
             className={`changeProgressButton ${currentPage === 7 ? 'disabled' : ''}`} 
@@ -316,7 +333,7 @@ const BasicQuestionOverlay: React.FC<Props> = ({ goToHomePage , isDarkMode, togg
             Next Question
           </button>
         )}
-
+        {/*Submit button*/}
         {currentPage === 7 && (
           <button 
           className='changeProgressButton'

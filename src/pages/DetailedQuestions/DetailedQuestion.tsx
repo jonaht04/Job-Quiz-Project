@@ -19,15 +19,15 @@ interface Props {
 }
   
 const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDarkMode }) => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [isAnswerSelected, setIsAnswerSelected] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false); //State representing whether menu dropdown is open
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);  //State representing whether menu dropdown is open
+  const [currentPage, setCurrentPage] = useState(1); //State representing what page the quiz is currently on
+  const [isAnswerSelected, setIsAnswerSelected] = useState(false); //State representing whether man answer has been put in the textbox
+  const [isPlaying, setIsPlaying] = useState(false); //State representing whether the music is actively playing
   const audioRef = React.createRef<HTMLAudioElement>();
-  const [report, setReport] = useState("");
-  const [isLoading, setIsLoading] = useState(true); // will be passed into final report
-
+  const [report, setReport] = useState(""); //State representing the text to put on the report page
+  const [isLoading, setIsLoading] = useState(true); //State variable attached to the loading screen, controlling whether or not it is active
+//Toggles whether or not the page's music is playing, and also progresses the page to the Final Report
   const togglePlay = () => {
     const audio = audioRef.current;
     if (audio) {
@@ -42,6 +42,8 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
   };
 
   //#region Question Answers
+  //Use state functions representing storage for the question answers, allowing it to be efficiently piped
+  //into ChatGPT
   const [Q1Answer, setQ1Answer] = useState("");
   const [Q2Answer, setQ2Answer] = useState("");
   const [Q3Answer, setQ3Answer] = useState("");
@@ -88,7 +90,8 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
     setIsAnswerSelected(selectedString !== '' ? true : false);
   };
   //#endregion
-
+  //Proceeds to the next page, and informs the system that there is no longer an answer selected
+  //Additionally, saves current quiz progress
   const handleNextButtonClick = () => {
     if (isAnswerSelected) {
       setCurrentPage(currentPage + 1)
@@ -138,6 +141,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
     if (isAnswerSelected) return currentPage;
     else return currentPage - 1;
   }
+  /*Generates a report, by first generating a report prompt and then feeding the report prompt to ChatGPT*/
   const generateDetailedQuestionReport = () => {
     var reportPrompt = "";
     reportPrompt = "What was your favorite subject in highschool and why? " + Q1Answer + 

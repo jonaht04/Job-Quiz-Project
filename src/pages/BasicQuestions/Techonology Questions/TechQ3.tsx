@@ -7,7 +7,7 @@ interface Props {
 
 export const TechQ3: React.FC<Props> = ({handleAnswerSelect }) => {
   const [buttonSelected, setButtonSelected] = useState(0);
-
+//Function to handle buttons, and communicate to other areas of the program which button was picked in order to record answer
   const handleButtonClick = (selectedString: string) => {
     handleAnswerSelect(selectedString);
     if (selectedString === "Java") setButtonSelected(1);
@@ -16,7 +16,7 @@ export const TechQ3: React.FC<Props> = ({handleAnswerSelect }) => {
     else if (selectedString === "SQL") setButtonSelected(4);
     else if (selectedString === "JavaScript") setButtonSelected(5);
   };
-
+//Render the question and the four answer buttons
   return (
     <div className='container'>
       <h1><strong>Technology Branch: Question 3</strong></h1>

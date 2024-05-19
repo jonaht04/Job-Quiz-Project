@@ -16,7 +16,7 @@ const SettingsMenu: React.FC<Props> = ({ isOpen, onClose, onDarkModeToggle, isDa
   const handleDarkModeToggle = (event: React.ChangeEvent<HTMLInputElement>) => {
     onDarkModeToggle(event.target.checked);
   };
-
+//Function handling exiting the settings menu
   const CloseSettings = () =>
     {
       onClose();
@@ -34,6 +34,7 @@ const SettingsMenu: React.FC<Props> = ({ isOpen, onClose, onDarkModeToggle, isDa
             <div className="d-flex justify-content-between align-items-center">
               <label className="form-label">Dark Mode</label>
               <div className="form-check form-switch">
+                {/*Form to enable Dark Mode*/}
                 <input
                   className="form-check-input"
                   type="checkbox"

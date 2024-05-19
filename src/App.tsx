@@ -7,14 +7,15 @@ import { Modal } from 'react-bootstrap';
 import jobImage from './assets/jobImagePassive.png';
 
 function App() {
-  const [key, setKey] = useState<string>('');
-  const [currentPage, setCurrentPage] = useState<string>('');
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false); 
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [isStartNewShortQuiz, setIsStartNewShortQuiz] = useState(false);
+  const [key, setKey] = useState<string>(''); //APIKey state variable
+  const [currentPage, setCurrentPage] = useState<string>(''); //State variable representing current page
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false); //State variable representing what theme is currently active
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false); //State variable representing whether menu is open
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false); //State variable representing whether settings menu pop-up is on screen
+  const [isStartNewShortQuiz, setIsStartNewShortQuiz] = useState(false); //State variables attached to new quiz start
   const [isStartNewLongQuiz, setIsStartNewLongQuiz] = useState(false);
-
+  // Series of functions that activate upon the usage of corresponding page elements,
+  //Telling the program that those things are currently open
   const toggleDropdown = () => {
       setIsDropdownOpen(!isDropdownOpen);
   };
@@ -30,7 +31,7 @@ function App() {
   const toggleLongQuiz = () => {
     setIsStartNewLongQuiz(!isStartNewLongQuiz);
   };
-
+  //Change website visuals based on whether dark mode has been selected
   useEffect(() => {
     if (isDarkMode) {
       document.body.classList.add('dark-mode');
@@ -38,11 +39,11 @@ function App() {
       document.body.classList.remove('dark-mode');
     }
   }, [isDarkMode]);
-
+  //Function to handle submission of APIKey, and throws it into local storage
   function handleSubmit() {
     localStorage.setItem("MYKEY", JSON.stringify(key));
   }
-
+  //Function to toggle darkmode upon button click in settings menu
   function toggleDarkMode() {
     setIsDarkMode(prevMode => !prevMode);
   }
@@ -50,7 +51,7 @@ function App() {
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
     setKey(event.target.value);
   }
-
+//Series of functions to handle webpage navigation
   function goToHomePage() {
     setCurrentPage(''); 
   }
@@ -64,7 +65,7 @@ function App() {
     setCurrentPage('DetailedQuesiton')
     toggleLongQuiz();
   }
-
+//Series of functions to handle new quizzes
   const startNewShortQuiz = () => {
     localStorage.removeItem('savedData');
     goToBasicQuestionPage();
@@ -76,10 +77,11 @@ function App() {
     goToDetailedQuestionPage();
     toggleLongQuiz();
   }
-
+//Generate the actual HomePage that you see on screen, as well as the other pages depending on which button is clicked
   return (
     <div className='App'>
       <div>
+        {/*Generate main page header*/}
         {currentPage === '' ? (
         <div>
           <header className="homePgHeader">
@@ -101,6 +103,7 @@ function App() {
               </div>
             </div>
           </header>
+          {/*Generate either basic questions or detailed questions based on currentPage state variable*/}
         </div>
     ) : currentPage === 'BasicQuestion1' ? (
       <BasicQuestion1 goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
@@ -109,6 +112,7 @@ function App() {
     )}
     {currentPage === '' && (
       <div className='container'>
+        {/*Display rest of main page*/}
         <p className="spacer"> </p>
         <p className="spacer"> </p>
 
@@ -123,7 +127,7 @@ function App() {
           </div>
           <img src={jobImage} alt="logo"></img>
         </div>
-
+        {/*Section containing the two descritions of the quizzes as well as the associated buttons*/}
         <p className="largeTextContainer">Two Quiz Types:</p>
         <div className="promptContainer">
           <div className="buttonAndTextContainer">
@@ -137,6 +141,7 @@ function App() {
         </div>
         <p></p>
         <p></p>
+        {/*APIKey submission box*/}
         <form>
           <label>API Key:</label>
           <input type="password" placeholder="Insert API Key Here" onChange={changeKey} />
@@ -147,7 +152,7 @@ function App() {
     )}
     <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode} toggleDropdown={toggleDropdown}/>
 
-
+{/*Pop-up menus associated with quizzes; prompts user to either continue old quiz or start new one*/}
     <Modal show={isStartNewShortQuiz} onHide={toggleShortQuiz} className="ShortQuizModal">
       <Modal.Header closeButton>
         <Modal.Title>Short Quiz</Modal.Title>
@@ -167,7 +172,7 @@ function App() {
         </ul>
       </Modal.Body>
     </Modal>
-
+    {/*Pop-up menu for detailed questions quiz*/}
     <Modal show={isStartNewLongQuiz} onHide={toggleLongQuiz} className="ShortQuizModal">
       <Modal.Header closeButton>
         <Modal.Title>Long Quiz</Modal.Title>

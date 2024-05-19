@@ -2,6 +2,8 @@ import OpenAI from "openai";
 
 //this is a fairly barebones implementation but it doesn't need to be much more than that.
 
+//async function that takes in users responses from the quiz, and returns a message from ChatGPT
+//that represents our recommended jobs.
 async function genReport(responses: string) {
     //get key from local storage
     const APIKey = localStorage.getItem("MYKEY");
@@ -34,6 +36,7 @@ async function genReport(responses: string) {
   //return the AI's response as a string
   const response: string = completion.choices[0].message.content ||  "";
   return(response)
+  //If an error is found, return the following message on the report page
 } catch (error){
     return "Error: Invalid API Key. Refresh to enter a new API Key";
 }

@@ -28,7 +28,7 @@ export const Detailed2: React.FC<Props> = ({handleAnswerSelect}) => {
     setInputText(event.target.value);
     handleAnswerSelect(event.target.value);
   };
-
+  //Actual textbox
   return (<div className='container'>
     <h1>Question 2</h1>
     <h2>What are your hobbies and why do you enjoy them?</h2>
