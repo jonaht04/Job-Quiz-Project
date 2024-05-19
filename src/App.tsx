@@ -14,7 +14,8 @@ function App() {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isStartNewShortQuiz, setIsStartNewShortQuiz] = useState(false);
   const [isStartNewLongQuiz, setIsStartNewLongQuiz] = useState(false);
-
+  // Series of functions that activate upon the usage of corresponding page elements,
+  //Telling the program that those things are currently open
   const toggleDropdown = () => {
       setIsDropdownOpen(!isDropdownOpen);
   };
@@ -30,7 +31,7 @@ function App() {
   const toggleLongQuiz = () => {
     setIsStartNewLongQuiz(!isStartNewLongQuiz);
   };
-
+  //Change website visuals based on whether dark mode has been selected
   useEffect(() => {
     if (isDarkMode) {
       document.body.classList.add('dark-mode');
@@ -38,11 +39,11 @@ function App() {
       document.body.classList.remove('dark-mode');
     }
   }, [isDarkMode]);
-
+  //Function to handle submission of APIKey, and throws it into local storage
   function handleSubmit() {
     localStorage.setItem("MYKEY", JSON.stringify(key));
   }
-
+  //Function to toggle darkmode upon button click in settings menu
   function toggleDarkMode() {
     setIsDarkMode(prevMode => !prevMode);
   }
@@ -50,7 +51,7 @@ function App() {
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
     setKey(event.target.value);
   }
-
+//Series of functions to handle webpage navigation
   function goToHomePage() {
     setCurrentPage(''); 
   }
@@ -64,7 +65,7 @@ function App() {
     setCurrentPage('DetailedQuesiton')
     toggleLongQuiz();
   }
-
+//Series of functions to handle new quizzes
   const startNewShortQuiz = () => {
     localStorage.removeItem('savedData');
     goToBasicQuestionPage();
@@ -76,7 +77,7 @@ function App() {
     goToDetailedQuestionPage();
     toggleLongQuiz();
   }
-
+//Generate the actual HomePage that you see on screen
   return (
     <div className='App'>
       <div>
@@ -167,7 +168,6 @@ function App() {
         </ul>
       </Modal.Body>
     </Modal>
-
     <Modal show={isStartNewLongQuiz} onHide={toggleLongQuiz} className="ShortQuizModal">
       <Modal.Header closeButton>
         <Modal.Title>Long Quiz</Modal.Title>
