@@ -7,12 +7,12 @@ import { Modal } from 'react-bootstrap';
 import jobImage from './assets/jobImagePassive.png';
 
 function App() {
-  const [key, setKey] = useState<string>('');
-  const [currentPage, setCurrentPage] = useState<string>('');
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false); 
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [isStartNewShortQuiz, setIsStartNewShortQuiz] = useState(false);
+  const [key, setKey] = useState<string>(''); //APIKey state variable
+  const [currentPage, setCurrentPage] = useState<string>(''); //State variable representing current page
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false); //State variable representing what theme is currently active
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false); //State variable representing whether menu is open
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false); //State variable representing whether settings menu pop-up is on screen
+  const [isStartNewShortQuiz, setIsStartNewShortQuiz] = useState(false); //State variables attached to new quiz start
   const [isStartNewLongQuiz, setIsStartNewLongQuiz] = useState(false);
   // Series of functions that activate upon the usage of corresponding page elements,
   //Telling the program that those things are currently open
@@ -127,7 +127,7 @@ function App() {
           </div>
           <img src={jobImage} alt="logo"></img>
         </div>
-
+        {/*Section containing the two descritions of the quizzes as well as the associated buttons*/}
         <p className="largeTextContainer">Two Quiz Types:</p>
         <div className="promptContainer">
           <div className="buttonAndTextContainer">
@@ -141,6 +141,7 @@ function App() {
         </div>
         <p></p>
         <p></p>
+        {/*APIKey submission box*/}
         <form>
           <label>API Key:</label>
           <input type="password" placeholder="Insert API Key Here" onChange={changeKey} />
