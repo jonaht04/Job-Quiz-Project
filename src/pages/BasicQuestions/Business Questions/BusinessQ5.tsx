@@ -7,14 +7,14 @@ interface Props {
 
 export const BusinessQ5: React.FC<Props> = ({handleAnswerSelect }) => {
   const [buttonSelected, setButtonSelected] = useState(0);
-
+//Function to handle buttons, and communicate to other areas of the program which button was picked in order to record answer
   const handleButtonClick = (selectedString: string) => {
     handleAnswerSelect(selectedString);
     if (selectedString === "Yes") setButtonSelected(1);
     else if (selectedString === "No") setButtonSelected(2);
     else if (selectedString === "Somewhat") setButtonSelected(3);
   };
-
+//Render the question and the four answer buttons
   return (
     <div className='container'>
       <h1><strong>Business Branch: Question 5</strong></h1>

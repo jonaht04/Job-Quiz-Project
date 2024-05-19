@@ -7,7 +7,7 @@ interface Props {
 
 export const HealthcareQ2: React.FC<Props> = ({handleAnswerSelect }) => {
   const [buttonSelected, setButtonSelected] = useState(0);
-
+//Function to handle buttons, and communicate to other areas of the program which button was picked in order to record answer
   const handleButtonClick = (selectedString: string) => {
     handleAnswerSelect(selectedString);
     if (selectedString === "Pediatrics") setButtonSelected(1);
@@ -15,7 +15,7 @@ export const HealthcareQ2: React.FC<Props> = ({handleAnswerSelect }) => {
     else if (selectedString === "Psychiatry") setButtonSelected(3);
     else if (selectedString === "Emergency Medicine") setButtonSelected(4);
   };
-
+//Render the question and the four answer buttons
   return (
     <div className='container'>
       <h1><strong>Healthcare Branch: Question 2</strong></h1>
