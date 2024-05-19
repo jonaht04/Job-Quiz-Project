@@ -28,7 +28,7 @@ export const Detailed5: React.FC<Props> = ({handleAnswerSelect }) => {
     setInputText(event.target.value);
     handleAnswerSelect(event.target.value);
   };
-
+    //Actual textbox render
     return (<div className='container'>
     <h1>Question 5</h1>
     <h2>What is one career that you would never want to work at and why?</h2>

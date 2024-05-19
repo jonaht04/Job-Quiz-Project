@@ -27,7 +27,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
   const audioRef = React.createRef<HTMLAudioElement>();
   const [report, setReport] = useState("");
   const [isLoading, setIsLoading] = useState(true); // will be passed into final report
-
+//Toggles whether or not the page's music is playing, and also progresses the page to the Final Report
   const togglePlay = () => {
     const audio = audioRef.current;
     if (audio) {
@@ -88,7 +88,8 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
     setIsAnswerSelected(selectedString !== '' ? true : false);
   };
   //#endregion
-
+  //Proceeds to the next page, and informs the system that there is no longer an answer selected
+  //Additionally, saves current quiz progress
   const handleNextButtonClick = () => {
     if (isAnswerSelected) {
       setCurrentPage(currentPage + 1)
@@ -138,6 +139,7 @@ const DetailedQuestion: React.FC<Props> = ({ goToHomePage , isDarkMode, toggleDa
     if (isAnswerSelected) return currentPage;
     else return currentPage - 1;
   }
+  /*Generates a report, by first generating a report prompt and then feeding the report prompt to ChatGPT*/
   const generateDetailedQuestionReport = () => {
     var reportPrompt = "";
     reportPrompt = "What was your favorite subject in highschool and why? " + Q1Answer + 

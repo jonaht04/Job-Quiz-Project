@@ -28,7 +28,7 @@ export const Detailed7: React.FC<Props> = ({handleAnswerSelect }) => {
     setInputText(event.target.value);
     handleAnswerSelect(event.target.value);
   };
-
+    //Actual textbox render
     return (<div className='container'>
     <h1>Question 7</h1>
     <h2>List your values and explain why they are important to you.</h2>
