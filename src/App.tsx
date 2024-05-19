@@ -77,10 +77,11 @@ function App() {
     goToDetailedQuestionPage();
     toggleLongQuiz();
   }
-//Generate the actual HomePage that you see on screen
+//Generate the actual HomePage that you see on screen, as well as the other pages depending on which button is clicked
   return (
     <div className='App'>
       <div>
+        {/*Generate main page header*/}
         {currentPage === '' ? (
         <div>
           <header className="homePgHeader">
@@ -102,6 +103,7 @@ function App() {
               </div>
             </div>
           </header>
+          {/*Generate either basic questions or detailed questions based on currentPage state variable*/}
         </div>
     ) : currentPage === 'BasicQuestion1' ? (
       <BasicQuestion1 goToHomePage={goToHomePage} isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
@@ -110,6 +112,7 @@ function App() {
     )}
     {currentPage === '' && (
       <div className='container'>
+        {/*Display rest of main page*/}
         <p className="spacer"> </p>
         <p className="spacer"> </p>
 
@@ -148,7 +151,7 @@ function App() {
     )}
     <SettingsMenu isOpen={isSettingsOpen} onClose={toggleSettings} onDarkModeToggle={toggleDarkMode} isDarkMode={isDarkMode} toggleDropdown={toggleDropdown}/>
 
-
+{/*Pop-up menus associated with quizzes; prompts user to either continue old quiz or start new one*/}
     <Modal show={isStartNewShortQuiz} onHide={toggleShortQuiz} className="ShortQuizModal">
       <Modal.Header closeButton>
         <Modal.Title>Short Quiz</Modal.Title>
@@ -168,6 +171,7 @@ function App() {
         </ul>
       </Modal.Body>
     </Modal>
+    {/*Pop-up menu for detailed questions quiz*/}
     <Modal show={isStartNewLongQuiz} onHide={toggleLongQuiz} className="ShortQuizModal">
       <Modal.Header closeButton>
         <Modal.Title>Long Quiz</Modal.Title>
