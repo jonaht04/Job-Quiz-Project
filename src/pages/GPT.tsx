@@ -11,8 +11,8 @@ async function genReport(responses: string) {
     if(APIKey == null){
         return("Error: You did not submit your API Key.")
     }
-    if(responses.length < 390){ // Length of string with no answers are at minimum, 390 characters. If it is less than that, then validiation fails
-        return("Error: Responses were not sufficent")
+    if(responses.length < 410){ // Length of string with no answers are at minimum, 410 characters. If it is less than that, then validiation fails
+        return("Error: Responses were not sufficent. Please be more detailed with your answers")
     }
     //if key was entered, convert it into a string and cut off excess characters
     try {
